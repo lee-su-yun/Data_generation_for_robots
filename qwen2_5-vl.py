@@ -113,10 +113,10 @@ if __name__ == "__main__":
 
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_path,
-        # torch_dtype=torch.bfloat16,
-        torch_dtype="auto",
-        device_map=device,
-        quantization_config=quantization_config
+        torch_dtype=torch.bfloat16,
+        #torch_dtype="auto",
+        device_map=device
+        #quantization_config=quantization_config
     ).eval().to(device)
 
     processor = AutoProcessor.from_pretrained(model_path)

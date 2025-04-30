@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="sylee@147.47.239.14:22 password" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="sylee@147.46.111.214:22 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/sylee/codes/data_gen" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="sylee@147.47.239.14:22 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/sylee/codes/Data_generation_for_robots" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

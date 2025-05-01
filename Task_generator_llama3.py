@@ -50,6 +50,8 @@ messages = [
 ]
 """
 prompt = (
+    "<|image|>"
+    "<|begin_of_text|>"
     "Ignore the image."
     "[INST] I have a robot arm with a gripper, operating on a white table. "
     "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "

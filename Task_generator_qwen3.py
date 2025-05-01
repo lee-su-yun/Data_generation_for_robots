@@ -1,6 +1,27 @@
 
+import re
 import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
+
+def extract_and_merge_json_objects(raw_text):
+    json_chunks = re.findall(r'\{(?:[^{}]|(?R))*\}', raw_text)
+
+    merged = {}
+    task_counter = 1
+
+    for chunk in json_chunks:
+        try:
+            parsed = json.loads(chunk)
+            for key, val in parsed.items():
+                new_key = f"task_{task_counter}"
+                merged[new_key] = val
+                task_counter += 1
+        except json.JSONDecodeError as e:
+            print(f"Skipping malformed chunk: {e}")
+            continue
+
+    return merged
+
 
 
 model_path = "/sda1/Qwen3-8B"
@@ -68,14 +89,21 @@ content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("
 
 print(thinking_content)
 
+# thinking_content
 try:
     response_json = json.loads(content)
 except json.JSONDecodeError:
     print("JSON parsing failed. Raw output:")
-    print(content)
-    raise
+    print(thinking_content)
+
+with open("/home/sylee/codes/Data_generation_for_robots/suggested_thinking.json", "w") as f:
+    json.dump(content, f, indent=2)
+
+# content
+cleaned_content = extract_and_merge_json_objects(content)
 
 with open("/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json", "w") as f:
-    json.dump(content, f, indent=2)
+    json.dump(cleaned_content, f, indent=2)
+
 
 print("Saved to suggested_tasks.json")

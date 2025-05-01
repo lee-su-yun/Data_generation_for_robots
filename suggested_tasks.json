@@ -1,1 +1,32 @@
-"{\n  \"task_1\": {\n    \"description\": \"Use the permanent marker to draw a line on a paper cup.\",\n    \"required_objects\": \"permanent marker, paper cup\",\n    \"initial_setup\": \"Paper cup and permanent marker are placed on the table.\",\n    \"difficulty\": \"medium\"\n  },\n  \"task_2\": {\n    \"description\": \"Stack a colored cup on top of a paper cup.\",\n    \"required_objects\": \"colored cup, paper cup\",\n    \"initial_setup\": \"Both cups are scattered on the table.\",\n    \"difficulty\": \"medium\"\n  },\n  \"task_3\": {\n    \"description\": \"Pick up a tissue and place it inside a paper cup.\",\n    \"required_objects\": \"tissue, paper cup\",\n    \"initial_setup\": \"Tissue is on the table, paper cup is nearby.\",\n    \"difficulty\": \"easy\"\n  },\n  \"task_4\": {\n    \"description\": \"Use the permanent marker to label a colored cup with a specific color name.\",\n    \"required_objects\": \"permanent marker, colored cup\",\n    \"initial_setup\": \"Colored cup and marker are on the table.\",\n    \"difficulty\": \"hard\"\n  },\n  \"task_5\": {\n    \"description\": \"Arrange three cups in a triangular formation on the table.\",\n    \"required_objects\": \"three colored cups\",\n    \"initial_setup\": \"All cups are randomly placed on the table.\",\n    \"difficulty\": \"hard\"\n  }\n}"
+{
+  "task_1": {
+    "description": "Sort colored cups by color into designated zones",
+    "required_objects": "colored cups (red, blue, green, yellow), color-coded zones (e.g., labeled containers)",
+    "initial_setup": "A mix of colored cups randomly placed on the table; color-coded zones are empty and positioned nearby.",
+    "difficulty": "medium"
+  },
+  "task_2": {
+    "description": "Use a permanent marker to draw a symbol on a paper cup",
+    "required_objects": "permanent marker, paper cup",
+    "initial_setup": "A paper cup and marker are placed on the table; a blank surface (e.g., a piece of paper) is available for reference.",
+    "difficulty": "medium"
+  },
+  "task_3": {
+    "description": "Fold a tissue into a specific shape (e.g., a square or triangle)",
+    "required_objects": "tissue",
+    "initial_setup": "A single tissue is placed flat on the table.",
+    "difficulty": "medium"
+  },
+  "task_4": {
+    "description": "Assemble a stack of cups in a specific order (e.g., size or color sequence)",
+    "required_objects": "cups of varying sizes and colors",
+    "initial_setup": "Cups are scattered on the table in a random arrangement.",
+    "difficulty": "hard"
+  },
+  "task_5": {
+    "description": "Use the gripper to pick up a cup, apply the marker to its surface, and place it in a designated location",
+    "required_objects": "cup, permanent marker, target location (e.g., a marked spot on the table)",
+    "initial_setup": "A cup and marker are on the table; the target location is clearly marked.",
+    "difficulty": "hard"
+  }
+}

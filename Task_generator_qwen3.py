@@ -72,10 +72,10 @@ try:
     response_json = json.loads(content)
 except json.JSONDecodeError:
     print("JSON parsing failed. Raw output:")
-    print(output_ids)
+    print(content)
     raise
 
 with open("/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json", "w") as f:
-    json.dump(output_ids, f, indent=2)
+    json.dump(content, f, indent=2)
 
 print("Saved to suggested_tasks.json")

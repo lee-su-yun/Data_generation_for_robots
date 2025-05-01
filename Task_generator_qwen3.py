@@ -3,24 +3,34 @@ import re
 import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-def extract_and_merge_json_objects(raw_text):
-    json_chunks = re.findall(r'\{(?:[^{}]|(?R))*\}', raw_text)
+def clean_llm_json_output(raw_text: str, output_path: str):
+    parts = re.split(r'}\s*"?\s*"?\s*{', raw_text)
+    json_chunks = []
+    for i, part in enumerate(parts):
+        if i == 0:
+            json_chunks.append(part + "}")
+        elif i == len(parts) - 1:
+            json_chunks.append("{" + part)
+        else:
+            json_chunks.append("{" + part + "}")
 
-    merged = {}
-    task_counter = 1
+    merged_tasks = {}
+    task_idx = 1
 
     for chunk in json_chunks:
         try:
             parsed = json.loads(chunk)
             for key, val in parsed.items():
-                new_key = f"task_{task_counter}"
-                merged[new_key] = val
-                task_counter += 1
+                merged_tasks[f"task_{task_idx}"] = val
+                task_idx += 1
         except json.JSONDecodeError as e:
-            print(f"Skipping malformed chunk: {e}")
+            print(f"Skipping malformed chunk:\n{chunk}\nError: {e}")
             continue
 
-    return merged
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(merged_tasks, f, indent=2, ensure_ascii=False)
+
+    print(f"Clean JSON saved to {output_path}")
 
 
 
@@ -99,6 +109,8 @@ with open("/home/sylee/codes/Data_generation_for_robots/suggested_thinking.json"
     json.dump(content, f, indent=2)
 
 # content
+clean_llm_json_output(content, "/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json")
+"""
 cleaned_content = extract_and_merge_json_objects(content)
 
 with open("/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json", "w") as f:
@@ -106,3 +118,4 @@ with open("/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json", "
 
 
 print("Saved to suggested_tasks.json")
+"""

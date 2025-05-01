@@ -50,7 +50,7 @@ messages = [
         "content": (
             "I have a robot arm with a gripper, operating on a white table. "
             "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
-            "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
+            "Please suggest 2 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
             "Each task should involve physical interaction and test useful robotic skills such as planning, perception, or tool use. "
             "Use the following format clearly:\n\n"
             "task_1: <description>\n"
@@ -83,7 +83,7 @@ try:
 except ValueError:
     index = 0
 
-thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
+thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip()
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content

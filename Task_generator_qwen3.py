@@ -4,31 +4,30 @@ import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-def parse_task_text_to_json(raw_text):
+def parse_task_blocks(text: str) -> dict:
     tasks = {}
     current_task = None
     fields = {}
 
-    lines = raw_text.strip().split("\n")
-    for line in lines:
+    for line in text.strip().splitlines():
         line = line.strip()
+        if not line:
+            continue
         if line.startswith("task_"):
             if current_task and fields:
                 tasks[current_task] = fields
-            current_task = line.split(":")[0].strip()
-            description = ":".join(line.split(":")[1:]).strip()
+            parts = line.split(":", 1)
+            current_task = parts[0].strip()
+            description = parts[1].strip()
             fields = {"description": description}
         elif ":" in line:
-            key, value = line.split(":", 1)
-            fields[key.strip()] = value.strip()
-        elif line == "":
-            continue
+            key, val = line.split(":", 1)
+            fields[key.strip()] = val.strip()
 
     if current_task and fields:
         tasks[current_task] = fields
 
     return tasks
-
 
 
 model_path = "/sda1/Qwen3-8B"
@@ -95,9 +94,9 @@ with open("/home/sylee/codes/Data_generation_for_robots/suggested_thinking.json"
     json.dump(thinking_content, f, indent=2)
 
 # content
-parsed = parse_task_text_to_json(content)
+parsed = parse_task_blocks(content)
 
-with open("/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json", "w") as f:
-    json.dump(parsed, f, indent=2)
+with open("suggested_tasks.json", "w", encoding="utf-8") as f:
+    json.dump(parsed, f, indent=2, ensure_ascii=False)
 
 print("Saved to suggested_tasks.json")

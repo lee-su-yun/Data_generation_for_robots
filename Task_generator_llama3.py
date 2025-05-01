@@ -1,13 +1,12 @@
 import json
 import torch
-from transformers import AutoProcessor, Llama4ForConditionalGeneration
+from transformers import AutoProcessor, MllamaForConditionalGeneration
 
 model_path = "/sda1/llama3.2-11b-vision"
 processor = AutoProcessor.from_pretrained(model_path)
-model = Llama4ForConditionalGeneration.from_pretrained(
-#model = MllamaForConditionalGeneration.from_pretrained(
+model = MllamaForConditionalGeneration.from_pretrained(
     model_path,
-    attn_implementation="flex_attention",
+    #attn_implementation="flex_attention",
     device_map="auto",
     torch_dtype=torch.bfloat16,
 )

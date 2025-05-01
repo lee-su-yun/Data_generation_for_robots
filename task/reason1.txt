@@ -1,0 +1,63 @@
+<think>
+Okay, the user wants 100 realistic tabletop manipulation tasks for a 1-armed household robot. Each task needs to involve meaningful physical interaction and require reasoning, decision-making, or planning. They specified avoiding deformable objects, complex tools, or multi-step assembly. Let me start by brainstorming different categories of tasks that fit these criteria.
+
+First, I should consider common household objects like cups, tissues, markers, and paper cups. The robot needs to interact with these, so tasks could involve sorting, arranging, or using them in specific ways. Since the robot has visual perception and basic grasping, tasks should involve recognizing objects based on properties like color, position, or type.
+
+For example, a task might involve selecting a red cup from a group of cups. The initial setup would have cups of different colors, and the robot needs to choose the correct one. That requires color recognition and decision-making. I need to ensure each task has a clear initial and final state, with enough detail for a human to visualize.
+
+Another idea is stacking objects based on size or color. The robot has to determine the correct order or arrangement. Maybe placing a cup on top of another, but ensuring stability. However, the user mentioned avoiding complex assembly, so stacking might be okay as long as it's simple.
+
+Tasks could also involve avoiding certain objects. For instance, moving a cup away from a marker to prevent it from getting dirty. The robot needs to recognize the marker and the cup's position, then plan the movement.
+
+I should also think about tasks that require prioritizing actions. Like, if there are multiple cups, the robot needs to pick the one that's closest to a specific point or the one that's upright. Maybe tasks where the robot has to check if an object is in a certain state, like if a tissue is unfolded or folded.
+
+Another angle is using objects in a specific way. For example, using a marker to draw on a paper cup, but the user said to avoid complex tool use. So maybe just positioning the marker near the cup for drawing, but not actually drawing. Or using the marker to label a cup, which requires placing it correctly.
+
+I need to ensure each task has a unique aspect that requires reasoning. Let me list some possible tasks:
+
+1. Selecting the correct color cup based on a condition.
+2. Moving a cup to a specific location while avoiding another object.
+3. Sorting objects by type (cup vs. tissue).
+4. Aligning objects in a particular orientation.
+5. Placing an object in a specific position relative to others.
+6. Determining which object is the correct one to use based on context.
+7. Avoiding certain objects during movement.
+8. Reordering objects based on size or position.
+9. Ensuring an object is upright before placing it.
+10. Using an object in a way that requires understanding its function.
+
+Wait, the user mentioned avoiding tasks that only involve repetition or precision placement without reasoning. So each task must have a decision-making component. Let me check each task idea against that.
+
+For example, moving a cup to a specific spot might require the robot to determine the correct path, avoiding obstacles. That involves planning. Sorting by color requires recognizing colors and deciding which to move. Aligning objects might require understanding orientation and adjusting accordingly.
+
+I need to make sure there are 100 tasks, so I'll need to categorize them. Let me think of different scenarios:
+
+- Sorting by color, size, type.
+- Positioning objects relative to each other (e.g., next to, in front of).
+- Avoiding specific objects.
+- Prioritizing based on proximity or state.
+- Using objects in their intended purpose (e.g., placing a marker near a cup for labeling).
+- Ensuring objects are in a certain state (upright, unfolded).
+- Reordering objects in a sequence.
+- Selecting the correct object based on a condition.
+- Handling objects that are in different orientations.
+- Managing multiple objects with constraints (e.g., not overlapping).
+
+Each of these categories can generate several tasks. Let me start drafting the first few tasks, ensuring they meet the criteria.
+
+For task_1: Maybe "Select the red cup from a group of cups and place it on the left side of the table." The initial setup would have cups of different colors, and the final state has the red cup on the left. Difficulty: medium.
+
+Task_2: "Move the tissue to the top of the table without touching the marker." Initial setup: tissue and marker are on the table, marker is on the right. Final state: tissue on top, marker still on the right. Difficulty: medium.
+
+Task_3: "Arrange the cups in a line from left to right, ordered by size (smallest to largest)." Initial setup: cups of varying sizes in a cluster. Final state: line from left to right. Difficulty: hard.
+
+I need to ensure each task has specific details about the initial and final states. Let me check if I'm avoiding deformable objects and complex tools. Tissues are okay as they're rigid, cups are rigid. Markers are simple.
+
+Continuing this way, I can generate 100 tasks. Each should have a unique reasoning component. For example, task_4 could involve selecting a cup that's upright, task_5 could involve moving a cup away from a specific area, etc.
+
+I need to make sure that the tasks are varied and cover different aspects of reasoning: color, position, size, state, avoiding obstacles, prioritization, etc. Also, the initial and final states need to be detailed enough for a human to visualize. For example, specifying the exact positions of objects, their colors, orientations, and spatial relationships.
+
+I should also consider the difficulty levels. Some tasks might be easy, like picking up a single object, but since they require reasoning, they might be medium. Others, like sorting by multiple criteria, could be harder.
+
+I think I have a good start. Now, I'll need to systematically generate 100 tasks, ensuring each meets the criteria. Let me proceed to list them out, making sure each has the required elements.
+</think>

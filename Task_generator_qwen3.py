@@ -101,7 +101,10 @@ messages = [
 
             "For each task, you must describe the initial and final state of the tabletop **in sufficient detail that a human could visualize or reconstruct the setup**. "
             "That includes positions, orientations, relative distances, visibility, and any relevant spatial arrangements. Mention specific colors, object states (e.g. upright, tilted), and where they are located on the table.\n\n"
-
+            
+            "**Important: You must generate all 100 tasks in full. Do not skip, summarize, or say that the remaining tasks follow the same pattern. "
+            "Every task must be explicitly written out in the required format.**\n\n"
+            
             "Use the following format exactly:\n\n"
             "task_1: <short clear description>\n"
             "required_objects: <list of objects>\n"

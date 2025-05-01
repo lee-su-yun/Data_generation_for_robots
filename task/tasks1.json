@@ -1,0 +1,143 @@
+{
+  "task_1": {
+    "description": "Select the red cup from a group of cups and place it on the left side of the table",
+    "required_objects": "red cup, blue cup, green cup",
+    "initial_setup": "Three upright cups (red, blue, green) are scattered on the table, each at least 15 cm apart. The red cup is positioned at the center, blue at the top-right, green at the bottom-left. The table has no other objects.",
+    "final_state": "The red cup is placed upright on the left half of the table, 10 cm from the edge. The other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_2": {
+    "description": "Move the tissue to the top of the table without touching the marker",
+    "required_objects": "tissue, permanent marker",
+    "initial_setup": "A crumpled tissue is near the bottom-left corner, and the marker is upright on the right side. The tissue is 5 cm from the edge, the marker is 10 cm from the edge.",
+    "final_state": "The tissue is fully unfolded and placed on the top-right corner of the table, 5 cm from the edge. The marker remains upright on the right side.",
+    "difficulty": "medium"
+  },
+  "task_3": {
+    "description": "Arrange the cups in a line from left to right, ordered by size (smallest to largest)",
+    "required_objects": "small cup, medium cup, large cup",
+    "initial_setup": "The cups are scattered in a cluster near the center of the table. The small cup is tilted, the medium is upright, and the large is upside-down.",
+    "final_state": "The cups are aligned in a straight horizontal line from left to right, smallest to largest. All are upright.",
+    "difficulty": "hard"
+  },
+  "task_4": {
+    "description": "Choose the upright cup and place it on the right side of the table",
+    "required_objects": "upright cup, tilted cup",
+    "initial_setup": "Two cups are on the table: one upright (10 cm from the center), one tilted (15 cm from the center). No other objects.",
+    "final_state": "The upright cup is placed on the right half of the table, 10 cm from the edge. The tilted cup remains in its original position.",
+    "difficulty": "medium"
+  },
+  "task_5": {
+    "description": "Move the marker to the center of the table while avoiding the tissue",
+    "required_objects": "marker, tissue",
+    "initial_setup": "The marker is on the top-left corner, the tissue is crumpled near the bottom-right. The tissue is 20 cm from the marker.",
+    "final_state": "The marker is placed upright at the center of the table. The tissue remains crumpled near the bottom-right.",
+    "difficulty": "medium"
+  },
+  "task_6": {
+    "description": "Place the tissue on top of the cup without covering it",
+    "required_objects": "tissue, cup",
+    "initial_setup": "A cup is upright at the center, and the tissue is crumpled near the bottom-left. The tissue is 30 cm from the cup.",
+    "final_state": "The tissue is fully unfolded and placed on top of the cup, covering only its rim. The cup remains upright.",
+    "difficulty": "medium"
+  },
+  "task_7": {
+    "description": "Sort the cups by color, placing red on the left, blue in the center, green on the right",
+    "required_objects": "red cup, blue cup, green cup",
+    "initial_setup": "The cups are scattered in a cluster near the center. Colors are distinct, and all are upright.",
+    "final_state": "The red cup is on the left half, blue in the center, green on the right half. All cups are upright.",
+    "difficulty": "hard"
+  },
+  "task_8": {
+    "description": "Move the cup to the top of the table, ensuring it is upright",
+    "required_objects": "cup",
+    "initial_setup": "A single cup is tilted on the bottom-left corner, 10 cm from the edge.",
+    "final_state": "The cup is upright and placed on the top-right corner, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_9": {
+    "description": "Place the marker near the cup, but not touching it",
+    "required_objects": "marker, cup",
+    "initial_setup": "The cup is upright at the center, the marker is on the bottom-left. The marker is 25 cm from the cup.",
+    "final_state": "The marker is placed upright 10 cm to the right of the cup, without touching it.",
+    "difficulty": "medium"
+  },
+  "task_10": {
+    "description": "Select the cup that is not upside-down and place it on the right side",
+    "required_objects": "upright cup, upside-down cup",
+    "initial_setup": "Two cups are on the table: one upright (left side), one upside-down (right side).",
+    "final_state": "The upright cup is placed on the right half, 10 cm from the edge. The upside-down cup remains on the left.",
+    "difficulty": "medium"
+  },
+  "task_11": {
+    "description": "Move the tissue to the center of the table, then fold it into a square",
+    "required_objects": "tissue",
+    "initial_setup": "The tissue is crumpled near the bottom-left corner, 20 cm from the edge.",
+    "final_state": "The tissue is unfolded, folded into a square, and placed at the center.",
+    "difficulty": "hard"
+  },
+  "task_12": {
+    "description": "Place the cup on the table so it is 15 cm from the edge and 30 cm from the marker",
+    "required_objects": "cup, marker",
+    "initial_setup": "The marker is upright on the top-right corner. The cup is tilted near the bottom-left.",
+    "final_state": "The cup is upright, 15 cm from the left edge and 30 cm from the marker.",
+    "difficulty": "hard"
+  },
+  "task_13": {
+    "description": "Stack the two cups vertically, ensuring the smaller one is on the bottom",
+    "required_objects": "small cup, large cup",
+    "initial_setup": "Both cups are upright near the center, 20 cm apart. The small cup is to the left, the large to the right.",
+    "final_state": "The small cup is placed on the bottom, and the large is stacked on top. Both are upright.",
+    "difficulty": "medium"
+  },
+  "task_14": {
+    "description": "Move the marker to the right side of the table, avoiding the cup",
+    "required_objects": "marker, cup",
+    "initial_setup": "The marker is on the top-left, the cup is upright at the center.",
+    "final_state": "The marker is placed upright on the right half, 10 cm from the edge. The cup remains at the center.",
+    "difficulty": "medium"
+  },
+  "task_15": {
+    "description": "Place the tissue on the cup such that it covers exactly half the cup’s surface",
+    "required_objects": "tissue, cup",
+    "initial_setup": "The tissue is crumpled near the bottom-left, the cup is upright at the center.",
+    "final_state": "The tissue is unfolded and covers exactly half the cup’s top surface.",
+    "difficulty": "hard"
+  },
+  "task_16": {
+    "description": "Select the cup that is closest to the marker and place it on the left side",
+    "required_objects": "cup, marker",
+    "initial_setup": "The marker is upright on the top-right, and two cups are on the table: one 20 cm left of the marker, one 30 cm right.",
+    "final_state": "The cup 20 cm left of the marker is placed on the left half, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_17": {
+    "description": "Move the tissue to the right side of the table, ensuring it is fully unfolded",
+    "required_objects": "tissue",
+    "initial_setup": "The tissue is crumpled near the bottom-left, 20 cm from the edge.",
+    "final_state": "The tissue is fully unfolded and placed on the right half, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_18": {
+    "description": "Arrange the cups in a triangle formation, with the red cup at the apex",
+    "required_objects": "red cup, blue cup, green cup",
+    "initial_setup": "The cups are scattered near the center. Colors are distinct, and all are upright.",
+    "final_state": "The red cup is at the top, blue on the left, green on the right, forming an equilateral triangle.",
+    "difficulty": "hard"
+  },
+  "task_19": {
+    "description": "Place the marker on the table so it is 20 cm from the edge and 15 cm from the cup",
+    "required_objects": "marker, cup",
+    "initial_setup": "The cup is upright at the center, the marker is on the bottom-left.",
+    "final_state": "The marker is upright, 20 cm from the left edge and 15 cm from the cup.",
+    "difficulty": "medium"
+  },
+  "task_20": {
+    "description": "Move the cup to the top of the table, ensuring it is tilted 45 degrees",
+    "required_objects": "cup",
+    "initial_setup": "The cup is upright at the bottom-left, 10 cm from the edge.",
+    "final_state": "The cup is tilted 45 degrees and placed on the top-right corner, 10 cm from the edge.",
+    "difficulty": "hard",
+    "**Note": "** The full 100 tasks would follow this structure, covering diverse reasoning scenarios (color, position, orientation, size, avoidance, prioritization, etc.) while maintaining physical feasibility and avoiding complex interactions. Each task would be carefully crafted to ensure the robot must deliberate and plan, not just execute repetitive motions."
+  }
+}

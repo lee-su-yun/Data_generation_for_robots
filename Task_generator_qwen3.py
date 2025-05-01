@@ -87,9 +87,8 @@ thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content
-formatted_text = thinking_content.replace("\\n", "\n")
-with open("/home/sylee/codes/Data_generation_for_robots/thinking_task.json", "w", encoding="utf-8") as f:
-    f.write(formatted_text)
+with open("/home/sylee/codes/Data_generation_for_robots/thinking_task.json", "w") as f:
+    f.write(thinking_content)
 
 # content
 parsed = parse_task_blocks(content)

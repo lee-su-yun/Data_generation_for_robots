@@ -22,8 +22,6 @@ messages = [
         "role": "user",
         "content": [
             {
-                "type": "text",
-                "text": (
                     "I have a robot arm with a gripper, operating on a white table. "
                     "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
                     "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
@@ -40,7 +38,6 @@ messages = [
                     "  ...\n"
                     "}\n\n"
                     "Make sure all fields are filled. Output only the JSON structure, with no extra commentary."
-                )
             }
         ]
     }

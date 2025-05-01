@@ -3,7 +3,7 @@ import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-model_path = "/sda1/hub/Qwen3-8B"
+model_path = "/sda1/Qwen3-8B"
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 

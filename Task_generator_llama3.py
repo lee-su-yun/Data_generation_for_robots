@@ -11,6 +11,7 @@ model = MllamaForConditionalGeneration.from_pretrained(
     torch_dtype=torch.bfloat16,
 )
 
+"""
 messages = [
     {
         "role": "user",
@@ -39,12 +40,31 @@ messages = [
         ]
     }
 ]
-input_text = processor.apply_chat_template(messages, add_generation_prompt=True)
-inputs = processor(
-    input_text,
-    add_special_tokens=False,
-    return_tensors="pt"
-).to(model.device)
+"""
+prompt = (
+    "[INST] I have a robot arm with a gripper, operating on a white table. "
+    "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
+    "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
+    "Each task should involve physical interaction and test useful robotic skills such as planning, perception, or tool use. "
+    "Respond in JSON format with fields: description, required_objects, initial_setup, and difficulty. [/INST]"
+    "{\n"
+    "  \"task_1\": {\n"
+    "    \"description\": \"...\",\n"
+    "    \"required_objects\": \"...\",\n"
+    "    \"initial_setup\": \"...\",\n"
+    "    \"difficulty\": \"easy / medium / hard\"\n"
+    "  },\n"
+    "  \"task_2\": {\n"
+    "    \"description\": \"...\",\n"
+    "    \"required_objects\": \"...\",\n"
+    "    \"initial_setup\": \"...\",\n"
+    "    \"difficulty\": \"...\"\n"
+    "  },\n"
+    "  ...\n"
+    "}\n\n"
+)
+
+inputs = processor(prompt, return_tensors="pt").to(model.device)
 
 """
 inputs = processor.apply_chat_template(

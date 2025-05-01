@@ -86,8 +86,6 @@ except ValueError:
 thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
-print(content)
-exit()
 # thinking_content
 
 with open("/home/sylee/codes/Data_generation_for_robots/suggested_thinking.json", "w") as f:

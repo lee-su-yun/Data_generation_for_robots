@@ -1,32 +1,14 @@
 {
   "task_1": {
-    "description": "**Color-based object sorting**",
-    "required_objects": "colored cups (red, blue, green), white table",
-    "initial_setup": "Colored cups are randomly scattered on the table. The robot must identify and sort them into designated color-specific bins.",
+    "description": "Label colored cups with the permanent marker to distinguish them by color.",
+    "required_objects": "colored cups, permanent marker",
+    "initial_setup": "~Colored cups are scattered on the white table, and the permanent marker is placed near the cups.~",
     "difficulty": "medium"
   },
   "task_2": {
-    "description": "**Tool-assisted labeling**",
-    "required_objects": "permanent marker, paper cup, white table",
-    "initial_setup": "A paper cup is placed on the table, and the marker is nearby. The robot must pick up the marker, label the cup with a specific text (e.g., \"water\"), and place it back.",
+    "description": "Use tissue to pick up a paper cup and place it into a designated area.",
+    "required_objects": "tissue, paper cup",
+    "initial_setup": "~A paper cup is placed on the white table, and the tissue is folded and positioned nearby.~",
     "difficulty": "medium"
-  },
-  "task_3": {
-    "description": "**Precision stacking**",
-    "required_objects": "three paper cups, white table",
-    "initial_setup": "Cups are placed in a scattered configuration. The robot must stack them in a specific order (e.g., largest at the bottom, smallest on top) without toppling.",
-    "difficulty": "hard"
-  },
-  "task_4": {
-    "description": "**Tissue-based cleaning**",
-    "required_objects": "tissue, paper cup, white table",
-    "initial_setup": "A paper cup is partially filled with water and placed on the table. The robot must use the tissue to wipe the cup’s exterior, then discard the tissue.",
-    "difficulty": "medium"
-  },
-  "task_5": {
-    "description": "**Tool-mediated object transfer**",
-    "required_objects": "tissue, colored cup, white table",
-    "initial_setup": "A colored cup is placed on one side of the table, and a tissue is on the opposite side. The robot must use the tissue to transport the cup to the other side.",
-    "difficulty": "hard"
   }
 }

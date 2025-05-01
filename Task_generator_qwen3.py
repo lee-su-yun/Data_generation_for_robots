@@ -87,14 +87,14 @@ thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content
-
-with open("/home/sylee/codes/Data_generation_for_robots/suggested_thinking.json", "w") as f:
-    json.dump(thinking_content, f, indent=2)
+formatted_text = thinking_content.replace("\\n", "\n")
+with open("/home/sylee/codes/Data_generation_for_robots/thinking_task.json", "w", encoding="utf-8") as f:
+    f.write(formatted_text)
 
 # content
 parsed = parse_task_blocks(content)
 
-with open("suggested_tasks.json", "w", encoding="utf-8") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/suggested_task.json", "w", encoding="utf-8") as f:
     json.dump(parsed, f, indent=2, ensure_ascii=False)
 
 print("Saved to suggested_tasks.json")

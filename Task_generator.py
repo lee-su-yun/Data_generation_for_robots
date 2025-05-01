@@ -3,6 +3,7 @@ import torch
 from transformers import AutoProcessor, Llama4ForConditionalGeneration
 
 model_path = "/sda1/llama3.2-11b-vision"
+
 processor = AutoProcessor.from_pretrained(model_path)
 model = Llama4ForConditionalGeneration.from_pretrained(
 #model = MllamaForConditionalGeneration.from_pretrained(

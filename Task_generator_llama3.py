@@ -2,7 +2,15 @@ import json
 import torch
 from transformers import AutoProcessor, MllamaForConditionalGeneration
 
+import requests
+from PIL import Image
+
 model_path = "/sda1/llama3.2-11b-vision"
+image_path = "/home/sylee/codes/Data_generation_for_robots/task/stack_cups1.jpg"
+
+image = Image.open(image_path)
+
+
 processor = AutoProcessor.from_pretrained(model_path)
 model = MllamaForConditionalGeneration.from_pretrained(
     model_path,
@@ -65,7 +73,7 @@ prompt = (
     "}\n\n"
 )
 
-inputs = processor(prompt, return_tensors="pt").to(model.device)
+inputs = processor(image, prompt, return_tensors="pt").to(model.device)
 
 """
 inputs = processor.apply_chat_template(

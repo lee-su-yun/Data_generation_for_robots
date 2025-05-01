@@ -109,6 +109,7 @@ if __name__ == "__main__":
     # Device setup
     model_path = "/sda1/hub/Qwen2.5-VL-7B-Instruct"
     device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    print(device)
     quantization_config = BitsAndBytesConfig(load_in_8bit=True)
 
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(

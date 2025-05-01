@@ -3,34 +3,31 @@ import re
 import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-def clean_llm_json_output(raw_text: str, output_path: str):
-    parts = re.split(r'}\s*"?\s*"?\s*{', raw_text)
-    json_chunks = []
-    for i, part in enumerate(parts):
-        if i == 0:
-            json_chunks.append(part + "}")
-        elif i == len(parts) - 1:
-            json_chunks.append("{" + part)
-        else:
-            json_chunks.append("{" + part + "}")
 
-    merged_tasks = {}
-    task_idx = 1
+def parse_task_text_to_json(raw_text):
+    tasks = {}
+    current_task = None
+    fields = {}
 
-    for chunk in json_chunks:
-        try:
-            parsed = json.loads(chunk)
-            for key, val in parsed.items():
-                merged_tasks[f"task_{task_idx}"] = val
-                task_idx += 1
-        except json.JSONDecodeError as e:
-            print(f"Skipping malformed chunk:\n{chunk}\nError: {e}")
+    lines = raw_text.strip().split("\n")
+    for line in lines:
+        line = line.strip()
+        if line.startswith("task_"):
+            if current_task and fields:
+                tasks[current_task] = fields
+            current_task = line.split(":")[0].strip()
+            description = ":".join(line.split(":")[1:]).strip()
+            fields = {"description": description}
+        elif ":" in line:
+            key, value = line.split(":", 1)
+            fields[key.strip()] = value.strip()
+        elif line == "":
             continue
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(merged_tasks, f, indent=2, ensure_ascii=False)
+    if current_task and fields:
+        tasks[current_task] = fields
 
-    print(f"Clean JSON saved to {output_path}")
+    return tasks
 
 
 
@@ -56,18 +53,11 @@ messages = [
             "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
             "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
             "Each task should involve physical interaction and test useful robotic skills such as planning, perception, or tool use. "
-            "Respond in the following JSON format:\n\n"
-            "{\n"
-            "  \"task_1\": {\n"
-            "    \"description\": \"~~\",\n"
-            "    \"required_objects\": \"~~\",\n"
-            "    \"initial_setup\": \"~~\",\n"
-            "    \"difficulty\": \"easy / medium / hard\"\n"
-            "  },\n"
-            "  \"task_2\": { ... },\n"
-            "  ...\n"
-            "}\n\n"
-            "Make sure all fields are filled. Output only the JSON structure, with no extra commentary."
+            "Use the following format clearly:\n\n"
+            "task_1: <description>\n"
+            "required_objects: <objects>\n"
+            "initial_setup: <~~>\n"
+            "difficulty: <easy/medium/hard>\n"
         )
     }
 ]
@@ -95,7 +85,7 @@ except ValueError:
     index = 0
 
 thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
-content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
+content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 
 # thinking_content
@@ -109,13 +99,9 @@ with open("/home/sylee/codes/Data_generation_for_robots/suggested_thinking.json"
     json.dump(content, f, indent=2)
 
 # content
-clean_llm_json_output(content, "/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json")
-"""
-cleaned_content = extract_and_merge_json_objects(content)
+parsed = parse_task_text_to_json(content)
 
 with open("/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json", "w") as f:
-    json.dump(cleaned_content, f, indent=2)
-
+    json.dump(parsed, f, indent=2)
 
 print("Saved to suggested_tasks.json")
-"""

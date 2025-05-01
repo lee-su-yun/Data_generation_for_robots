@@ -39,7 +39,14 @@ messages = [
         ]
     }
 ]
+input_text = processor.apply_chat_template(messages, add_generation_prompt=True)
+inputs = processor(
+    input_text,
+    add_special_tokens=False,
+    return_tensors="pt"
+).to(model.device)
 
+"""
 inputs = processor.apply_chat_template(
     messages,
     add_generation_prompt=True,
@@ -47,7 +54,7 @@ inputs = processor.apply_chat_template(
     return_dict=True,
     return_tensors="pt",
 ).to(model.device)
-
+"""
 outputs = model.generate(
     **inputs,
     max_new_tokens=512,

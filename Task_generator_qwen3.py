@@ -20,26 +20,24 @@ model = AutoModelForCausalLM.from_pretrained(
 messages = [
     {
         "role": "user",
-        "content": [
-            {
-                    "I have a robot arm with a gripper, operating on a white table. "
-                    "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
-                    "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
-                    "Each task should involve physical interaction and test useful robotic skills such as planning, perception, or tool use. "
-                    "Respond in the following JSON format:\n\n"
-                    "{\n"
-                    "  \"task_1\": {\n"
-                    "    \"description\": \"~~\",\n"
-                    "    \"required_objects\": \"~~\",\n"
-                    "    \"initial_setup\": \"~~\",\n"
-                    "    \"difficulty\": \"easy / medium / hard\"\n"
-                    "  },\n"
-                    "  \"task_2\": { ... },\n"
-                    "  ...\n"
-                    "}\n\n"
-                    "Make sure all fields are filled. Output only the JSON structure, with no extra commentary."
-            }
-        ]
+        "content": (
+            "I have a robot arm with a gripper, operating on a white table. "
+            "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
+            "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
+            "Each task should involve physical interaction and test useful robotic skills such as planning, perception, or tool use. "
+            "Respond in the following JSON format:\n\n"
+            "{\n"
+            "  \"task_1\": {\n"
+            "    \"description\": \"~~\",\n"
+            "    \"required_objects\": \"~~\",\n"
+            "    \"initial_setup\": \"~~\",\n"
+            "    \"difficulty\": \"easy / medium / hard\"\n"
+            "  },\n"
+            "  \"task_2\": { ... },\n"
+            "  ...\n"
+            "}\n\n"
+            "Make sure all fields are filled. Output only the JSON structure, with no extra commentary."
+        )
     }
 ]
 
@@ -60,7 +58,18 @@ outputs = model.generate(
 output_ids = outputs[0][len(model_inputs.input_ids[0]):].tolist()
 
 try:
-    response_json = json.loads(output_ids)
+    # rindex finding 151668 (</think>)
+    index = len(output_ids) - output_ids[::-1].index(151668)
+except ValueError:
+    index = 0
+
+thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
+content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
+
+print(thinking_content)
+
+try:
+    response_json = json.loads(content)
 except json.JSONDecodeError:
     print("JSON parsing failed. Raw output:")
     print(output_ids)

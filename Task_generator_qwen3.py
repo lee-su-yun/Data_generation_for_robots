@@ -88,7 +88,7 @@ messages = [
             "I have a robot arm with a simple gripper, operating on a flat white table. "
             "The robot has standard capabilities for visual perception, object localization, and basic grasping. "
             "It can manipulate common household objects such as colored plastic cups, tissues, paper cups, and a permanent marker. "
-            "The robot can lift, and place objects by using its gripper.\n\n"
+            "The robot can lift and place objects by using its gripper.\n\n"
 
             "Please suggest 100 **realistic and reasoning-focused tabletop manipulation tasks** suitable for fine-tuning a foundation model for 1-armed household robots. "
             "Each task should be physically feasible with current robot hardware and involve **meaningful physical interaction**. "
@@ -99,10 +99,14 @@ messages = [
 
             "Avoid tasks that require manipulation of deformable objects, complex tool use, or multi-step mechanical assembly.\n\n"
 
-            "Use the following format **exactly** for each task:\n\n"
+            "For each task, you must describe the initial and final state of the tabletop **in sufficient detail that a human could visualize or reconstruct the setup**. "
+            "That includes positions, orientations, relative distances, visibility, and any relevant spatial arrangements. Mention specific colors, object states (e.g. upright, tilted), and where they are located on the table.\n\n"
+
+            "Use the following format exactly:\n\n"
             "task_1: <short clear description>\n"
             "required_objects: <list of objects>\n"
-            "initial_setup: <clear initial condition of objects on the table>\n"
+            "initial_setup: <clear, detailed initial condition of the tabletop>\n"
+            "final_state: <clear, detailed expected tabletop state after the task is complete>\n"
             "difficulty: <easy / medium / hard>\n"
         )
     }

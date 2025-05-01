@@ -43,7 +43,7 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype="auto",
     local_files_only=True
 )
-
+"""
 messages = [
     {
         "role": "user",
@@ -57,6 +57,26 @@ messages = [
             "required_objects: <objects>\n"
             "initial_setup: <~~>\n"
             "difficulty: <easy/medium/hard>\n"
+        )
+    }
+]
+"""
+messages = [
+    {
+        "role": "user",
+        "content": (
+            "I have a robot arm with a simple gripper, operating on a flat white table. "
+            "Assume the robot has standard capabilities for visual perception, object localization, and basic grasping. "
+            "It can manipulate common household objects such as colored plastic cups, tissues, paper cups, and a permanent marker. "
+            "Please suggest 2 **realistic and practical tabletop manipulation tasks** suitable for fine-tuning a foundation model for 1-armed household robots. "
+            "These tasks should be feasible with current robot hardware and relevant to everyday human activities. "
+            "Each task should require meaningful **physical interaction** and test at least one useful skill such as planning, visual perception, sequential action, or tool use. "
+            "Avoid tasks that involve deformable object modeling or complex multi-step assembly that is not suitable for a single arm robot. "
+            "Use the following format exactly:\n\n"
+            "task_1: <short clear description>\n"
+            "required_objects: <list of objects>\n"
+            "initial_setup: <clear initial condition of objects on the table>\n"
+            "difficulty: <easy / medium / hard>\n"
         )
     }
 ]
@@ -87,7 +107,7 @@ thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content
-with open("/home/sylee/codes/Data_generation_for_robots/thinking_task.json", "w") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/thinking_task.txt", "w") as f:
     f.write(thinking_content)
 
 # content

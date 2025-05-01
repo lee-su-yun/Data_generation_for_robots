@@ -1,0 +1,602 @@
+{
+  "task_1": {
+    "description": "Sort red and blue cups into two designated areas on the table.",
+    "required_objects": "red cup, blue cup",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_2": {
+    "description": "Arrange cups in order of size (smallest to largest) in a line.",
+    "required_objects": "three cups of varying sizes",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_3": {
+    "description": "Pick up the cup that is not covered by any other object.",
+    "required_objects": "cup, tissue, paper cup",
+    "initial_setup": "tissue is on top of the cup, paper cup is on the table",
+    "difficulty": "medium"
+  },
+  "task_4": {
+    "description": "Place the marker next to the tissue so it's clearly visible.",
+    "required_objects": "marker, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "easy"
+  },
+  "task_5": {
+    "description": "Avoid picking up the green cup; instead, pick up the red cup.",
+    "required_objects": "green cup, red cup",
+    "initial_setup": "both on the table",
+    "difficulty": "easy"
+  },
+  "task_6": {
+    "description": "Place the tissue in a position where it's not touching any other object.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "tissue and cup are on the table",
+    "difficulty": "medium"
+  },
+  "task_7": {
+    "description": "Stack the cups in a way that the smallest cup is on top.",
+    "required_objects": "three cups of different sizes",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_8": {
+    "description": "Pick up the cup that is farthest from the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker are on the table",
+    "difficulty": "medium"
+  },
+  "task_9": {
+    "description": "Place the paper cup in a spot where it's not overlapping with the plastic cup.",
+    "required_objects": "paper cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_10": {
+    "description": "Use the marker to indicate the location of the tissue.",
+    "required_objects": "marker, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_11": {
+    "description": "Place the cup so that it's touching the edge of the table.",
+    "required_objects": "cup",
+    "initial_setup": "cup on the table",
+    "difficulty": "medium"
+  },
+  "task_12": {
+    "description": "Pick up the cup that is not in the center of the table.",
+    "required_objects": "cup",
+    "initial_setup": "cup is on the edge",
+    "difficulty": "easy"
+  },
+  "task_13": {
+    "description": "Arrange the cups in a triangle formation.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_14": {
+    "description": "Place the tissue on top of the cup without causing it to tip over.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "cup on the table",
+    "difficulty": "medium"
+  },
+  "task_15": {
+    "description": "Select the cup that is closest to the marker and place it in the center.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_16": {
+    "description": "Avoid placing the tissue on top of the cup; instead, place it next to the cup.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_17": {
+    "description": "Stack the cups so that the largest is at the bottom.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_18": {
+    "description": "Use the marker to mark the position of the tissue.",
+    "required_objects": "marker, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_19": {
+    "description": "Place the paper cup in a position where it's not directly under the plastic cup.",
+    "required_objects": "paper cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_20": {
+    "description": "Pick up the cup that is not adjacent to any other object.",
+    "required_objects": "cup, tissue, paper cup",
+    "initial_setup": "tissue and paper cup are on the table",
+    "difficulty": "medium"
+  },
+  "task_21": {
+    "description": "Arrange the cups in a line with equal spacing between them.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_22": {
+    "description": "Place the tissue in a spot where it's not overlapping with any other object.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "tissue and cup are on the table",
+    "difficulty": "medium"
+  },
+  "task_23": {
+    "description": "Select the cup that is the same color as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_24": {
+    "description": "Avoid placing the cup on top of the tissue; instead, place it next to the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_25": {
+    "description": "Use the marker to indicate the correct position for the cup.",
+    "required_objects": "marker, cup",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_26": {
+    "description": "Place the paper cup in a spot where it's not touching the edge of the table.",
+    "required_objects": "paper cup",
+    "initial_setup": "paper cup on the table",
+    "difficulty": "medium"
+  },
+  "task_27": {
+    "description": "Pick up the cup that is not in the same row as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_28": {
+    "description": "Arrange the cups in a circle formation.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_29": {
+    "description": "Place the tissue on the cup so that it's centered.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "cup on the table",
+    "difficulty": "medium"
+  },
+  "task_30": {
+    "description": "Select the cup that is the same size as the plastic cup.",
+    "required_objects": "cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_31": {
+    "description": "Place the tissue in a position where it's not under any other object.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "tissue and cup are on the table",
+    "difficulty": "medium"
+  },
+  "task_32": {
+    "description": "Avoid picking up the cup that is partially obscured by the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "tissue is on top of the cup",
+    "difficulty": "medium"
+  },
+  "task_33": {
+    "description": "Stack the cups so that the middle cup is the smallest.",
+    "required_objects": "three cups of different sizes",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_34": {
+    "description": "Place the marker in a spot where it's not near the tissue.",
+    "required_objects": "marker, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_35": {
+    "description": "Select the cup that is not adjacent to the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_36": {
+    "description": "Arrange the cups in a diagonal line from the top-left to bottom-right corner.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_37": {
+    "description": "Place the tissue so that it's not under the paper cup.",
+    "required_objects": "tissue, paper cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_38": {
+    "description": "Avoid placing the cup in the same spot as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_39": {
+    "description": "Stack the cups in a way that the plastic cup is on top.",
+    "required_objects": "cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_40": {
+    "description": "Place the cup so that it's not touching the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_41": {
+    "description": "Select the cup that is the same color as the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_42": {
+    "description": "Arrange the cups in a zigzag pattern.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_43": {
+    "description": "Place the tissue in a position where it's not overlapping with the marker.",
+    "required_objects": "tissue, marker",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_44": {
+    "description": "Avoid picking up the cup that is directly in front of the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_45": {
+    "description": "Stack the cups so that the paper cup is on top.",
+    "required_objects": "cup, paper cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_46": {
+    "description": "Place the marker so that it's not near the edge of the table.",
+    "required_objects": "marker",
+    "initial_setup": "marker on the table",
+    "difficulty": "medium"
+  },
+  "task_47": {
+    "description": "Select the cup that is not in the same column as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_48": {
+    "description": "Arrange the cups in a square formation.",
+    "required_objects": "four cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_49": {
+    "description": "Place the tissue so that it's not under the plastic cup.",
+    "required_objects": "tissue, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_50": {
+    "description": "Avoid placing the cup in the same row as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_51": {
+    "description": "Stack the cups in a way that the tissue is not touching the cup.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "cup and tissue on the table",
+    "difficulty": "medium"
+  },
+  "task_52": {
+    "description": "Place the cup so that it's not overlapping with the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_53": {
+    "description": "Select the cup that is the same shape as the plastic cup.",
+    "required_objects": "cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_54": {
+    "description": "Arrange the cups in a spiral pattern.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_55": {
+    "description": "Place the tissue so that it's not touching the cup.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_56": {
+    "description": "Avoid placing the cup in the same column as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_57": {
+    "description": "Stack the cups so that the smallest cup is in the middle.",
+    "required_objects": "three cups of different sizes",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_58": {
+    "description": "Place the marker so that it's not near the cup.",
+    "required_objects": "marker, cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_59": {
+    "description": "Select the cup that is not adjacent to the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_60": {
+    "description": "Arrange the cups in a U-shape formation.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_61": {
+    "description": "Place the tissue so that it's not under the paper cup.",
+    "required_objects": "tissue, paper cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_62": {
+    "description": "Avoid placing the cup in the same spot as the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_63": {
+    "description": "Stack the cups in a way that the plastic cup is in the middle.",
+    "required_objects": "cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_64": {
+    "description": "Place the marker so that it's not in the center of the table.",
+    "required_objects": "marker",
+    "initial_setup": "marker on the table",
+    "difficulty": "medium"
+  },
+  "task_65": {
+    "description": "Select the cup that is not in the same row as the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_66": {
+    "description": "Arrange the cups in a vertical line.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_67": {
+    "description": "Place the tissue so that it's not touching the edge of the table.",
+    "required_objects": "tissue",
+    "initial_setup": "tissue on the table",
+    "difficulty": "medium"
+  },
+  "task_68": {
+    "description": "Avoid placing the cup in the same column as the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_69": {
+    "description": "Stack the cups so that the tissue is not touching the cup.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "cup and tissue on the table",
+    "difficulty": "medium"
+  },
+  "task_70": {
+    "description": "Place the marker so that it's not near the tissue.",
+    "required_objects": "marker, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_71": {
+    "description": "Select the cup that is the same material as the plastic cup.",
+    "required_objects": "cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_72": {
+    "description": "Arrange the cups in a diagonal line from the top-right to bottom-left corner.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_73": {
+    "description": "Place the tissue so that it's not overlapping with the marker.",
+    "required_objects": "tissue, marker",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_74": {
+    "description": "Avoid placing the cup in the same row as the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_75": {
+    "description": "Stack the cups in a way that the paper cup is in the middle.",
+    "required_objects": "cup, paper cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_76": {
+    "description": "Place the marker so that it's not in the same column as the tissue.",
+    "required_objects": "marker, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_77": {
+    "description": "Select the cup that is not adjacent to the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_78": {
+    "description": "Arrange the cups in a horizontal line.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_79": {
+    "description": "Place the tissue so that it's not under the marker.",
+    "required_objects": "tissue, marker",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_80": {
+    "description": "Avoid placing the cup in the same spot as the paper cup.",
+    "required_objects": "cup, paper cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_81": {
+    "description": "Stack the cups so that the smallest cup is on the bottom.",
+    "required_objects": "three cups of different sizes",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_82": {
+    "description": "Place the marker so that it's not near the edge of the table.",
+    "required_objects": "marker",
+    "initial_setup": "marker on the table",
+    "difficulty": "medium"
+  },
+  "task_83": {
+    "description": "Select the cup that is not in the same column as the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_84": {
+    "description": "Arrange the cups in a vertical line.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_85": {
+    "description": "Place the tissue so that it's not touching the marker.",
+    "required_objects": "tissue, marker",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_86": {
+    "description": "Avoid placing the cup in the same row as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_87": {
+    "description": "Stack the cups in a way that the tissue is not touching the cup.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "cup and tissue on the table",
+    "difficulty": "medium"
+  },
+  "task_88": {
+    "description": "Place the marker so that it's not in the same row as the tissue.",
+    "required_objects": "marker, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_89": {
+    "description": "Select the cup that is not adjacent to the tissue.",
+    "required_objects": "cup, tissue",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_90": {
+    "description": "Arrange the cups in a square formation.",
+    "required_objects": "four cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_91": {
+    "description": "Place the tissue so that it's not under the marker.",
+    "required_objects": "tissue, marker",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_92": {
+    "description": "Avoid placing the cup in the same column as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "cup and marker on the table",
+    "difficulty": "medium"
+  },
+  "task_93": {
+    "description": "Stack the cups so that the plastic cup is on top.",
+    "required_objects": "cup, plastic cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_94": {
+    "description": "Place the marker so that it's not near the cup.",
+    "required_objects": "marker, cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_95": {
+    "description": "Select the cup that is the same color as the paper cup.",
+    "required_objects": "cup, paper cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_96": {
+    "description": "Arrange the cups in a diagonal line from the top-left to bottom-right.",
+    "required_objects": "three cups",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "hard"
+  },
+  "task_97": {
+    "description": "Place the tissue so that it's not touching the cup.",
+    "required_objects": "tissue, cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_98": {
+    "description": "Avoid placing the cup in the same spot as the marker.",
+    "required_objects": "cup, marker",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  },
+  "task_99": {
+    "description": "Stack the cups in a way that the smallest cup is in the middle.",
+    "required_objects": "three cups of different sizes",
+    "initial_setup": "cups are scattered on the table",
+    "difficulty": "medium"
+  },
+  "task_100": {
+    "description": "Place the marker so that it's not in the same column as the cup.",
+    "required_objects": "marker, cup",
+    "initial_setup": "both on the table",
+    "difficulty": "medium"
+  }
+}

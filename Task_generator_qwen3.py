@@ -14,6 +14,7 @@ model = AutoModelForCausalLM.from_pretrained(
     model_path,
     device_map="device:1",
     torch_dtype="auto",
+    local_files_only=True
 )
 
 messages = [

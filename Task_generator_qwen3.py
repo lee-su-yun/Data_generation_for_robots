@@ -60,7 +60,7 @@ messages = [
         )
     }
 ]
-"""
+
 messages = [
     {
         "role": "user",
@@ -73,6 +73,33 @@ messages = [
             "Each task should require meaningful **physical interaction** and test at least one useful skill such as planning, visual perception, sequential action, or tool use. "
             "Avoid tasks that involve deformable object modeling or complex multi-step assembly that is not suitable for a single arm robot. "
             "Use the following format exactly:\n\n"
+            "task_1: <short clear description>\n"
+            "required_objects: <list of objects>\n"
+            "initial_setup: <clear initial condition of objects on the table>\n"
+            "difficulty: <easy / medium / hard>\n"
+        )
+    }
+]
+"""
+messages = [
+    {
+        "role": "user",
+        "content": (
+            "I have a robot arm with a simple gripper, operating on a flat white table. "
+            "The robot has standard capabilities for visual perception, object localization, and basic grasping. "
+            "It can manipulate common household objects such as colored plastic cups, tissues, paper cups, and a permanent marker. "
+            "The robot can lift, and place objects by using its gripper.\n\n"
+
+            "Please suggest 100 **realistic and reasoning-focused tabletop manipulation tasks** suitable for fine-tuning a foundation model for 1-armed household robots. "
+            "Each task should be physically feasible with current robot hardware and involve **meaningful physical interaction**. "
+            "However, more importantly, each task must also require **reasoning, decision-making, or planning** by the robot. "
+            "That means the robot must determine the correct course of action based on object properties (like color, position, or type), task constraints, or implicit rules. "
+            "For example, tasks like selecting the right item based on a condition (e.g., color, distance), prioritizing actions, or avoiding specific objects. "
+            "Tasks that only involve repetition or precision placement without reasoning should be avoided.\n\n"
+
+            "Avoid tasks that require manipulation of deformable objects, complex tool use, or multi-step mechanical assembly.\n\n"
+
+            "Use the following format **exactly** for each task:\n\n"
             "task_1: <short clear description>\n"
             "required_objects: <list of objects>\n"
             "initial_setup: <clear initial condition of objects on the table>\n"
@@ -107,13 +134,13 @@ thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content
-with open("/home/sylee/codes/Data_generation_for_robots/task/reason.txt", "w") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/reason1.txt", "w") as f:
     f.write(thinking_content)
 
 # content
 parsed = parse_task_blocks(content)
 
-with open("/home/sylee/codes/Data_generation_for_robots/task/tasks.json", "w", encoding="utf-8") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/tasks1.json", "w", encoding="utf-8") as f:
     json.dump(parsed, f, indent=2, ensure_ascii=False)
 
 print("Saved to suggested_tasks.json")

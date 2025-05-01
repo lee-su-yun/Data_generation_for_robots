@@ -1,0 +1,138 @@
+<think>
+Okay, the user wants 100 realistic tabletop manipulation tasks for a single-armed household robot. Let me start by understanding the requirements. The robot has a gripper, visual perception, object localization, and basic grasping. It can handle common objects like plastic cups, tissues, paper cups, and a permanent marker. The tasks need to be feasible with current hardware, involve physical interaction, and test skills like planning, perception, sequential actions, or tool use. Avoid deformable objects and complex multi-step assemblies.
+
+First, I should brainstorm tasks that are everyday activities. Let me think of common tasks people do with these objects. For example, pouring water from one cup to another, but wait, the user said to avoid deformable objects. So maybe not pouring, but moving objects. Or using the marker to draw. Let me list some categories: object sorting, stacking, arranging, using tools, cleaning, organizing, etc.
+
+Let me start with easy tasks. Task 1 could be picking up a cup. But maybe more specific. Like, picking up a plastic cup from the table. But the initial setup needs to be clear. Maybe the cup is on the table, and the robot needs to grasp it. But that's too simple. Maybe need to include more steps. Wait, the user said each task should require meaningful physical interaction and test at least one skill. So maybe tasks that involve multiple steps, like moving an object from one place to another, or using a tool.
+
+Let me think of tasks that involve sequential actions. For example, using a marker to draw a line on a paper cup. That would require planning the path, using the marker as a tool, and precise movement. But the initial setup would have the marker and the cup on the table. Difficulty: medium.
+
+Another task: arranging objects in a specific order. Like sorting cups by color. That would require visual perception and classification. Initial setup: multiple cups of different colors on the table. Difficulty: medium.
+
+What about using a tissue to wipe something? Like, take a tissue, wipe a surface, then dispose of it. That involves grasping, using the tissue as a tool, and sequential actions. Difficulty: medium.
+
+I need to ensure each task is unique and covers different skills. Let me categorize them:
+
+1. Object manipulation (grasping, moving)
+2. Tool use (marker, tissue)
+3. Sorting and classification
+4. Sequential actions (steps involved)
+5. Spatial reasoning (arranging, stacking)
+6. Cleaning or organizing
+7. Assembly (but avoid complex multi-step, so maybe simple stacking)
+8. Using objects as tools (e.g., using a cup as a container)
+
+Let me start listing them:
+
+Task 1: Pick up a plastic cup from the table. Required objects: plastic cup. Initial setup: cup on table. Difficulty: easy. But maybe too easy. Maybe need to specify that the robot has to grasp it without knocking over other objects.
+
+Task 2: Move a paper cup to a specific location. Required: paper cup. Initial: cup on table. Difficulty: easy.
+
+Wait, the user wants 100 tasks. Need to make sure they are varied. Let me think of more. Maybe tasks involving multiple objects. For example, stacking cups. But stacking requires planning and precision. Difficulty: medium.
+
+Another idea: using the marker to write on a surface. But the marker is a tool. So task: use the permanent marker to draw a circle on a whiteboard. Required objects: marker, whiteboard. Initial setup: whiteboard on table, marker nearby. Difficulty: medium.
+
+But the user said the table is flat white, so maybe the whiteboard is part of the table? Or maybe the surface is just the table. Maybe the task is to draw on the table surface with the marker. But the table is white, so maybe that's possible. But the user said the robot is on a flat white table, so maybe the table is a surface, not a whiteboard. Maybe the task is to draw on a piece of paper. But the initial setup would have the paper and the marker. So task: draw a line on a piece of paper using the marker. Required: paper, marker. Initial: paper on table, marker nearby. Difficulty: medium.
+
+I need to ensure that each task is feasible with current hardware. For example, moving objects, grasping, using tools. Let me think of tasks that involve multiple steps. For example, picking up a tissue, wiping a surface, then discarding the tissue. That's sequential actions. Difficulty: medium.
+
+Another task: arranging objects in a specific pattern, like placing cups in a line. That requires planning and spatial awareness. Difficulty: medium.
+
+I need to avoid tasks that are too complex. For example, assembling a puzzle is out. But simple stacking is okay. So stacking two cups on top of each other. Required: two cups. Initial: cups on table. Difficulty: medium.
+
+Also, tasks involving tool use. For example, using the marker to label a cup. Required: marker, cup. Initial: cup and marker on table. Difficulty: medium.
+
+Let me think of 100. Maybe start with object manipulation, then tool use, then sorting, then sequential actions, etc. Let me try to list them in groups.
+
+Group 1: Grasping and moving objects
+- Pick up a cup and move it to a new location
+- Transfer a cup from one side to another
+- Pick up a tissue and place it in a trash can
+- Move a paper cup to a specific spot
+- Grasp a plastic cup and lift it without spilling (if it's filled, but maybe not, since the user said common objects, maybe not filled)
+
+Group 2: Tool use
+- Use the marker to draw a line on a surface
+- Use the marker to label a cup
+- Use the marker to write on a piece of paper
+- Use the tissue to wipe a surface
+- Use the permanent marker to color a paper cup
+
+Group 3: Sorting and classification
+- Sort cups by color
+- Sort tissues by size
+- Group cups by material (plastic vs paper)
+- Arrange objects in order of size
+- Sort objects by shape
+
+Group 4: Sequential actions
+- Pick up a tissue, wipe a surface, discard the tissue
+- Pick up a cup, pour water into it (but maybe not, since it's not deformable)
+- Pick up a cup, place it in a specific location, then pick up another
+- Use the marker to draw a shape, then place it on the table
+- Stack two cups on top of each other
+
+Group 5: Spatial reasoning
+- Arrange objects in a straight line
+- Place objects in a specific pattern (like a triangle)
+- Align cups in a row
+- Stack cups in a pyramid (but that might be complex)
+- Place objects at specific distances from each other
+
+Group 6: Cleaning and organizing
+- Wipe a surface with a tissue
+- Fold a tissue into a square
+- Stack tissues in a pile
+- Organize cups in a specific order
+- Clean a surface using a tissue
+
+Group 7: Assembly (simple)
+- Stack two cups
+- Place a cup on top of another
+- Arrange objects in a specific sequence
+- Combine objects into a group
+- Stack objects vertically
+
+Group 8: Using objects as tools
+- Use a cup as a container to hold objects
+- Use a cup to measure liquid (but maybe not, since it's not deformable)
+- Use a tissue to hold small objects
+- Use a marker to mark a location
+- Use a cup to pour water (but again, maybe not)
+
+Wait, the user said to avoid deformable objects. So pouring water might not be feasible if the robot can't handle liquid. So maybe focus on solid objects.
+
+Now, I need to make sure each task is unique and covers different skills. Let me try to list them, ensuring variety.
+
+Let me start writing the tasks with the required format. Each task should have a short description, required objects, initial setup, and difficulty. Let me check for repetition and ensure they are all different.
+
+For example:
+
+task_1: Pick up a plastic cup from the table. Required: plastic cup. Initial: cup on table. Difficulty: easy.
+
+task_2: Move a paper cup to a designated area. Required: paper cup. Initial: cup on table. Difficulty: easy.
+
+task_3: Use the permanent marker to draw a straight line on a piece of paper. Required: marker, paper. Initial: paper and marker on table. Difficulty: medium.
+
+task_4: Stack two plastic cups on top of each other. Required: two plastic cups. Initial: cups on table. Difficulty: medium.
+
+task_5: Wipe a surface with a tissue. Required: tissue, surface. Initial: tissue on table, surface is a flat object. Difficulty: medium.
+
+task_6: Sort cups by color. Required: multiple cups of different colors. Initial: cups on table. Difficulty: medium.
+
+task_7: Arrange tissues in a specific order by size. Required: tissues of different sizes. Initial: tissues on table. Difficulty: medium.
+
+task_8: Place a tissue in a trash can. Required: tissue, trash can. Initial: tissue on table, trash can nearby. Difficulty: medium.
+
+task_9: Use the marker to label a cup with a specific symbol. Required: marker, cup. Initial: cup and marker on table. Difficulty: medium.
+
+task_10: Grasp a tissue and fold it into a square. Required: tissue. Initial: tissue on table. Difficulty: medium.
+
+Continuing this way, I can create 100 tasks. Need to ensure that each task is distinct and covers different aspects. Let me check if I have covered all the skills: planning, perception, sequential action, tool use. Each task should test at least one. For example, task_3 tests tool use and planning, task_4 tests planning and spatial reasoning.
+
+I need to avoid tasks that are too similar. Let me think of more tasks involving different objects and actions. For example, using the marker to draw a circle, using the tissue to hold a small object, arranging objects in a specific pattern, etc.
+
+Also, some tasks might involve multiple steps, like picking up an object, moving it, then placing it. For example, task_11: Pick up a cup and place it in a specific location. Required: cup. Initial: cup on table. Difficulty: easy.
+
+Wait, but some tasks are similar. Need to ensure variety. Let me think of 100 and make sure they are all unique. This might take time, but I'll proceed step by step, ensuring each task is different and covers different skills.
+</think>

@@ -46,7 +46,7 @@ def generate_and_save_image(prompt, save_path):
    # torch.cuda.empty_cache()
 
 
-with open("tasks1.json", "r") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/tasks1.json", "r") as f:
     tasks = json.load(f)
 
 
@@ -68,4 +68,5 @@ for task_key in tqdm(tasks.keys()):
     with open(os.path.join(folder, "task.json"), "w") as f:
         json.dump({task_key: task}, f, indent=2)
 
+    exit()
   #  torch.cuda.empty_cache()

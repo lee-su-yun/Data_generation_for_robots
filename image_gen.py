@@ -71,3 +71,5 @@ for task_key in tqdm(tasks.keys()):
     # task 내용 저장
     with open(os.path.join(folder, "task.json"), "w") as f:
         json.dump({task_key: task}, f, indent=2)
+
+    exit()

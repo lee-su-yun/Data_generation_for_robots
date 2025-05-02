@@ -46,7 +46,7 @@ def generate_and_save_image(prompt, save_path):
    # torch.cuda.empty_cache()
 
 
-with open("/home/sylee/codes/Data_generation_for_robots/task/suggested_tasks.json", "r") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/suggested_task.json", "r") as f:
     tasks = json.load(f)
 
 

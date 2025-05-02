@@ -53,7 +53,7 @@ with open("/home/sylee/codes/Data_generation_for_robots/task/tasks1.json", "r") 
 # 경로 생성 및 이미지 저장
 for task_key in tqdm(tasks.keys()):
     task = tasks[task_key]
-    folder = f"./{task_key}"
+    folder = f"./task/{task_key}"
     os.makedirs(folder, exist_ok=True)
 
     # 프롬프트 생성

@@ -42,15 +42,9 @@ def generate_and_save_image(prompt, save_path):
     ).images[0]
     image.save(save_path)
 
-    del image
-    torch.cuda.empty_cache()
+   # del image
+   # torch.cuda.empty_cache()
 
-
-
-pipe = StableDiffusion3Pipeline.from_pretrained(
-    "/sda1/stable-diffusion-3.5-large",
-    torch_dtype=torch.bfloat16
-).to("cuda:1")
 
 with open("tasks1.json", "r") as f:
     tasks = json.load(f)
@@ -58,7 +52,6 @@ with open("tasks1.json", "r") as f:
 
 # 경로 생성 및 이미지 저장
 for task_key in tqdm(tasks.keys()):
-    print(task_key)
     task = tasks[task_key]
     folder = f"./{task_key}"
     os.makedirs(folder, exist_ok=True)
@@ -75,4 +68,4 @@ for task_key in tqdm(tasks.keys()):
     with open(os.path.join(folder, "task.json"), "w") as f:
         json.dump({task_key: task}, f, indent=2)
 
-    torch.cuda.empty_cache()
+  #  torch.cuda.empty_cache()

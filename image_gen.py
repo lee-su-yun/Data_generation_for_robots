@@ -50,7 +50,7 @@ pipe = StableDiffusion3Pipeline.from_pretrained(
     torch_dtype=torch.bfloat16
 ).to("cuda:1")
 
-with open("tasks.json", "r") as f:
+with open("tasks1.json", "r") as f:
     tasks = json.load(f)
 
 

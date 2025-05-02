@@ -3,7 +3,7 @@ import os
 from tqdm import tqdm
 import torch
 from diffusers import StableDiffusion3Pipeline
-"""
+
 pipe = StableDiffusion3Pipeline.from_pretrained("/sda1/stable-diffusion-3.5-large", torch_dtype=torch.bfloat16)
 pipe = pipe.to("cuda:1")
 
@@ -13,8 +13,9 @@ image = pipe(
     guidance_scale=3.5,
 ).images[0]
 image.save("capybara.png")
-"""
 
+
+"""
 pipe = StableDiffusion3Pipeline.from_pretrained(
     "/sda1/stable-diffusion-3.5-large",
     torch_dtype=torch.bfloat16
@@ -56,3 +57,5 @@ for task_key in tqdm(tasks.keys()):
     # task 내용 저장
     with open(os.path.join(folder, "task.json"), "w") as f:
         json.dump({task_key: task}, f, indent=2)
+
+"""

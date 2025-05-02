@@ -37,10 +37,11 @@ prompt = (
     "The camera angle is from a top-down view at a slight tilt, capturing the robot and the entire table clearly. "
     "The environment resembles a lab setting. This is the initial setup."
 )
-conditioning = compel.build_conditioning_tensor(prompt)
+conditioning, pooled = compel.build_conditioning_tensor(prompt, return_pooled=True)
 
 image = pipeline(
     prompt_embeds=conditioning,
+    pooled_prompt_embeds=pooled,
     num_inference_steps=28,
     guidance_scale=4.5,
     max_sequence_length=512,

@@ -27,21 +27,19 @@ pipeline = StableDiffusion3Pipeline.from_pretrained(
 )
 pipeline.enable_model_cpu_offload()
 
-compel = Compel(tokenizer=pipeline.tokenizer, text_encoder=pipeline.text_encoder)
+#compel = Compel(tokenizer=pipeline.tokenizer, text_encoder=pipeline.text_encoder)
 #prompt = "A whimsical and creative image depicting a hybrid creature that is a mix of a waffle and a hippopotamus, basking in a river of melted butter amidst a breakfast-themed landscape. It features the distinctive, bulky body shape of a hippo. However, instead of the usual grey skin, the creature's body resembles a golden-brown, crispy waffle fresh off the griddle. The skin is textured with the familiar grid pattern of a waffle, each square filled with a glistening sheen of syrup. The environment combines the natural habitat of a hippo with elements of a breakfast table setting, a river of warm, melted butter, with oversized utensils or plates peeking out from the lush, pancake-like foliage in the background, a towering pepper mill standing in for a tree.  As the sun rises in this fantastical world, it casts a warm, buttery glow over the scene. The creature, content in its butter river, lets out a yawn. Nearby, a flock of birds take flight"
 
 prompt = (
-    "A tabletop robotic manipulation scene showing a one-arm robot with a gripper, "
-    "executing a task on a white table. The red plastic cup is upright on the left side of the table, 20 cm from the edge. "
-    "The blue paper cup is upright on the right side, 20 cm from the edge. A white tissue is folded and lying flat on the center of the table, 10 cm from the red cup. "
-    "The camera angle is from a top-down view at a slight tilt, capturing the robot and the entire table clearly. "
-    "The environment resembles a lab setting. This is the initial setup."
+    "A tabletop robotic manipulation scene showing a one-arm robot with a parallel gripper,"
+    "executing a task on a white table."
+    "The red plastic cup is upright on the left side of the table, 20 cm from the edge. The blue paper cup is on the right side, 20 cm from the edge. A folded white tissue lies at the table center, 10 cm from the red cup."
+    "The scene is viewed from a top-down angle, showing the robot and table clearly."
+    "The setting is a lab. Initial setup."
 )
-conditioning, pooled = compel.build_conditioning_tensor(prompt, return_pooled=True)
 
 image = pipeline(
-    prompt_embeds=conditioning,
-    pooled_prompt_embeds=pooled,
+    prompt=prompt,
     num_inference_steps=28,
     guidance_scale=4.5,
     max_sequence_length=512,

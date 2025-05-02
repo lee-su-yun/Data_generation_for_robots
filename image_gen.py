@@ -33,7 +33,7 @@ def make_prompt(state_text):
         f"{state_text}."
     )
 
-def generate_and_save_image(prompt, save_path):
+def generate_and_save_image(pipeline, prompt, save_path):
     image = pipeline(
         prompt=prompt,
         num_inference_steps=28,
@@ -65,8 +65,8 @@ for task_key in tqdm(tasks.keys()):
     final_prompt = make_prompt(task["final_state"])
 
     # 이미지 생성 및 저장
-    generate_and_save_image(init_prompt, os.path.join(folder, "init.png"))
-    generate_and_save_image(final_prompt, os.path.join(folder, "final.png"))
+    generate_and_save_image(pipeline, init_prompt, os.path.join(folder, "init.png"))
+    generate_and_save_image(pipeline, final_prompt, os.path.join(folder, "final.png"))
 
     # task 내용 저장
     with open(os.path.join(folder, "task.json"), "w") as f:

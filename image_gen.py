@@ -33,6 +33,7 @@ pipeline.enable_model_cpu_offload()
 prompt = (
     #"A robotic manipulation scene showing a one-arm robot with a parallel gripper on a white table,"
     #"The scene is viewed from a top-down angle, showing the robot and table clearly,"
+    "On the table, top-down"
     "The red tissue is crumpled and lying flat on the center of the table. The blue plastic cup is upright on the left side, 20 cm from the edge. The green paper cup is upright on the right side, 20 cm from the edge. A yellow tissue is folded and placed near the red tissue."
     #"The red plastic cup is upright on the left side of the table, 20 cm from the edge. The blue paper cup is on the right side, 20 cm from the edge. A folded white tissue lies at the table center, 10 cm from the red cup."
 )

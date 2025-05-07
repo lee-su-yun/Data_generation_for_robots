@@ -47,7 +47,7 @@ def generate_and_save_image(prompt, save_path):
    # del image
    # torch.cuda.empty_cache()
 
-generate_and_save_image("A man standing to the right of a woman.", os.path.join("./aaa", "init.png"))
+generate_and_save_image("A red ball is on the left. A green ball is to the right of the red ball. A blue ball is above the green ball.", os.path.join("./aaa", "init.png"))
 
 """
 

@@ -34,6 +34,7 @@ def make_prompt(state_text):
     )
 
 def generate_and_save_image(prompt, save_path):
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
     image = pipeline(
         prompt=prompt,
         #num_inference_steps=28,
@@ -46,7 +47,6 @@ def generate_and_save_image(prompt, save_path):
    # del image
    # torch.cuda.empty_cache()
 
-os.makedirs(os.path.dirname("./aaa"), exist_ok=True)
 generate_and_save_image("A man standing to the right of a woman.", os.path.join("./aaa", "init.png"))
 
 """

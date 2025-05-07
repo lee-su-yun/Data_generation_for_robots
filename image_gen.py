@@ -36,7 +36,8 @@ def make_prompt(state_text):
 def generate_and_save_image(prompt, save_path):
     image = pipeline(
         prompt=prompt,
-        num_inference_steps=28,
+        #num_inference_steps=28,
+        num_inference_steps=10,
         guidance_scale=4.5,
         max_sequence_length=512,
     ).images[0]

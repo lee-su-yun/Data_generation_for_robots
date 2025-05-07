@@ -45,7 +45,7 @@ def generate_and_save_image(prompt, save_path):
    # del image
    # torch.cuda.empty_cache()
 
-
+os.makedirs(os.path.dirname("./aaa"), exist_ok=True)
 generate_and_save_image("A man standing to the right of a woman.", os.path.join("./aaa", "init.png"))
 
 """

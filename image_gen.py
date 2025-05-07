@@ -34,7 +34,7 @@ def make_prompt(state_text):
     )
 
 def generate_and_save_image(prompt, save_path):
-    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+#    os.makedirs(os.path.dirname(save_path), exist_ok=True)
     image = pipeline(
         prompt=prompt,
         #num_inference_steps=28,
@@ -47,9 +47,9 @@ def generate_and_save_image(prompt, save_path):
    # del image
    # torch.cuda.empty_cache()
 
-generate_and_save_image("A red ball is on the left. A green ball is to the right of the red ball. A blue ball is above the green ball.", os.path.join("./aaa", "init.png"))
+#generate_and_save_image("A red ball is on the left. A green ball is to the right of the red ball. A blue ball is above the green ball.", os.path.join("./aaa", "init.png"))
 
-"""
+
 
 with open("/home/sylee/codes/Data_generation_for_robots/task/suggested_task.json", "r") as f:
     tasks = json.load(f)
@@ -74,5 +74,3 @@ for task_key in tqdm(tasks.keys()):
         json.dump({task_key: task}, f, indent=2)
 
   #  torch.cuda.empty_cache()
-
-"""

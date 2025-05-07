@@ -46,6 +46,10 @@ def generate_and_save_image(prompt, save_path):
    # torch.cuda.empty_cache()
 
 
+generate_and_save_image("A man standing to the right of a woman.", os.path.join("./aaa", "init.png"))
+
+"""
+
 with open("/home/sylee/codes/Data_generation_for_robots/task/suggested_task.json", "r") as f:
     tasks = json.load(f)
 
@@ -69,3 +73,5 @@ for task_key in tqdm(tasks.keys()):
         json.dump({task_key: task}, f, indent=2)
 
   #  torch.cuda.empty_cache()
+
+"""

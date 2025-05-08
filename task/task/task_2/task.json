@@ -1,9 +1,0 @@
-{
-  "task_2": {
-    "description": "Move the green tissue to the left of the yellow paper cup",
-    "required_objects": "green tissue, yellow paper cup",
-    "initial_setup": "The green tissue is crumpled and lying flat on the left side of the table, 15 cm from the edge. The yellow paper cup is upright on the right side, 15 cm from the edge. A red plastic cup is tilted and resting on its side near the center of the table.",
-    "final_state": "The green tissue is flat and positioned 10 cm to the left of the yellow paper cup. The red cup is upright and placed on the far left corner of the table.",
-    "difficulty": "medium"
-  }
-}

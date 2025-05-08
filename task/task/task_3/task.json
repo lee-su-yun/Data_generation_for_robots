@@ -1,9 +1,0 @@
-{
-  "task_3": {
-    "description": "Stack the blue plastic cup on top of the green tissue",
-    "required_objects": "blue plastic cup, green tissue",
-    "initial_setup": "The blue plastic cup is upright on the left side of the table, 25 cm from the edge. The green tissue is folded and lying flat on the center of the table, 10 cm from the red plastic cup. A yellow paper cup is upright on the right side, 25 cm from the edge.",
-    "final_state": "The blue plastic cup is upright and placed directly on top of the green tissue, which is now flat and centered on the table. The yellow cup remains untouched.",
-    "difficulty": "medium"
-  }
-}

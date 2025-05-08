@@ -88,20 +88,20 @@ messages = [
             "I have a robot arm with a simple gripper, operating on a flat white table. "
             "The robot has standard capabilities for visual perception, object localization, and basic grasping. "
             #"It can manipulate common household objects such as colored plastic cups, tissues, paper cups, and a permanent marker. "
-            "It can manipulate common household objects such as 6 colored plastic cups (e.g., light blue, white, pink, lavender, mint, yellow), and white paper cups "
+            "It can manipulate common household objects such as 6 colored plastic cups (e.g., light blue, white, pink, lavender, mint, yellow), and three white paper cups which have numbers (1, 2, 3) written on their base, visible when the cups are turned upside down. "
             "The robot can lift and place objects by using its gripper.\n\n"
 
-            "Please suggest 100 **realistic and reasoning-focused tabletop manipulation tasks** suitable for fine-tuning a foundation model for 1-armed household robots. "
+            "Please suggest 20 **realistic and reasoning-focused tabletop manipulation tasks** suitable for fine-tuning a foundation model for 1-armed household robots. "
             "Each task should be physically feasible with current robot hardware and involve **meaningful physical interaction**. "
             "However, more importantly, each task must also require **reasoning, decision-making, or planning** by the robot. "
             "That means the robot must determine the correct course of action based on object properties (like color, position, or type), task constraints, or implicit rules. "
             "For example, tasks like selecting the right item based on a condition (e.g., color, materials), prioritizing actions, or avoiding specific objects. "
             "Tasks that only involve repetition or precision placement without reasoning should be avoided.\n\n"
             
-            "Avoid using exact measurements such as '10 cm from the edge'. Instead, describe object locations using **simple relative spatial terms** like 'on the left side of the table', 'in the center', 'next to the blue cup', or 'facing the front edge'.\n\n"
+            "Avoid using exact measurements such as '10 cm from the edge'. Instead, describe object locations using **simple relative spatial terms** like 'on the left side of the table', 'in the center', 'next to the blue cup'.\n\n"
            # "Avoid tasks that require manipulation of deformable objects, complex tool use, or multi-step mechanical assembly.\n\n"
             "For each task, you must describe the initial and final state of the tabletop **in sufficient detail that a human could visualize or reconstruct the setup**. "
-            "That includes positions, orientations, relative positions (e.g. right, left, above, upright), and any relevant spatial arrangements. Mention specific colors, object states (e.g. upright, tilted), and where they are located on the table.\n\n"
+            "That includes positions, orientations, relative positions (e.g. right, left, above, upright), and any relevant spatial arrangements. Mention specific colors, object states (e.g. upright), and where they are located on the table.\n\n"
             
             "**Important: You must generate all 100 tasks in full. Do not skip, summarize, or say that the remaining tasks follow the same pattern. "
             "Every task must be explicitly written out in the required format.**\n\n"
@@ -142,13 +142,13 @@ thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content
-with open("/home/sylee/codes/Data_generation_for_robots/task/reason3.txt", "w") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/reason20.txt", "w") as f:
     f.write(thinking_content)
 
 # content
 parsed = parse_task_blocks(content)
 
-with open("/home/sylee/codes/Data_generation_for_robots/task/tasks3.json", "w", encoding="utf-8") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/tasks20.json", "w", encoding="utf-8") as f:
     json.dump(parsed, f, indent=2, ensure_ascii=False)
 
 print("Saved to suggested_tasks.json")

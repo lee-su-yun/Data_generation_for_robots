@@ -1,0 +1,96 @@
+<think>
+Okay, let's tackle this query. The user wants 100 realistic tabletop manipulation tasks for a single-armed household robot. Each task needs to involve reasoning, decision-making, or planning, not just repetitive actions. They also specified avoiding exact measurements and using relative spatial terms. Plus, every task must have detailed initial and final states.
+
+First, I need to make sure I understand the requirements. The robot has a gripper, can perceive objects, localize them, and grasp common household items like colored plastic cups and white paper cups. The tasks should be physically feasible with current hardware, so I can't ask for things that require advanced manipulation beyond what's possible.
+
+Each task must require the robot to reason. That means the robot has to make decisions based on object properties, positions, or constraints. For example, choosing the right cup based on color, prioritizing actions, or avoiding certain objects. Tasks that just involve moving objects without any decision-making are out.
+
+I need to avoid using exact measurements. Instead, use terms like 'left side', 'center', 'next to', etc. The initial and final states need to be detailed enough for a human to visualize. That includes colors, positions, orientations, and spatial arrangements. 
+
+Let me start brainstorming some tasks. Maybe start with sorting tasks. For example, sorting cups by color. That requires the robot to recognize colors and decide where to place them. But I need to make sure each task is unique and covers different aspects of reasoning.
+
+Another idea is stacking. The robot might need to stack cups in a certain order, considering their sizes or colors. But wait, the cups are all similar except for color. Maybe the paper cup is different. So stacking could involve choosing the right cup to place on top.
+
+Then there are tasks involving avoiding certain objects. Like, moving a cup without knocking over others. Or, moving an object from one side to another while keeping others in place.
+
+What about tasks that require understanding object properties? For example, identifying which cup is the paper cup and moving it to a specific location. Or, moving a cup to a spot where it's not in the way of another action.
+
+I should also think about tasks that involve sequences. Like, first moving a cup to a certain position, then using it to support another object. Or, arranging cups in a specific pattern that requires planning the order of actions.
+
+I need to ensure that each task is distinct. Maybe categorize them into types: sorting, stacking, avoiding, prioritizing, sequence, conditional movement, etc. That way, I can cover different reasoning aspects.
+
+Also, the difficulty levels: easy, medium, hard. Maybe start with easy tasks that involve simple decisions, then move to more complex ones requiring multiple steps or more intricate reasoning.
+
+Let me check if I have enough variety. For example, some tasks could involve color-based sorting, others based on type (paper vs plastic), others based on position relative to other objects. Also, tasks that require the robot to consider the state of objects, like tilting or upright positions.
+
+I need to make sure that each task's initial and final states are detailed. For example, specifying that the blue cup is on the left side, the paper cup is in the center, etc. Then, after the task, the blue cup is moved to the right side, etc.
+
+Avoiding repetition is key. So each task should have a unique objective. Maybe some tasks involve moving an object to a specific location relative to another, others involve rearranging to free up space, or ensuring certain objects are not in the way.
+
+I should also think about edge cases, like when an object is tilted and needs to be upright before moving. Or, when multiple objects are in the way, requiring the robot to plan the order of movements.
+
+Let me start drafting the first few tasks to ensure they meet the criteria. For example:
+
+Task 1: Sort the cups by color, placing each color in its designated area. The initial setup would have all cups scattered, and the final state would have them grouped by color in specific zones.
+
+But wait, the user mentioned that the robot has standard visual perception, so it can recognize colors. So this task is feasible. The robot needs to decide which cups go where based on color.
+
+Another task could be moving the paper cup to a specific location without disturbing others. That requires the robot to identify the paper cup and plan the movement.
+
+I need to make sure each task has a clear reasoning component. For example, choosing the right cup based on color, avoiding a specific object, or prioritizing actions based on constraints.
+
+I should also consider tasks that involve multiple steps. Like, first moving a cup to a position, then using it as a support for another object. That requires planning the sequence of actions.
+
+Let me think about the difficulty. Easy tasks might involve simple decisions, like moving a specific color cup to a spot. Medium tasks could involve more steps or considering multiple objects. Hard tasks might require complex planning, like rearranging multiple objects with constraints.
+
+I need to generate 100 tasks, so I need to ensure variety and cover different aspects of reasoning. Let me outline categories:
+
+1. Color-based sorting
+2. Type-based sorting (paper vs plastic)
+3. Position-based movement (relative to other objects)
+4. Avoiding specific objects
+5. Stacking or arranging in order
+6. Prioritizing actions (e.g., move X before Y)
+7. Freeing up space
+8. Ensuring certain objects are not in the way
+9. Handling tilted or unstable objects
+10. Conditional movement based on object state
+
+Each category can have several tasks. For example, under color-based sorting, tasks could involve grouping by color, moving specific colors to certain areas, etc.
+
+Now, I need to write each task in the specified format. Let me start with the first few and check if they meet the criteria.
+
+Task 1: Sort all plastic cups by color, placing each color group in a designated area on the table. Required objects: all cups. Initial setup: cups are scattered randomly on the table. Final state: each color group is in a specific area. Difficulty: medium.
+
+Wait, the user mentioned that the robot can manipulate common household objects like the 6 colored cups and white paper cups. So the initial setup should have all these objects. Let me adjust.
+
+Task 1: Sort the 6 colored plastic cups by color, placing each color group in a designated area on the table. Required objects: light blue, white, pink, lavender, mint, yellow cups. Initial setup: cups are scattered randomly on the table. Final state: each color group is in a specific area. Difficulty: medium.
+
+Yes, that works. Now, the robot needs to identify each color and group them. That requires reasoning based on color.
+
+Task 2: Move the paper cup to the center of the table without disturbing any other objects. Required objects: paper cup and all plastic cups. Initial setup: paper cup is on the left side, plastic cups are scattered. Final state: paper cup is in the center. Difficulty: easy.
+
+This task requires the robot to move the paper cup to the center without moving others, which involves planning the path.
+
+I need to ensure that each task has a unique aspect. Let me continue this process, making sure each task is distinct and covers different reasoning elements.
+
+I should also check that the initial and final states are detailed enough. For example, specifying positions like 'left side', 'center', 'next to the blue cup', etc.
+
+Another task could involve stacking. For example, stacking the paper cup on top of a specific colored cup. But since the paper cup is different, maybe the robot needs to decide which cup to stack it on based on some criteria.
+
+Task 3: Stack the paper cup on top of the white plastic cup. Required objects: paper cup and white cup. Initial setup: paper cup is on the left, white cup is on the right. Final state: paper cup is stacked on the white cup. Difficulty: easy.
+
+But this is straightforward. Maybe a medium task could involve stacking based on color. For example, stacking the paper cup on the tallest stack, but since all cups are similar, maybe that's not applicable. Alternatively, stacking in a specific order.
+
+I need to ensure that each task is meaningful and requires reasoning. Let me think of more examples.
+
+Task 4: Move the pink cup to the right side of the table, ensuring it is not in the path of the blue cup. Required objects: pink and blue cups. Initial setup: pink is on the left, blue is in the center. Final state: pink is on the right, blue remains in the center. Difficulty: medium.
+
+This requires the robot to plan the movement of the pink cup so it doesn't block the blue cup's position.
+
+Task 5: Place the yellow cup next to the white cup, but not on the same side as the paper cup. Required objects: yellow, white, and paper cups. Initial setup: yellow is on the left, white is in the center, paper is on the right. Final state: yellow is next to white but not on the same side as the paper. Difficulty: medium.
+
+This involves understanding relative positions and avoiding certain areas.
+
+I need to continue this process, making sure each task has a unique reasoning component and detailed setup. Let me proceed to generate the remaining tasks, ensuring variety and coverage of different reasoning aspects.
+</think>

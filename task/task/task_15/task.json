@@ -1,0 +1,9 @@
+{
+  "task_15": {
+    "description": "Lift the red tissue and place it on top of the green cup",
+    "required_objects": "red tissue, green paper cup",
+    "initial_setup": "The red tissue is crumpled and lying flat on the far left corner. The green paper cup is upright on the center of the table, 10 cm from the edge. A blue plastic cup is tilted and resting on its side near the right side.",
+    "final_state": "The red tissue is flat and placed directly on top of the green cup. The blue cup is upright on the far right corner.",
+    "difficulty": "medium"
+  }
+}

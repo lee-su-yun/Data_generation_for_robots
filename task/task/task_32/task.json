@@ -1,0 +1,9 @@
+{
+  "task_32": {
+    "description": "Place the yellow tissue on top of the blue cup",
+    "required_objects": "yellow tissue, blue plastic cup",
+    "initial_setup": "The yellow tissue is folded and lying flat on the far right corner. The blue cup is upright on the center of the table, 10 cm from the edge. A green paper cup is tilted and resting on its side near the left side.",
+    "final_state": "The yellow tissue is flat and placed directly on top of the blue cup. The green cup is upright on the far left corner.",
+    "difficulty": "medium"
+  }
+}

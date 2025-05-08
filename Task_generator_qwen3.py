@@ -98,6 +98,7 @@ messages = [
             "For example, tasks like selecting the right item based on a condition (e.g., color, materials), prioritizing actions, or avoiding specific objects. "
             "Tasks that only involve repetition or precision placement without reasoning should be avoided.\n\n"
             
+            "Avoid using exact measurements such as '10 cm from the edge'. Instead, describe object locations using **simple relative spatial terms** like 'on the left side of the table', 'in the center', 'next to the blue cup', or 'facing the front edge'.\n\n"
            # "Avoid tasks that require manipulation of deformable objects, complex tool use, or multi-step mechanical assembly.\n\n"
             "For each task, you must describe the initial and final state of the tabletop **in sufficient detail that a human could visualize or reconstruct the setup**. "
             "That includes positions, orientations, relative positions (e.g. right, left, above, upright), and any relevant spatial arrangements. Mention specific colors, object states (e.g. upright, tilted), and where they are located on the table.\n\n"
@@ -141,13 +142,13 @@ thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content
-with open("/home/sylee/codes/Data_generation_for_robots/task/reason2.txt", "w") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/reason3.txt", "w") as f:
     f.write(thinking_content)
 
 # content
 parsed = parse_task_blocks(content)
 
-with open("/home/sylee/codes/Data_generation_for_robots/task/tasks2.json", "w", encoding="utf-8") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/tasks3.json", "w", encoding="utf-8") as f:
     json.dump(parsed, f, indent=2, ensure_ascii=False)
 
 print("Saved to suggested_tasks.json")

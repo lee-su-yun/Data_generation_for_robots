@@ -1,0 +1,702 @@
+{
+  "task_1": {
+    "description": "Place the light blue cup on top of the paper cup",
+    "required_objects": "light blue cup, paper cup",
+    "initial_setup": "The light blue cup is upright on the left side of the table, 10 cm from the edge. The paper cup is upright on the right side of the table, 15 cm from the edge. Both cups are facing the same direction (front side up).",
+    "final_state": "The light blue cup is upright and placed on top of the paper cup, which remains upright on the table.",
+    "difficulty": "medium"
+  },
+  "task_2": {
+    "description": "Move the yellow cup to the center of the table without touching the white cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is tilted forward on the left side of the table, 5 cm from the edge. The white cup is upright on the right side of the table, 10 cm from the edge.",
+    "final_state": "The yellow cup is upright and centered on the table, 5 cm from the edge. The white cup remains untouched on the right side.",
+    "difficulty": "medium"
+  },
+  "task_3": {
+    "description": "Stack the pink and lavender cups in ascending order of size (pink on bottom, lavender on top)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge. Both cups are facing the same direction.",
+    "final_state": "The pink cup is upright on the left side, and the lavender cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_4": {
+    "description": "Remove the white cup from the table without knocking over the mint cup",
+    "required_objects": "white cup, mint cup",
+    "initial_setup": "The white cup is upright on the center of the table, 5 cm from the edge. The mint cup is tilted backward on the left side, 10 cm from the edge.",
+    "final_state": "The white cup is removed from the table. The mint cup remains tilted on the left side.",
+    "difficulty": "medium"
+  },
+  "task_5": {
+    "description": "Place the lavender cup in the position of the yellow cup, then move the yellow cup to the far right",
+    "required_objects": "lavender cup, yellow cup",
+    "initial_setup": "The lavender cup is upright on the left side, 15 cm from the edge. The yellow cup is upright on the far right, 10 cm from the edge.",
+    "final_state": "The lavender cup is upright on the far right, 10 cm from the edge. The yellow cup is upright on the left side, 15 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_6": {
+    "description": "Arrange the cups in a line from left to right based on their color intensity (lightest to darkest)",
+    "required_objects": "light blue, white, pink, lavender, mint, yellow",
+    "initial_setup": "All six cups are upright on the table in random positions: light blue on the far left, white in the center, pink on the right, and the others scattered.",
+    "final_state": "The cups are arranged in a straight line from left to right: white (lightest), light blue, mint, lavender, pink, yellow (darkest).",
+    "difficulty": "hard"
+  },
+  "task_7": {
+    "description": "Lift the paper cup and place it on top of the mint cup, ensuring the paper cup is not tilted",
+    "required_objects": "paper cup, mint cup",
+    "initial_setup": "The paper cup is upright on the far left, 8 cm from the edge. The mint cup is upright on the center, 12 cm from the edge.",
+    "final_state": "The paper cup is upright and placed on top of the mint cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_8": {
+    "description": "Move the pink cup to the right side of the table, avoiding the lavender cup",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the right side, 15 cm from the edge.",
+    "final_state": "The pink cup is upright on the right side, 15 cm from the edge. The lavender cup remains on the right side, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_9": {
+    "description": "Stack the yellow and white cups in a way that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_10": {
+    "description": "Place the lavender cup on the table such that it is 5 cm to the right of the mint cup",
+    "required_objects": "lavender cup, mint cup",
+    "initial_setup": "The mint cup is upright on the center of the table, 10 cm from the edge. The lavender cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned 5 cm to the right of the mint cup, which remains in its original position.",
+    "difficulty": "medium"
+  },
+  "task_11": {
+    "description": "Remove the pink cup from the table if it is tilted, otherwise leave it",
+    "required_objects": "pink cup",
+    "initial_setup": "The pink cup is tilted forward on the left side of the table, 10 cm from the edge.",
+    "final_state": "The pink cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_12": {
+    "description": "Place the light blue cup on the table such that it is directly above the paper cup",
+    "required_objects": "light blue cup, paper cup",
+    "initial_setup": "The paper cup is upright on the center of the table, 10 cm from the edge. The light blue cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright and positioned directly above the paper cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_13": {
+    "description": "Stack the mint and yellow cups so that the yellow cup is on top of the mint cup",
+    "required_objects": "mint cup, yellow cup",
+    "initial_setup": "The mint cup is upright on the left side, 12 cm from the edge. The yellow cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright and placed on top of the mint cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_14": {
+    "description": "Move the white cup to the far left of the table, ensuring it is not touching the light blue cup",
+    "required_objects": "white cup, light blue cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge. The light blue cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The white cup is upright on the far left, 15 cm from the edge. The light blue cup remains on the far left, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_15": {
+    "description": "Place the lavender cup on the table such that it is 10 cm to the left of the pink cup",
+    "required_objects": "lavender cup, pink cup",
+    "initial_setup": "The pink cup is upright on the right side, 10 cm from the edge. The lavender cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned 10 cm to the left of the pink cup, which remains on the right side.",
+    "difficulty": "medium"
+  },
+  "task_16": {
+    "description": "Stack the yellow and white cups in a way that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_17": {
+    "description": "Move the pink cup to the center of the table, then place the lavender cup on top of it",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The pink cup is upright on the center of the table, 5 cm from the edge. The lavender cup is upright and placed on top of the pink cup.",
+    "difficulty": "hard"
+  },
+  "task_18": {
+    "description": "Place the paper cup on the table such that it is 5 cm to the right of the mint cup",
+    "required_objects": "paper cup, mint cup",
+    "initial_setup": "The mint cup is upright on the left side, 12 cm from the edge. The paper cup is upright on the far right, 8 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 5 cm to the right of the mint cup, which remains in its original position.",
+    "difficulty": "medium"
+  },
+  "task_19": {
+    "description": "Stack the light blue and white cups in ascending order of size (light blue on bottom, white on top)",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the right side, 10 cm from the edge. The white cup is upright on the left side, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the right side, and the white cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_20": {
+    "description": "Remove the yellow cup from the table if it is upright, otherwise leave it",
+    "required_objects": "yellow cup",
+    "initial_setup": "The yellow cup is upright on the far left, 12 cm from the edge.",
+    "final_state": "The yellow cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_21": {
+    "description": "Place the lavender cup on the table such that it is directly above the white cup",
+    "required_objects": "lavender cup, white cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge. The lavender cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the white cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_22": {
+    "description": "Stack the pink and mint cups in descending order of size (pink on top, mint on bottom)",
+    "required_objects": "pink cup, mint cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The mint cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The mint cup is upright on the right side, and the pink cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_23": {
+    "description": "Move the white cup to the far right of the table, ensuring it is not touching the paper cup",
+    "required_objects": "white cup, paper cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The white cup is upright on the far right, 10 cm from the edge. The paper cup remains on the far left, 15 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_24": {
+    "description": "Place the light blue cup on the table such that it is 10 cm to the right of the lavender cup",
+    "required_objects": "light blue cup, lavender cup",
+    "initial_setup": "The lavender cup is upright on the left side, 15 cm from the edge. The light blue cup is upright on the far right, 8 cm from the edge.",
+    "final_state": "The light blue cup is upright and positioned 10 cm to the right of the lavender cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_25": {
+    "description": "Stack the yellow and mint cups so that the mint cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, mint cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The mint cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The mint cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_26": {
+    "description": "Move the paper cup to the center of the table, then place the white cup on top of it",
+    "required_objects": "paper cup, white cup",
+    "initial_setup": "The paper cup is upright on the far left, 15 cm from the edge. The white cup is upright on the right side, 10 cm from the edge.",
+    "final_state": "The paper cup is upright on the center of the table, 5 cm from the edge. The white cup is upright and placed on top of it.",
+    "difficulty": "hard"
+  },
+  "task_27": {
+    "description": "Place the pink cup on the table such that it is 5 cm to the left of the lavender cup",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The lavender cup is upright on the right side, 10 cm from the edge. The pink cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The pink cup is upright and positioned 5 cm to the left of the lavender cup, which remains on the right side.",
+    "difficulty": "medium"
+  },
+  "task_28": {
+    "description": "Stack the white and light blue cups in descending order of size (white on bottom, light blue on top)",
+    "required_objects": "white cup, light blue cup",
+    "initial_setup": "The white cup is upright on the left side, 12 cm from the edge. The light blue cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the left side, and the light blue cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_29": {
+    "description": "Remove the mint cup from the table if it is tilted, otherwise leave it",
+    "required_objects": "mint cup",
+    "initial_setup": "The mint cup is tilted backward on the center of the table, 10 cm from the edge.",
+    "final_state": "The mint cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_30": {
+    "description": "Place the lavender cup on the table such that it is directly above the pink cup",
+    "required_objects": "lavender cup, pink cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the pink cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_31": {
+    "description": "Stack the yellow and white cups in a way that the yellow cup is not directly on top of the white cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_32": {
+    "description": "Move the light blue cup to the far left of the table, ensuring it is not touching the white cup",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the center of the table, 10 cm from the edge. The white cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the far left, 15 cm from the edge. The white cup remains on the far left, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_33": {
+    "description": "Place the paper cup on the table such that it is 10 cm to the right of the light blue cup",
+    "required_objects": "paper cup, light blue cup",
+    "initial_setup": "The light blue cup is upright on the left side, 15 cm from the edge. The paper cup is upright on the far right, 8 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 10 cm to the right of the light blue cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_34": {
+    "description": "Stack the pink and lavender cups in ascending order of size (pink on bottom, lavender on top)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The pink cup is upright on the left side, and the lavender cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_35": {
+    "description": "Remove the yellow cup from the table if it is upright, otherwise leave it",
+    "required_objects": "yellow cup",
+    "initial_setup": "The yellow cup is upright on the far right, 12 cm from the edge.",
+    "final_state": "The yellow cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_36": {
+    "description": "Place the lavender cup on the table such that it is directly above the mint cup",
+    "required_objects": "lavender cup, mint cup",
+    "initial_setup": "The mint cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the mint cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_37": {
+    "description": "Stack the white and yellow cups in descending order of size (white on bottom, yellow on top)",
+    "required_objects": "white cup, yellow cup",
+    "initial_setup": "The white cup is upright on the left side, 12 cm from the edge. The yellow cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the left side, and the yellow cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_38": {
+    "description": "Move the pink cup to the center of the table, then place the light blue cup on top of it",
+    "required_objects": "pink cup, light blue cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The light blue cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The pink cup is upright on the center of the table, 5 cm from the edge. The light blue cup is upright and placed on top of it.",
+    "difficulty": "hard"
+  },
+  "task_39": {
+    "description": "Place the paper cup on the table such that it is 5 cm to the right of the lavender cup",
+    "required_objects": "paper cup, lavender cup",
+    "initial_setup": "The lavender cup is upright on the right side, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 5 cm to the right of the lavender cup, which remains on the right side.",
+    "difficulty": "medium"
+  },
+  "task_40": {
+    "description": "Stack the yellow and white cups so that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_41": {
+    "description": "Move the light blue cup to the far left of the table, ensuring it is not touching the pink cup",
+    "required_objects": "light blue cup, pink cup",
+    "initial_setup": "The light blue cup is upright on the center of the table, 10 cm from the edge. The pink cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the far left, 15 cm from the edge. The pink cup remains on the far left, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_42": {
+    "description": "Place the mint cup on the table such that it is 10 cm to the left of the white cup",
+    "required_objects": "mint cup, white cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge. The mint cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The mint cup is upright and positioned 10 cm to the left of the white cup, which remains in its original position.",
+    "difficulty": "medium"
+  },
+  "task_43": {
+    "description": "Stack the pink and lavender cups in descending order of size (pink on top, lavender on bottom)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The lavender cup is upright on the right side, and the pink cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_44": {
+    "description": "Remove the white cup from the table if it is tilted, otherwise leave it",
+    "required_objects": "white cup",
+    "initial_setup": "The white cup is tilted forward on the center of the table, 10 cm from the edge.",
+    "final_state": "The white cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_45": {
+    "description": "Place the lavender cup on the table such that it is directly above the yellow cup",
+    "required_objects": "lavender cup, yellow cup",
+    "initial_setup": "The yellow cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the yellow cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_46": {
+    "description": "Stack the yellow and white cups in a way that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_47": {
+    "description": "Move the light blue cup to the far right of the table, ensuring it is not touching the paper cup",
+    "required_objects": "light blue cup, paper cup",
+    "initial_setup": "The light blue cup is upright on the center of the table, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the far right, 10 cm from the edge. The paper cup remains on the far left, 15 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_48": {
+    "description": "Place the paper cup on the table such that it is 5 cm to the right of the lavender cup",
+    "required_objects": "paper cup, lavender cup",
+    "initial_setup": "The lavender cup is upright on the right side, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 5 cm to the right of the lavender cup, which remains on the right side.",
+    "difficulty": "medium"
+  },
+  "task_49": {
+    "description": "Stack the pink and white cups in ascending order of size (pink on bottom, white on top)",
+    "required_objects": "pink cup, white cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The pink cup is upright on the left side, and the white cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_50": {
+    "description": "Remove the mint cup from the table if it is upright, otherwise leave it",
+    "required_objects": "mint cup",
+    "initial_setup": "The mint cup is upright on the center of the table, 10 cm from the edge.",
+    "final_state": "The mint cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_51": {
+    "description": "Place the lavender cup on the table such that it is directly above the pink cup",
+    "required_objects": "lavender cup, pink cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the pink cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_52": {
+    "description": "Stack the yellow and white cups so that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_53": {
+    "description": "Move the light blue cup to the center of the table, then place the white cup on top of it",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the far left, 15 cm from the edge. The white cup is upright on the far right, 10 cm from the edge.",
+    "final_state": "The light blue cup is upright on the center of the table, 5 cm from the edge. The white cup is upright and placed on top of it.",
+    "difficulty": "hard"
+  },
+  "task_54": {
+    "description": "Place the paper cup on the table such that it is 10 cm to the right of the light blue cup",
+    "required_objects": "paper cup, light blue cup",
+    "initial_setup": "The light blue cup is upright on the left side, 15 cm from the edge. The paper cup is upright on the far right, 8 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 10 cm to the right of the light blue cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_55": {
+    "description": "Stack the pink and lavender cups in descending order of size (pink on top, lavender on bottom)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The lavender cup is upright on the right side, and the pink cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_56": {
+    "description": "Remove the yellow cup from the table if it is tilted, otherwise leave it",
+    "required_objects": "yellow cup",
+    "initial_setup": "The yellow cup is tilted backward on the center of the table, 10 cm from the edge.",
+    "final_state": "The yellow cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_57": {
+    "description": "Place the lavender cup on the table such that it is directly above the white cup",
+    "required_objects": "lavender cup, white cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge. The lavender cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the white cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_58": {
+    "description": "Stack the white and yellow cups in descending order of size (white on bottom, yellow on top)",
+    "required_objects": "white cup, yellow cup",
+    "initial_setup": "The white cup is upright on the left side, 12 cm from the edge. The yellow cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the left side, and the yellow cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_59": {
+    "description": "Move the pink cup to the center of the table, then place the light blue cup on top of it",
+    "required_objects": "pink cup, light blue cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The light blue cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The pink cup is upright on the center of the table, 5 cm from the edge. The light blue cup is upright and placed on top of it.",
+    "difficulty": "hard"
+  },
+  "task_60": {
+    "description": "Place the paper cup on the table such that it is 5 cm to the right of the mint cup",
+    "required_objects": "paper cup, mint cup",
+    "initial_setup": "The mint cup is upright on the left side, 10 cm from the edge. The paper cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 5 cm to the right of the mint cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_61": {
+    "description": "Stack the yellow and white cups so that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_62": {
+    "description": "Move the light blue cup to the far left of the table, ensuring it is not touching the white cup",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the center of the table, 10 cm from the edge. The white cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the far left, 15 cm from the edge. The white cup remains on the far left, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_63": {
+    "description": "Place the mint cup on the table such that it is 10 cm to the left of the paper cup",
+    "required_objects": "mint cup, paper cup",
+    "initial_setup": "The paper cup is upright on the far right, 8 cm from the edge. The mint cup is upright on the center of the table, 10 cm from the edge.",
+    "final_state": "The mint cup is upright and positioned 10 cm to the left of the paper cup, which remains on the far right.",
+    "difficulty": "medium"
+  },
+  "task_64": {
+    "description": "Stack the pink and lavender cups in ascending order of size (pink on bottom, lavender on top)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The pink cup is upright on the left side, and the lavender cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_65": {
+    "description": "Remove the white cup from the table if it is upright, otherwise leave it",
+    "required_objects": "white cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge.",
+    "final_state": "The white cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_66": {
+    "description": "Place the lavender cup on the table such that it is directly above the mint cup",
+    "required_objects": "lavender cup, mint cup",
+    "initial_setup": "The mint cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the mint cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_67": {
+    "description": "Stack the yellow and white cups in a way that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_68": {
+    "description": "Move the light blue cup to the far right of the table, ensuring it is not touching the paper cup",
+    "required_objects": "light blue cup, paper cup",
+    "initial_setup": "The light blue cup is upright on the center of the table, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the far right, 10 cm from the edge. The paper cup remains on the far left, 15 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_69": {
+    "description": "Place the paper cup on the table such that it is 5 cm to the right of the lavender cup",
+    "required_objects": "paper cup, lavender cup",
+    "initial_setup": "The lavender cup is upright on the right side, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 5 cm to the right of the lavender cup, which remains on the right side.",
+    "difficulty": "medium"
+  },
+  "task_70": {
+    "description": "Stack the pink and white cups in descending order of size (pink on top, white on bottom)",
+    "required_objects": "pink cup, white cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the right side, and the pink cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_71": {
+    "description": "Remove the yellow cup from the table if it is tilted, otherwise leave it",
+    "required_objects": "yellow cup",
+    "initial_setup": "The yellow cup is tilted forward on the center of the table, 10 cm from the edge.",
+    "final_state": "The yellow cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_72": {
+    "description": "Place the lavender cup on the table such that it is directly above the pink cup",
+    "required_objects": "lavender cup, pink cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the pink cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_73": {
+    "description": "Stack the white and yellow cups so that the white cup is not directly on top of the yellow cup",
+    "required_objects": "white cup, yellow cup",
+    "initial_setup": "The white cup is upright on the left side, 12 cm from the edge. The yellow cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the left side. The yellow cup is placed on the right side, 10 cm from the edge, and not directly stacked on the white cup.",
+    "difficulty": "medium"
+  },
+  "task_74": {
+    "description": "Move the light blue cup to the center of the table, then place the white cup on top of it",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the far left, 15 cm from the edge. The white cup is upright on the far right, 10 cm from the edge.",
+    "final_state": "The light blue cup is upright on the center of the table, 5 cm from the edge. The white cup is upright and placed on top of it.",
+    "difficulty": "hard"
+  },
+  "task_75": {
+    "description": "Place the paper cup on the table such that it is 10 cm to the right of the light blue cup",
+    "required_objects": "paper cup, light blue cup",
+    "initial_setup": "The light blue cup is upright on the left side, 15 cm from the edge. The paper cup is upright on the far right, 8 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 10 cm to the right of the light blue cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_76": {
+    "description": "Stack the pink and lavender cups in descending order of size (pink on top, lavender on bottom)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The lavender cup is upright on the right side, and the pink cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_77": {
+    "description": "Remove the white cup from the table if it is upright, otherwise leave it",
+    "required_objects": "white cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge.",
+    "final_state": "The white cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_78": {
+    "description": "Place the lavender cup on the table such that it is directly above the yellow cup",
+    "required_objects": "lavender cup, yellow cup",
+    "initial_setup": "The yellow cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the yellow cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_79": {
+    "description": "Stack the yellow and white cups in a way that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_80": {
+    "description": "Move the light blue cup to the far right of the table, ensuring it is not touching the paper cup",
+    "required_objects": "light blue cup, paper cup",
+    "initial_setup": "The light blue cup is upright on the center of the table, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the far right, 10 cm from the edge. The paper cup remains on the far left, 15 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_81": {
+    "description": "Place the paper cup on the table such that it is 5 cm to the right of the mint cup",
+    "required_objects": "paper cup, mint cup",
+    "initial_setup": "The mint cup is upright on the left side, 10 cm from the edge. The paper cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 5 cm to the right of the mint cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_82": {
+    "description": "Stack the pink and lavender cups in ascending order of size (pink on bottom, lavender on top)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The pink cup is upright on the left side, and the lavender cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_83": {
+    "description": "Remove the yellow cup from the table if it is tilted, otherwise leave it",
+    "required_objects": "yellow cup",
+    "initial_setup": "The yellow cup is tilted backward on the center of the table, 10 cm from the edge.",
+    "final_state": "The yellow cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_84": {
+    "description": "Place the lavender cup on the table such that it is directly above the white cup",
+    "required_objects": "lavender cup, white cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge. The lavender cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the white cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_85": {
+    "description": "Stack the white and yellow cups so that the white cup is not directly on top of the yellow cup",
+    "required_objects": "white cup, yellow cup",
+    "initial_setup": "The white cup is upright on the left side, 12 cm from the edge. The yellow cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the left side. The yellow cup is placed on the right side, 10 cm from the edge, and not directly stacked on the white cup.",
+    "difficulty": "medium"
+  },
+  "task_86": {
+    "description": "Move the light blue cup to the center of the table, then place the white cup on top of it",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the far left, 15 cm from the edge. The white cup is upright on the far right, 10 cm from the edge.",
+    "final_state": "The light blue cup is upright on the center of the table, 5 cm from the edge. The white cup is upright and placed on top of it.",
+    "difficulty": "hard"
+  },
+  "task_87": {
+    "description": "Place the paper cup on the table such that it is 10 cm to the right of the light blue cup",
+    "required_objects": "paper cup, light blue cup",
+    "initial_setup": "The light blue cup is upright on the left side, 15 cm from the edge. The paper cup is upright on the far right, 8 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 10 cm to the right of the light blue cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_88": {
+    "description": "Stack the pink and lavender cups in descending order of size (pink on top, lavender on bottom)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The lavender cup is upright on the right side, and the pink cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_89": {
+    "description": "Remove the white cup from the table if it is upright, otherwise leave it",
+    "required_objects": "white cup",
+    "initial_setup": "The white cup is upright on the center of the table, 10 cm from the edge.",
+    "final_state": "The white cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_90": {
+    "description": "Place the lavender cup on the table such that it is directly above the mint cup",
+    "required_objects": "lavender cup, mint cup",
+    "initial_setup": "The mint cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the mint cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_91": {
+    "description": "Stack the yellow and white cups in a way that the white cup is not directly on top of the yellow cup",
+    "required_objects": "yellow cup, white cup",
+    "initial_setup": "The yellow cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The yellow cup is upright on the left side. The white cup is placed on the right side, 10 cm from the edge, and not directly stacked on the yellow cup.",
+    "difficulty": "medium"
+  },
+  "task_92": {
+    "description": "Move the light blue cup to the far left of the table, ensuring it is not touching the white cup",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the center of the table, 10 cm from the edge. The white cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The light blue cup is upright on the far left, 15 cm from the edge. The white cup remains on the far left, 10 cm from the edge.",
+    "difficulty": "medium"
+  },
+  "task_93": {
+    "description": "Place the paper cup on the table such that it is 5 cm to the right of the lavender cup",
+    "required_objects": "paper cup, lavender cup",
+    "initial_setup": "The lavender cup is upright on the right side, 10 cm from the edge. The paper cup is upright on the far left, 15 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 5 cm to the right of the lavender cup, which remains on the right side.",
+    "difficulty": "medium"
+  },
+  "task_94": {
+    "description": "Stack the pink and white cups in descending order of size (pink on top, white on bottom)",
+    "required_objects": "pink cup, white cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The white cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the right side, and the pink cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  },
+  "task_95": {
+    "description": "Remove the yellow cup from the table if it is tilted, otherwise leave it",
+    "required_objects": "yellow cup",
+    "initial_setup": "The yellow cup is tilted forward on the center of the table, 10 cm from the edge.",
+    "final_state": "The yellow cup is removed from the table.",
+    "difficulty": "easy"
+  },
+  "task_96": {
+    "description": "Place the lavender cup on the table such that it is directly above the pink cup",
+    "required_objects": "lavender cup, pink cup",
+    "initial_setup": "The pink cup is upright on the left side, 10 cm from the edge. The lavender cup is upright on the far right, 15 cm from the edge.",
+    "final_state": "The lavender cup is upright and positioned directly above the pink cup, which remains upright.",
+    "difficulty": "medium"
+  },
+  "task_97": {
+    "description": "Stack the white and yellow cups so that the white cup is not directly on top of the yellow cup",
+    "required_objects": "white cup, yellow cup",
+    "initial_setup": "The white cup is upright on the left side, 12 cm from the edge. The yellow cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The white cup is upright on the left side. The yellow cup is placed on the right side, 10 cm from the edge, and not directly stacked on the white cup.",
+    "difficulty": "medium"
+  },
+  "task_98": {
+    "description": "Move the light blue cup to the center of the table, then place the white cup on top of it",
+    "required_objects": "light blue cup, white cup",
+    "initial_setup": "The light blue cup is upright on the far left, 15 cm from the edge. The white cup is upright on the far right, 10 cm from the edge.",
+    "final_state": "The light blue cup is upright on the center of the table, 5 cm from the edge. The white cup is upright and placed on top of it.",
+    "difficulty": "hard"
+  },
+  "task_99": {
+    "description": "Place the paper cup on the table such that it is 10 cm to the right of the light blue cup",
+    "required_objects": "paper cup, light blue cup",
+    "initial_setup": "The light blue cup is upright on the left side, 15 cm from the edge. The paper cup is upright on the far right, 8 cm from the edge.",
+    "final_state": "The paper cup is upright and positioned 10 cm to the right of the light blue cup, which remains on the left side.",
+    "difficulty": "medium"
+  },
+  "task_100": {
+    "description": "Stack the pink and lavender cups in ascending order of size (pink on bottom, lavender on top)",
+    "required_objects": "pink cup, lavender cup",
+    "initial_setup": "The pink cup is upright on the left side, 12 cm from the edge. The lavender cup is upright on the right side, 8 cm from the edge.",
+    "final_state": "The pink cup is upright on the left side, and the lavender cup is placed on top of it, centered above.",
+    "difficulty": "hard"
+  }
+}

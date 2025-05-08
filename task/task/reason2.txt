@@ -1,0 +1,51 @@
+<think>
+Okay, I need to come up with 100 realistic tabletop manipulation tasks for a 1-armed household robot. Each task must involve meaningful physical interaction and require reasoning, decision-making, or planning. The robot has a gripper, can see, localize objects, and manipulate common household items like colored plastic cups and paper cups. Let me start by brainstorming different types of tasks that require the robot to think.
+
+First, tasks involving sorting objects based on color, size, or type. For example, sorting cups by color. But I need to make sure each task isn't just a simple move. Maybe the robot has to decide which cup to pick first based on some condition. Like, if there's a red cup, but the robot only has a gripper that can handle certain sizes, it needs to choose the right one.
+
+Another idea is tasks that involve stacking. But stacking requires planning the order, checking stability, and maybe considering the weight or shape of objects. For example, stacking cups in a specific order, ensuring they don't tip over. The robot would need to assess the positions and decide the correct sequence.
+
+Then there are tasks that involve avoiding certain objects. For instance, moving a cup without knocking over others. The robot must plan its path carefully, considering the positions of other objects on the table.
+
+Also, tasks that require understanding object properties. Like, if the robot needs to pick up a paper cup, it might have to distinguish it from plastic ones, which could be a different texture or weight. Or, if the task is to pick up only cups that are upright, the robot has to check the orientation.
+
+I should also think about tasks that involve multiple steps. For example, moving an object to a specific location, then another, requiring the robot to sequence actions. Or, tasks where the robot has to use the gripper in a particular way, like opening a container, but since the gripper is simple, maybe it's more about positioning.
+
+Let me outline some categories:
+
+1. Sorting by color, shape, or type.
+2. Stacking or arranging in order.
+3. Avoiding obstacles or specific objects.
+4. Selecting the correct object based on conditions.
+5. Reordering objects based on spatial relations.
+6. Using object properties (like weight, texture) to decide actions.
+7. Path planning to move objects without collision.
+8. Sequential tasks requiring multiple steps.
+9. Tasks involving object orientation (upright, tilted).
+10. Tasks requiring understanding of object function (e.g., using a cup as a container).
+
+Now, I need to ensure each task is unique and covers different aspects. Let me start drafting some tasks, making sure they require reasoning. For example, task 1 could be sorting cups by color, but the robot has to choose the correct color based on a given instruction. Let me check if the initial setup is detailed enough, including positions, colors, etc.
+
+Wait, the user wants each task to have initial and final states with specific details. So for each task, I need to describe where the objects are, their colors, positions, orientations, and the final arrangement.
+
+Let me start with task_1. Suppose the robot needs to pick up the white cup and place it on the left side. But maybe the white cup is among other cups. The initial setup would have the white cup in a specific position, others in different places. The final state would have the white cup moved. But this is simple. To make it require reasoning, maybe the robot has to choose between multiple white cups, or there's a constraint like not knocking over others.
+
+Alternatively, task_1 could be: "Pick up the pink cup and place it on top of the paper cup." Here, the robot must identify the pink cup, then the paper cup, and ensure the placement is stable. This requires understanding the target positions and possible interactions.
+
+Another task could involve avoiding a specific object. For example, moving a cup without touching a certain object. The robot must plan a path around it.
+
+I need to make sure each task is distinct and covers different reasoning aspects. Let me try to generate 100, but I need to be careful not to repeat. Let me think of different scenarios:
+
+1. Sorting by color, with multiple cups of the same color.
+2. Stacking cups in a specific order (e.g., light blue on top of white).
+3. Reordering cups based on size or position.
+4. Selecting the correct cup based on a condition (e.g., not the yellow one).
+5. Moving an object to a location while avoiding others.
+6. Ensuring stability when stacking.
+7. Using object properties (e.g., paper vs. plastic) to decide action.
+8. Sequential tasks, like moving one object to enable another action.
+9. Tasks involving orientation (e.g., tilting a cup to pour, but maybe that's too complex).
+10. Tasks where the robot has to infer the correct sequence based on constraints.
+
+I need to ensure that each task has a clear initial and final state, with enough detail. Let me start writing them out, making sure each has unique reasoning elements. Let's go step by step, ensuring variety and covering different aspects of reasoning and physical interaction.
+</think>

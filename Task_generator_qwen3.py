@@ -39,7 +39,7 @@ tokenizer = AutoTokenizer.from_pretrained(
 
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
-    device_map="cuda:1",
+    device_map="cuda:2",
     torch_dtype="auto",
     local_files_only=True
 )

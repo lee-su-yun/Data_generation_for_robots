@@ -1,9 +1,0 @@
-{
-  "task_5": {
-    "description": "Use the permanent marker to label the blue cup with a red dot",
-    "required_objects": "blue plastic cup, permanent marker",
-    "initial_setup": "The blue plastic cup is upright on the center of the table. The permanent marker is lying upright on the far left corner, 30 cm from the edge. A red tissue is folded and placed near the cup.",
-    "final_state": "The blue cup has a single red dot drawn on its side using the permanent marker. The marker is placed back on the far left corner.",
-    "difficulty": "medium"
-  }
-}

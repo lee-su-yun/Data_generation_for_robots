@@ -1,9 +1,0 @@
-{
-  "task_19": {
-    "description": "Move the blue paper cup to the center of the table, avoiding the red tissue",
-    "required_objects": "blue paper cup, red tissue",
-    "initial_setup": "The blue cup is upright on the far right corner, 25 cm from the edge. The red tissue is crumpled and lying flat on the center of the table. A green plastic cup is upright on the left side, 20 cm from the edge.",
-    "final_state": "The blue cup is placed directly on the center of the table, 10 cm from the edge. The red tissue is moved to the far left corner.",
-    "difficulty": "medium"
-  }
-}

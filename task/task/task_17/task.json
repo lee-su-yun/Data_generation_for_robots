@@ -1,9 +1,0 @@
-{
-  "task_17": {
-    "description": "Place the yellow tissue between the red cup and the blue cup",
-    "required_objects": "yellow tissue, red plastic cup, blue plastic cup",
-    "initial_setup": "The red cup is upright on the left side, 20 cm from the edge. The blue cup is upright on the right side, 20 cm from the edge. A green paper cup is tilted and resting on its side near the center.",
-    "final_state": "The yellow tissue is flat and positioned between the red and blue cups, 10 cm from each. The green cup is upright on the far left corner.",
-    "difficulty": "medium"
-  }
-}

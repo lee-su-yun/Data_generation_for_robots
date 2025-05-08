@@ -1,9 +1,0 @@
-{
-  "task_99": {
-    "description": "Stack the green tissue under the red cup",
-    "required_objects": "green tissue, red plastic cup",
-    "initial_setup": "The green tissue is crumpled and lying flat on the left side of the table. The red cup is upright on the right side, 20 cm from the edge. A blue paper cup is tilted and resting on its side near the center.",
-    "final_state": "The green tissue is flat and positioned directly under the red cup, which is now tilted slightly to accommodate it. The blue cup is upright on the far left corner.",
-    "difficulty": "medium"
-  }
-}

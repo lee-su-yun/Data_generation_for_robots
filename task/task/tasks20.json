@@ -1,0 +1,142 @@
+{
+  "task_1": {
+    "description": "Place the pink cup on top of the white paper cup with number 2",
+    "required_objects": "pink plastic cup, white paper cup (number 2)",
+    "initial_setup": "The pink plastic cup is on the left side of the table, upright. The white paper cup with number 2 is in the center, upright. Other cups (light blue, white, lavender, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The pink cup is upright on top of the white paper cup (number 2), which is now in the center with the pink cup stacked above it. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_2": {
+    "description": "Move the yellow cup to the right side of the table, ensuring it’s not directly in front of the white paper cup with number 3",
+    "required_objects": "yellow plastic cup, white paper cup (number 3)",
+    "initial_setup": "The yellow cup is in the center, upright. The white paper cup with number 3 is on the right side, upright. Other cups (light blue, white, pink, lavender, mint) are scattered around the table, all upright.",
+    "final_state": "The yellow cup is on the right side, not directly in front of the white paper cup (number 3). The white cup remains in its original position. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_3": {
+    "description": "Place the lavender cup next to the blue cup, but not overlapping with any other cup",
+    "required_objects": "lavender cup, blue cup",
+    "initial_setup": "The blue cup is on the left side of the table, upright. The lavender cup is on the right side, upright. Other cups (light blue, white, pink, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The lavender cup is next to the blue cup on the left side, not overlapping with any other cup. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_4": {
+    "description": "Stack the white plastic cup on top of the white paper cup with number 1",
+    "required_objects": "white plastic cup, white paper cup (number 1)",
+    "initial_setup": "The white plastic cup is on the right side of the table, upright. The white paper cup with number 1 is in the center, upright. Other cups (light blue, pink, lavender, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The white plastic cup is upright on top of the white paper cup (number 1), which is now in the center with the white cup stacked above it. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_5": {
+    "description": "Retrieve the cup that is not white and is next to the blue cup",
+    "required_objects": "blue cup, non-white cup",
+    "initial_setup": "The blue cup is on the left side of the table, upright. The pink plastic cup is next to the blue cup on the left side, upright. Other cups (light blue, white, lavender, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The pink cup is lifted and placed in the center of the table. The blue cup remains in its original position. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_6": {
+    "description": "Arrange the cups in a line from left to right based on their color alphabetically",
+    "required_objects": "all 6 plastic cups (light blue, white, pink, lavender, mint, yellow)",
+    "initial_setup": "The light blue cup is on the left side, the white cup is in the center, the pink cup is on the right side, and the lavender, mint, and yellow cups are scattered around the table, all upright.",
+    "final_state": "The cups are arranged in a line from left to right: light blue, lavender, mint, pink, white, yellow. All cups are upright and aligned in a straight line.",
+    "difficulty": "hard"
+  },
+  "task_7": {
+    "description": "Move the paper cup with number 2 to the position of the white plastic cup, but upside down",
+    "required_objects": "white plastic cup, white paper cup (number 2)",
+    "initial_setup": "The white plastic cup is on the right side of the table, upright. The white paper cup with number 2 is in the center, upright. Other cups (light blue, pink, lavender, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The white paper cup (number 2) is upside down in the position where the white plastic cup was. The white plastic cup is now on the left side of the table. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_8": {
+    "description": "Place the mint cup on top of the lavender cup, ensuring the lavender cup is not in the center",
+    "required_objects": "mint cup, lavender cup",
+    "initial_setup": "The mint cup is on the right side of the table, upright. The lavender cup is in the center, upright. Other cups (light blue, white, pink, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The mint cup is upright on top of the lavender cup, which is now on the left side of the table. The lavender cup is not in the center. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_9": {
+    "description": "Retrieve the cup that is both not white and not in the center",
+    "required_objects": "non-white, non-center cup",
+    "initial_setup": "The light blue cup is on the left side, the white cup is in the center, the pink cup is on the right side, and the lavender, mint, and yellow cups are scattered around the table, all upright.",
+    "final_state": "The lavender cup is lifted and placed in the center of the table. The light blue and pink cups remain in their original positions. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_10": {
+    "description": "Stack the yellow cup on top of the paper cup with number 3, then move the stack to the left side",
+    "required_objects": "yellow cup, white paper cup (number 3)",
+    "initial_setup": "The yellow cup is on the right side of the table, upright. The white paper cup with number 3 is in the center, upright. Other cups (light blue, white, pink, lavender, mint) are scattered around the table, all upright.",
+    "final_state": "The yellow cup is upright on top of the white paper cup (number 3), forming a stack. The stack is moved to the left side of the table. All other cups remain in their original positions.",
+    "difficulty": "hard"
+  },
+  "task_11": {
+    "description": "Place the white paper cup with number 1 upside down next to the blue cup",
+    "required_objects": "white paper cup (number 1), blue cup",
+    "initial_setup": "The white paper cup with number 1 is in the center, upright. The blue cup is on the left side, upright. Other cups (light blue, white, pink, lavender, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The white paper cup (number 1) is upside down next to the blue cup on the left side. The blue cup remains upright. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_12": {
+    "description": "Retrieve the cup that is not white and is the farthest from the white paper cup with number 3",
+    "required_objects": "non-white cup, white paper cup (number 3)",
+    "initial_setup": "The white paper cup with number 3 is on the right side of the table, upright. The light blue cup is on the left side, the pink cup is on the right side, and the lavender, mint, and yellow cups are scattered around the table, all upright.",
+    "final_state": "The yellow cup is lifted and placed in the center of the table. The white paper cup (number 3) remains in its original position. All other cups remain in their original positions.",
+    "difficulty": "hard"
+  },
+  "task_13": {
+    "description": "Arrange the cups in a circle, placing the white cups at the top and the colored cups at the bottom",
+    "required_objects": "all 6 plastic cups (light blue, white, pink, lavender, mint, yellow)",
+    "initial_setup": "The light blue cup is on the left side, the white cup is in the center, the pink cup is on the right side, and the lavender, mint, and yellow cups are scattered around the table, all upright.",
+    "final_state": "The cups are arranged in a circle with the white cups at the top (center) and the colored cups (light blue, pink, lavender, mint, yellow) arranged clockwise around the perimeter. All cups are upright.",
+    "difficulty": "hard"
+  },
+  "task_14": {
+    "description": "Move the paper cup with number 2 to the position of the white plastic cup, but keep it upright",
+    "required_objects": "white plastic cup, white paper cup (number 2)",
+    "initial_setup": "The white plastic cup is on the right side of the table, upright. The white paper cup with number 2 is in the center, upright. Other cups (light blue, pink, lavender, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The white paper cup (number 2) is upright in the position where the white plastic cup was. The white plastic cup is now on the left side of the table. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_15": {
+    "description": "Place the mint cup on top of the pink cup, but ensure the pink cup is not in the center",
+    "required_objects": "mint cup, pink cup",
+    "initial_setup": "The mint cup is on the right side of the table, upright. The pink cup is in the center, upright. Other cups (light blue, white, lavender, yellow) are scattered around the table, all upright.",
+    "final_state": "The mint cup is upright on top of the pink cup, which is now on the left side of the table. The pink cup is not in the center. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_16": {
+    "description": "Retrieve the cup that is both not white and not adjacent to the blue cup",
+    "required_objects": "non-white, non-adjacent cup",
+    "initial_setup": "The blue cup is on the left side of the table, upright. The light blue cup is next to the blue cup on the left side, the pink cup is on the right side, and the lavender, mint, and yellow cups are scattered around the table, all upright.",
+    "final_state": "The yellow cup is lifted and placed in the center of the table. The blue and light blue cups remain in their original positions. All other cups remain in their original positions.",
+    "difficulty": "hard"
+  },
+  "task_17": {
+    "description": "Stack the lavender cup on top of the white paper cup with number 1, then move the stack to the right side",
+    "required_objects": "lavender cup, white paper cup (number 1)",
+    "initial_setup": "The lavender cup is on the left side of the table, upright. The white paper cup with number 1 is in the center, upright. Other cups (light blue, white, pink, mint, yellow) are scattered around the table, all upright.",
+    "final_state": "The lavender cup is upright on top of the white paper cup (number 1), forming a stack. The stack is moved to the right side of the table. All other cups remain in their original positions.",
+    "difficulty": "hard"
+  },
+  "task_18": {
+    "description": "Place the white paper cup with number 3 upside down next to the mint cup",
+    "required_objects": "white paper cup (number 3), mint cup",
+    "initial_setup": "The white paper cup with number 3 is in the center, upright. The mint cup is on the right side, upright. Other cups (light blue, white, pink, lavender, yellow) are scattered around the table, all upright.",
+    "final_state": "The white paper cup (number 3) is upside down next to the mint cup on the right side. The mint cup remains upright. All other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_19": {
+    "description": "Retrieve the cup that is not white and is the closest to the white paper cup with number 2",
+    "required_objects": "non-white, closest-to-number-2 cup",
+    "initial_setup": "The white paper cup with number 2 is in the center, upright. The light blue cup is on the left side, the pink cup is on the right side, and the lavender, mint, and yellow cups are scattered around the table, all upright.",
+    "final_state": "The lavender cup is lifted and placed in the center of the table. The white paper cup (number 2) remains in its original position. All other cups remain in their original positions.",
+    "difficulty": "hard"
+  },
+  "task_20": {
+    "description": "Arrange the cups in a line from right to left based on their color alphabetically",
+    "required_objects": "all 6 plastic cups (light blue, white, pink, lavender, mint, yellow)",
+    "initial_setup": "The light blue cup is on the left side, the white cup is in the center, the pink cup is on the right side, and the lavender, mint, and yellow cups are scattered around the table, all upright.",
+    "final_state": "The cups are arranged in a line from right to left: yellow, mint, lavender, pink, white, light blue. All cups are upright and aligned in a straight line.",
+    "difficulty": "hard"
+  }
+}

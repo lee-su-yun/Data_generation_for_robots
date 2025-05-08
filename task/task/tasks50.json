@@ -1,0 +1,352 @@
+{
+  "task_1": {
+    "description": "Move the pink plastic cup to the center of the table without knocking over any other cups.",
+    "required_objects": "pink plastic cup, white plastic cups, white paper cups",
+    "initial_setup": "The pink plastic cup is on the left side of the table, upright. White plastic cups are scattered on the right side, some upright, some upside down. White paper cups 1, 2, and 3 are stacked in the center, with cup 2 on top.",
+    "final_state": "The pink plastic cup is centered on the table, upright. White plastic cups remain on the right side, and the white paper cups are still stacked in the center with cup 2 on top.",
+    "difficulty": "medium"
+  },
+  "task_2": {
+    "description": "Stack the white paper cups (numbered 1, 2, 3) in numerical order from left to right.",
+    "required_objects": "white paper cup 1, white paper cup 2, white paper cup 3",
+    "initial_setup": "The white paper cups are scattered on the table, with cup 1 on the far left, cup 2 in the center, and cup 3 on the far right. All are upright.",
+    "final_state": "The white paper cups are stacked in a line from left to right, with cup 1 on the left, cup 2 in the center, and cup 3 on the right. All are upright and aligned.",
+    "difficulty": "medium"
+  },
+  "task_3": {
+    "description": "Move all non-white plastic cups to the right side of the table.",
+    "required_objects": "non-white plastic cups (pink, light blue, lavender, mint, yellow)",
+    "initial_setup": "Non-white plastic cups are scattered on the table: pink on the left, light blue in the center, lavender and mint on the right, and yellow near the edge. White plastic cups are on the far right.",
+    "final_state": "All non-white plastic cups are on the right side of the table. White plastic cups remain on the far right.",
+    "difficulty": "medium"
+  },
+  "task_4": {
+    "description": "Place the yellow plastic cup next to the blue plastic cup, but not on top of any other cup.",
+    "required_objects": "yellow plastic cup, blue plastic cup",
+    "initial_setup": "The yellow plastic cup is on the far left, upright. The blue plastic cup is in the center, upright. Other cups are scattered on the right side.",
+    "final_state": "The yellow plastic cup is next to the blue plastic cup on the left side. The blue cup remains in the center. Other cups are on the right side.",
+    "difficulty": "medium"
+  },
+  "task_5": {
+    "description": "Sort all cups by color, placing each color in a specific quadrant of the table.",
+    "required_objects": "all cups",
+    "initial_setup": "The table has four quadrants: left, right, center-left, and center-right. Cups are scattered in these quadrants, with some colors overlapping.",
+    "final_state": "Each quadrant contains cups of a single color. Light blue in the center-left, pink in the center-right, white on the left, and yellow on the right.",
+    "difficulty": "hard"
+  },
+  "task_6": {
+    "description": "Move the only cup that is upside down to the right side of the table.",
+    "required_objects": "upside-down cup",
+    "initial_setup": "The upside-down cup is a white plastic cup on the left side. Other cups are upright and scattered on the right side.",
+    "final_state": "The upside-down white plastic cup is on the right side, upright. All other cups remain in their original positions.",
+    "difficulty": "easy"
+  },
+  "task_7": {
+    "description": "Stack the white plastic cups on top of each other in the center of the table.",
+    "required_objects": "white plastic cups",
+    "initial_setup": "Three white plastic cups are scattered on the right side, upright. The center of the table is empty.",
+    "final_state": "The three white plastic cups are stacked vertically in the center, with the bottom cup on the table, the middle cup on top of it, and the top cup on the middle one.",
+    "difficulty": "medium"
+  },
+  "task_8": {
+    "description": "Place the paper cup numbered 2 on top of the pink plastic cup.",
+    "required_objects": "paper cup 2, pink plastic cup",
+    "initial_setup": "The pink plastic cup is on the left side, upright. Paper cup 2 is on the right side, upright.",
+    "final_state": "Paper cup 2 is on top of the pink plastic cup. The pink cup remains on the left, and the paper cup is now upright on top of it.",
+    "difficulty": "medium"
+  },
+  "task_9": {
+    "description": "Arrange the cups in a line from left to right by color, starting with light blue.",
+    "required_objects": "light blue plastic cup, white plastic cups, pink plastic cup",
+    "initial_setup": "The light blue cup is on the far left, white cups are scattered in the center, and the pink cup is on the far right.",
+    "final_state": "The cups are in a line from left to right: light blue, white, white, white, pink. All are upright.",
+    "difficulty": "medium"
+  },
+  "task_10": {
+    "description": "Move the white paper cup numbered 1 to the position where the light blue cup is currently located.",
+    "required_objects": "white paper cup 1, light blue plastic cup",
+    "initial_setup": "White paper cup 1 is on the right side, and the light blue cup is in the center, upright.",
+    "final_state": "White paper cup 1 is in the center, upright. The light blue cup is now on the right side.",
+    "difficulty": "easy"
+  },
+  "task_11": {
+    "description": "Stack the pink and yellow plastic cups on top of the white paper cup numbered 3.",
+    "required_objects": "pink plastic cup, yellow plastic cup, white paper cup 3",
+    "initial_setup": "Pink cup is on the left, yellow cup on the right, and white paper cup 3 is in the center, upright.",
+    "final_state": "White paper cup 3 is on the table, with the pink cup on top of it, and the yellow cup on top of the pink cup. All are upright.",
+    "difficulty": "medium"
+  },
+  "task_12": {
+    "description": "Move the cup that is not white to the left side of the table, avoiding the paper cups.",
+    "required_objects": "non-white cups, white paper cups",
+    "initial_setup": "Non-white cups (pink, light blue, lavender, mint, yellow) are scattered on the table, with white paper cups 1-3 in the center.",
+    "final_state": "All non-white cups are on the left side. White paper cups remain in the center.",
+    "difficulty": "medium"
+  },
+  "task_13": {
+    "description": "Place the lavender plastic cup next to the white paper cup numbered 2, but not on top of it.",
+    "required_objects": "lavender plastic cup, white paper cup 2",
+    "initial_setup": "Lavender cup is on the far right, and white paper cup 2 is in the center, upright.",
+    "final_state": "Lavender cup is next to white paper cup 2 on the right side. Both are upright.",
+    "difficulty": "easy"
+  },
+  "task_14": {
+    "description": "Sort the cups by type, placing plastic cups on the left and paper cups on the right.",
+    "required_objects": "all cups",
+    "initial_setup": "Plastic cups are scattered on the left and right, and paper cups are on the center.",
+    "final_state": "All plastic cups are on the left side, and all paper cups are on the right side.",
+    "difficulty": "medium"
+  },
+  "task_15": {
+    "description": "Move the white plastic cup to the position where the paper cup numbered 1 is currently located.",
+    "required_objects": "white plastic cup, white paper cup 1",
+    "initial_setup": "White plastic cup is on the far left, and white paper cup 1 is in the center, upright.",
+    "final_state": "White plastic cup is in the center, upright. White paper cup 1 is now on the far left.",
+    "difficulty": "easy"
+  },
+  "task_16": {
+    "description": "Stack the three paper cups in a vertical line on the right side of the table.",
+    "required_objects": "white paper cups 1, 2, 3",
+    "initial_setup": "White paper cups are scattered on the table, with cup 1 on the left, cup 2 in the center, and cup 3 on the right.",
+    "final_state": "The three paper cups are stacked vertically on the right side, with cup 1 at the bottom, cup 2 in the middle, and cup 3 on top.",
+    "difficulty": "medium"
+  },
+  "task_17": {
+    "description": "Move the yellow plastic cup to the left side of the table, but only if it is upright.",
+    "required_objects": "yellow plastic cup",
+    "initial_setup": "Yellow plastic cup is on the far right, upright. Other cups are scattered on the left and center.",
+    "final_state": "Yellow plastic cup is on the left side, upright. Other cups remain in their original positions.",
+    "difficulty": "easy"
+  },
+  "task_18": {
+    "description": "Place the pink plastic cup on top of the white paper cup numbered 2, ensuring it is upright.",
+    "required_objects": "pink plastic cup, white paper cup 2",
+    "initial_setup": "Pink cup is on the left, and white paper cup 2 is in the center, upright.",
+    "final_state": "Pink cup is upright on top of white paper cup 2. Both are in the center.",
+    "difficulty": "medium"
+  },
+  "task_19": {
+    "description": "Move the cup that is upside down to the center of the table, then flip it upright.",
+    "required_objects": "upside-down cup",
+    "initial_setup": "An upside-down white plastic cup is on the right side. Other cups are upright on the left and center.",
+    "final_state": "The upside-down cup is upright in the center. Other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_20": {
+    "description": "Arrange the cups in a triangle formation with the light blue cup at the top.",
+    "required_objects": "light blue plastic cup, other cups",
+    "initial_setup": "Light blue cup is on the far left, and other cups are scattered on the right and center.",
+    "final_state": "The light blue cup is at the top center. Two cups are placed on the left and right below it, forming a triangle.",
+    "difficulty": "hard"
+  },
+  "task_21": {
+    "description": "Move the white plastic cup to the right side of the table, avoiding the paper cups.",
+    "required_objects": "white plastic cup, white paper cups",
+    "initial_setup": "White plastic cup is on the left side, and white paper cups 1-3 are in the center.",
+    "final_state": "White plastic cup is on the right side. White paper cups remain in the center.",
+    "difficulty": "easy"
+  },
+  "task_22": {
+    "description": "Stack the white plastic cups and paper cups in alternating layers on the left side.",
+    "required_objects": "white plastic cups, white paper cups",
+    "initial_setup": "White plastic cups are on the right, and white paper cups are on the center.",
+    "final_state": "Alternating layers of white plastic and paper cups are stacked on the left side, starting with a plastic cup.",
+    "difficulty": "medium"
+  },
+  "task_23": {
+    "description": "Move the cup that is not pink to the right side of the table, leaving the pink cup in the center.",
+    "required_objects": "non-pink cups, pink plastic cup",
+    "initial_setup": "Non-pink cups are scattered on the left and right, and the pink cup is in the center, upright.",
+    "final_state": "Non-pink cups are on the right side. Pink cup remains in the center.",
+    "difficulty": "medium"
+  },
+  "task_24": {
+    "description": "Place the lavender plastic cup next to the mint plastic cup, ensuring they are not stacked.",
+    "required_objects": "lavender plastic cup, mint plastic cup",
+    "initial_setup": "Lavender cup is on the far right, and mint cup is in the center, upright.",
+    "final_state": "Lavender and mint cups are adjacent on the right side, not stacked.",
+    "difficulty": "easy"
+  },
+  "task_25": {
+    "description": "Move the white paper cup numbered 3 to the position where the light blue cup is currently located.",
+    "required_objects": "white paper cup 3, light blue plastic cup",
+    "initial_setup": "White paper cup 3 is on the far right, and light blue cup is in the center, upright.",
+    "final_state": "White paper cup 3 is in the center, upright. Light blue cup is now on the far right.",
+    "difficulty": "easy"
+  },
+  "task_26": {
+    "description": "Stack the yellow and pink plastic cups on top of the white paper cup numbered 1.",
+    "required_objects": "yellow plastic cup, pink plastic cup, white paper cup 1",
+    "initial_setup": "Yellow cup is on the left, pink cup on the right, and white paper cup 1 is in the center, upright.",
+    "final_state": "White paper cup 1 is on the table, with yellow cup on top, then pink cup on top of the yellow. All are upright.",
+    "difficulty": "medium"
+  },
+  "task_27": {
+    "description": "Move the cup that is not white to the left side of the table, prioritizing the pink cup.",
+    "required_objects": "non-white cups, pink plastic cup",
+    "initial_setup": "Non-white cups are scattered on the right and center, with pink cup on the left.",
+    "final_state": "All non-white cups are on the left side, with the pink cup remaining on the left.",
+    "difficulty": "medium"
+  },
+  "task_28": {
+    "description": "Place the yellow plastic cup on top of the white paper cup numbered 2, ensuring it is not upside down.",
+    "required_objects": "yellow plastic cup, white paper cup 2",
+    "initial_setup": "Yellow cup is on the far left, and white paper cup 2 is in the center, upright.",
+    "final_state": "Yellow cup is upright on top of white paper cup 2. Both are in the center.",
+    "difficulty": "medium"
+  },
+  "task_29": {
+    "description": "Move the white plastic cup to the right side of the table, avoiding the paper cups.",
+    "required_objects": "white plastic cup, white paper cups",
+    "initial_setup": "White plastic cup is on the left, and white paper cups 1-3 are in the center.",
+    "final_state": "White plastic cup is on the right side. White paper cups remain in the center.",
+    "difficulty": "easy"
+  },
+  "task_30": {
+    "description": "Stack the white paper cups in a vertical line on the right side, with cup 3 at the bottom.",
+    "required_objects": "white paper cups 1, 2, 3",
+    "initial_setup": "White paper cups are scattered on the table, with cup 1 on the left, cup 2 in the center, and cup 3 on the right.",
+    "final_state": "White paper cups are stacked vertically on the right side, with cup 3 at the bottom, cup 2 in the middle, and cup 1 on top.",
+    "difficulty": "medium"
+  },
+  "task_31": {
+    "description": "Move the cup that is upside down to the center of the table, then flip it upright.",
+    "required_objects": "upside-down cup",
+    "initial_setup": "An upside-down white plastic cup is on the far right. Other cups are upright on the left and center.",
+    "final_state": "The upside-down cup is upright in the center. Other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_32": {
+    "description": "Place the mint plastic cup next to the lavender plastic cup, but not on top of it.",
+    "required_objects": "mint plastic cup, lavender plastic cup",
+    "initial_setup": "Mint cup is on the far left, and lavender cup is in the center, upright.",
+    "final_state": "Mint and lavender cups are adjacent on the left side, not stacked.",
+    "difficulty": "easy"
+  },
+  "task_33": {
+    "description": "Move the white paper cup numbered 1 to the position where the yellow plastic cup is currently located.",
+    "required_objects": "white paper cup 1, yellow plastic cup",
+    "initial_setup": "White paper cup 1 is on the right side, and yellow plastic cup is on the far left.",
+    "final_state": "White paper cup 1 is on the far left, and yellow cup is now on the right side.",
+    "difficulty": "easy"
+  },
+  "task_34": {
+    "description": "Stack the white plastic cups and paper cups in alternating layers on the center-left.",
+    "required_objects": "white plastic cups, white paper cups",
+    "initial_setup": "White plastic cups are on the right, and white paper cups are on the center.",
+    "final_state": "Alternating layers of white plastic and paper cups are stacked on the center-left, starting with a plastic cup.",
+    "difficulty": "medium"
+  },
+  "task_35": {
+    "description": "Move the cup that is not white to the right side of the table, leaving the white cups in the center.",
+    "required_objects": "non-white cups, white cups",
+    "initial_setup": "Non-white cups are scattered on the left and right, and white cups are in the center.",
+    "final_state": "Non-white cups are on the right side. White cups remain in the center.",
+    "difficulty": "medium"
+  },
+  "task_36": {
+    "description": "Place the pink plastic cup on top of the white paper cup numbered 3, ensuring it is upright.",
+    "required_objects": "pink plastic cup, white paper cup 3",
+    "initial_setup": "Pink cup is on the left, and white paper cup 3 is on the right, upright.",
+    "final_state": "Pink cup is upright on top of white paper cup 3. Both are on the right side.",
+    "difficulty": "medium"
+  },
+  "task_37": {
+    "description": "Move the white plastic cup to the left side of the table, avoiding the paper cups.",
+    "required_objects": "white plastic cup, white paper cups",
+    "initial_setup": "White plastic cup is on the right side, and white paper cups 1-3 are in the center.",
+    "final_state": "White plastic cup is on the left side. White paper cups remain in the center.",
+    "difficulty": "easy"
+  },
+  "task_38": {
+    "description": "Stack the white paper cups and plastic cups in alternating layers on the left side.",
+    "required_objects": "white plastic cups, white paper cups",
+    "initial_setup": "White plastic cups are on the right, and white paper cups are on the center.",
+    "final_state": "Alternating layers of white plastic and paper cups are stacked on the left side, starting with a plastic cup.",
+    "difficulty": "medium"
+  },
+  "task_39": {
+    "description": "Move the cup that is not pink to the left side of the table, prioritizing the light blue cup.",
+    "required_objects": "non-pink cups, light blue plastic cup",
+    "initial_setup": "Non-pink cups are scattered on the right and center, with light blue cup on the left.",
+    "final_state": "Non-pink cups are on the left side, with light blue cup remaining on the left.",
+    "difficulty": "medium"
+  },
+  "task_40": {
+    "description": "Place the lavender plastic cup next to the mint plastic cup, ensuring they are not stacked.",
+    "required_objects": "lavender plastic cup, mint plastic cup",
+    "initial_setup": "Lavender cup is on the far right, and mint cup is in the center, upright.",
+    "final_state": "Lavender and mint cups are adjacent on the right side, not stacked.",
+    "difficulty": "easy"
+  },
+  "task_41": {
+    "description": "Move the white paper cup numbered 2 to the position where the light blue cup is currently located.",
+    "required_objects": "white paper cup 2, light blue plastic cup",
+    "initial_setup": "White paper cup 2 is on the far right, and light blue cup is in the center, upright.",
+    "final_state": "White paper cup 2 is in the center, upright. Light blue cup is now on the far right.",
+    "difficulty": "easy"
+  },
+  "task_42": {
+    "description": "Stack the white plastic cups and paper cups in alternating layers on the center-right.",
+    "required_objects": "white plastic cups, white paper cups",
+    "initial_setup": "White plastic cups are on the left, and white paper cups are on the center.",
+    "final_state": "Alternating layers of white plastic and paper cups are stacked on the center-right, starting with a plastic cup.",
+    "difficulty": "medium"
+  },
+  "task_43": {
+    "description": "Move the cup that is upside down to the center of the table, then flip it upright.",
+    "required_objects": "upside-down cup",
+    "initial_setup": "An upside-down white plastic cup is on the far right. Other cups are upright on the left and center.",
+    "final_state": "The upside-down cup is upright in the center. Other cups remain in their original positions.",
+    "difficulty": "medium"
+  },
+  "task_44": {
+    "description": "Place the yellow plastic cup on top of the white paper cup numbered 1, ensuring it is not upside down.",
+    "required_objects": "yellow plastic cup, white paper cup 1",
+    "initial_setup": "Yellow cup is on the far left, and white paper cup 1 is in the center, upright.",
+    "final_state": "Yellow cup is upright on top of white paper cup 1. Both are in the center.",
+    "difficulty": "medium"
+  },
+  "task_45": {
+    "description": "Move the white plastic cup to the right side of the table, avoiding the paper cups.",
+    "required_objects": "white plastic cup, white paper cups",
+    "initial_setup": "White plastic cup is on the left, and white paper cups 1-3 are in the center.",
+    "final_state": "White plastic cup is on the right side. White paper cups remain in the center.",
+    "difficulty": "easy"
+  },
+  "task_46": {
+    "description": "Stack the white paper cups in a vertical line on the right side, with cup 1 at the bottom.",
+    "required_objects": "white paper cups 1, 2, 3",
+    "initial_setup": "White paper cups are scattered on the table, with cup 1 on the left, cup 2 in the center, and cup 3 on the right.",
+    "final_state": "White paper cups are stacked vertically on the right side, with cup 1 at the bottom, cup 2 in the middle, and cup 3 on top.",
+    "difficulty": "medium"
+  },
+  "task_47": {
+    "description": "Move the cup that is not white to the left side of the table, leaving the white cups in the center.",
+    "required_objects": "non-white cups, white cups",
+    "initial_setup": "Non-white cups are scattered on the right and center, and white cups are in the center.",
+    "final_state": "Non-white cups are on the left side. White cups remain in the center.",
+    "difficulty": "medium"
+  },
+  "task_48": {
+    "description": "Place the pink plastic cup on top of the white paper cup numbered 3, ensuring it is upright.",
+    "required_objects": "pink plastic cup, white paper cup 3",
+    "initial_setup": "Pink cup is on the left, and white paper cup 3 is on the right, upright.",
+    "final_state": "Pink cup is upright on top of white paper cup 3. Both are on the right side.",
+    "difficulty": "medium"
+  },
+  "task_49": {
+    "description": "Move the white plastic cup to the left side of the table, avoiding the paper cups.",
+    "required_objects": "white plastic cup, white paper cups",
+    "initial_setup": "White plastic cup is on the right side, and white paper cups 1-3 are in the center.",
+    "final_state": "White plastic cup is on the left side. White paper cups remain in the center.",
+    "difficulty": "easy"
+  },
+  "task_50": {
+    "description": "Stack the white paper cups and plastic cups in alternating layers on the center-left.",
+    "required_objects": "white plastic cups, white paper cups",
+    "initial_setup": "White plastic cups are on the right, and white paper cups are on the center.",
+    "final_state": "Alternating layers of white plastic and paper cups are stacked on the center-left, starting with a plastic cup.",
+    "difficulty": "medium"
+  }
+}

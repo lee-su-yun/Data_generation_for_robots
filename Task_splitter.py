@@ -44,7 +44,7 @@ class RobotTaskPlanner:
             generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
         )
         return output_text[0]
-
+    """
     def parse_generated_text(self, text: str) -> dict:
         result = {
             "task": "",
@@ -96,6 +96,54 @@ class RobotTaskPlanner:
             elif line.startswith("<SOLUTION>:"):
                 current["solution"] = line[len("<SOLUTION>:"):].strip()
             else:
+                if current_field and current_field in result:
+                    result[current_field] += (line + " ")
+
+        return result
+    """
+
+    def parse_generated_text(self, text: str) -> dict:
+        import re
+        result = {
+            "task": "",
+            "description": "",
+            "plan": "",
+            "planning_reason": "",
+            "subtasks": []
+        }
+        current = {}
+        lines = text.split('\n')
+
+        def commit():
+            if current and "step" in current:
+                result["subtasks"].append(current.copy())
+
+        current_field = None
+
+        for line in lines:
+            line = line.strip()
+            if line.startswith("<TASK>:"):
+                result["task"] = line[len("<TASK>:"):].strip()
+            elif line.startswith("<DESCRIPTION>:"):
+                result["description"] = line[len("<DESCRIPTION>:"):].strip()
+            elif line.startswith("<PLAN>:"):
+                result["plan"] = line[len("<PLAN>:"):].strip()
+            elif line.startswith("<PLANNING_reason>:"):
+                result["planning_reason"] = line[len("<PLANNING_reason>:"):].strip()
+            elif re.match(r"^\[?Step\s*\d+\]?", line, re.IGNORECASE):
+                commit()
+                step_match = re.search(r"Step\s*(\d+)", line, re.IGNORECASE)
+                if step_match:
+                    current = {"step": f"Step {step_match.group(1)}"}
+            elif line.strip().upper() == "FINISHED":
+                commit()
+                break
+            else:
+                # 태그가 줄 중간에 있어도 파싱
+                tag_match = re.findall(r"<(SUBTASK|SUBTASK_reason|MOVE|MOVE_reason|ISSUE|SOLUTION)>:\s*(.*?)(?=<|$)",
+                                       line)
+                for tag, content in tag_match:
+                    current[tag.lower()] = content.strip()
                 if current_field and current_field in result:
                     result[current_field] += (line + " ")
 

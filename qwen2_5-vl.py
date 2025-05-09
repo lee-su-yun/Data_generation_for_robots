@@ -75,7 +75,7 @@ async def create_robot_plan_and_save(
 ):
     planner = RobotTaskPlanner(model, processor, device)
 
-"""
+    """
     system_prompt = (
         "You are a robotics expert. Based on the provided images and task, "
         "break down the task into small, executable subtasks for a one-armed robot. "
@@ -85,8 +85,7 @@ async def create_robot_plan_and_save(
         "Potential Issue: <issue>\n"
         "Solution: <solution>\n"
     )
-"""
-
+    """
     system_prompt = (
         "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
         "You must reason through the missing sequence of actions required to transition from the initial state to the final state. Your output should include high-level planning and per-step detailed annotations with justifications.\n\n"

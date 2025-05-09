@@ -185,7 +185,7 @@ async def create_robot_plan_and_save(
         "You must reason through the missing sequence of actions required to transition from the initial state to the final state. Your output should include high-level planning and per-step detailed annotations with justifications.\n"
         "- You must infer the trajectory of steps and actions the robot would take to solve the task.\n\n"
         "## 1. Start by Describing the Task:\n"
-        "Give a comprehensive description of the task using the given instruction and the initial/final images. Include:\n"
+        "Give a comprehensive description of the initial/final images. Include:\n"
         "- Object identities and positions\n"
         "- Relative spatial relationships\n"
         "- A high-level sequence of subtasks needed to complete the task\n"

@@ -182,7 +182,7 @@ async def create_robot_plan_and_save(
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
 
-    print(generated_text)
+    #print(generated_text)
 
     # 2. Parse into structured format
     parsed = planner.parse_generated_text(generated_text)

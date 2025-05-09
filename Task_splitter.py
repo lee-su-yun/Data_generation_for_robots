@@ -183,6 +183,8 @@ async def create_robot_plan_and_save(
     system_prompt = (
         "Describe two images in details."
         "What objects are in them and where."
+        "What actions are needed to transform the first image into the second image?"
+        "Guess the name of a task"
     )
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)

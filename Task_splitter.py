@@ -181,7 +181,8 @@ async def create_robot_plan_and_save(
        "Use these images, along with the task description, to infer the full action plan and annotate the steps."
     )
     system_prompt = (
-        "Describe two images"
+        "Describe two images in details."
+        "What objects are in them and where."
     )
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
@@ -232,7 +233,7 @@ if __name__ == "__main__":
 
     loop = asyncio.get_event_loop()
     #for i in range(1, 31):
-    for i in [2]:
+    for i in [5]:
         task_id = f"task_{i}"
         task = all_tasks[task_id]["description"]
 

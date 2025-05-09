@@ -162,6 +162,9 @@ async def create_robot_plan_and_save(
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
 
+    print(generated_text)
+    exit()
+
     # 2. Parse into structured format
     structured_subtasks = planner.parse_generated_text(generated_text)
 
@@ -171,8 +174,7 @@ async def create_robot_plan_and_save(
         "images_used": image_paths,
         "subtasks": structured_subtasks
     }
-    print(output)
-    exit()
+
 
     # 4. Save JSON
     os.makedirs(os.path.dirname(output_json_path), exist_ok=True)

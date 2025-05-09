@@ -199,6 +199,11 @@ async def create_robot_plan_and_save(
         "<MOVE> Primitive movement to execute this subtask (e.g., “move down and close gripper”).\n"
         "<MOVE_reason> Why this movement is necessary at this moment.\n"
     )
+    system_prompt = (
+        "Describe two images in detail. Include:\n"
+        "Object identities and positions."
+        "Relative spatial relationships."
+    )
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
 #    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)

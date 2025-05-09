@@ -103,7 +103,7 @@ async def create_robot_plan_and_save(
     planner = RobotTaskPlanner(model, processor, device)
 
     system_prompt = (
-         "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
+        "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
         "You must reason through the missing sequence of actions required to transition from the initial state to the final state. Your output should include high-level planning and per-step detailed annotations with justifications.\n\n"
         "# Experimental Setup:\n"
         "- You are an expert in robotics and reinforcement learning.\n"
@@ -180,14 +180,16 @@ async def create_robot_plan_and_save(
         "  - The last image represent the final state after the task is completed:\n"
        "Use these images, along with the task description, to infer the full action plan and annotate the steps."
     )
-
+    system_prompt = (
+        "Describe two images"
+    )
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
-    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
-    with open(output_json_path, "w", encoding="utf-8") as f:
-        f.write(generated_text)
-    print(f"Saved robot plan to {output_json_path}")
-    #print(generated_text)
+#    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+#    with open(output_json_path, "w", encoding="utf-8") as f:
+#        f.write(generated_text)
+#    print(f"Saved robot plan to {output_json_path}")
+    print(generated_text)
 """
     # 2. Parse into structured format
     parsed = planner.parse_generated_text(generated_text)
@@ -229,8 +231,8 @@ if __name__ == "__main__":
     processor = AutoProcessor.from_pretrained(model_path)
 
     loop = asyncio.get_event_loop()
-    for i in range(1, 31):
-    #for i in [1]:
+    #for i in range(1, 31):
+    for i in [2]:
         task_id = f"task_{i}"
         task = all_tasks[task_id]["description"]
 

@@ -181,10 +181,23 @@ async def create_robot_plan_and_save(
        "Use these images, along with the task description, to infer the full action plan and annotate the steps."
     )
     system_prompt = (
-        "Describe two images in details."
-        "What objects are in them and where."
-        "What actions are needed to transform the first image into the second image?"
-        "Guess the name of a task"
+        "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description.\n"
+        "You must reason through the missing sequence of actions required to transition from the initial state to the final state. Your output should include high-level planning and per-step detailed annotations with justifications.\n"
+        "- You must infer the trajectory of steps and actions the robot would take to solve the task.\n\n"
+        "## 1. Start by Describing the Task:\n"
+        "Give a comprehensive description of the task using the given instruction and the initial/final images. Include:\n"
+        "- Object identities and positions\n"
+        "- Relative spatial relationships\n"
+        "- A high-level sequence of subtasks needed to complete the task\n"
+        "Then provide a full high-level plan (e.g., \"Pick cup 3\", \"Move cup 3 to right\", etc.), and assign each plan to a step interval.\n"
+        "Include a brief explanation of the reasoning behind the plan structure based on spatial relationships or task constraints.\n\n"
+        "## 2. For Each Step, Write the Following:\n"
+        "Each action step must include:\n"
+        "[Step X]\n"
+        "<SUBTASK> The high-level subtask that should be executed now.\n"
+        "<SUBTASK_reason> Why this subtask should be executed now, referencing spatial cues in the current setup.\n"
+        "<MOVE> Primitive movement to execute this subtask (e.g., “move down and close gripper”).\n"
+        "<MOVE_reason> Why this movement is necessary at this moment.\n"
     )
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)

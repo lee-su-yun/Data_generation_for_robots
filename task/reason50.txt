@@ -1,0 +1,106 @@
+<think>
+Okay, so I need to come up with 50 realistic tabletop manipulation tasks for a robot arm with a gripper. Each task should involve meaningful physical interaction and require reasoning, decision-making, or planning. Let me start by understanding the requirements.
+
+First, the robot can handle colored plastic cups (light blue, white, pink, lavender, mint, yellow) and three white paper cups numbered 1, 2, 3. The tasks must not use exact measurements, so relative positions like left, right, center, next to, etc., are needed. Each task must have initial and final states described in detail, including positions, orientations, and object states. Also, each task must require the robot to make decisions based on object properties or constraints.
+
+Let me brainstorm some categories of tasks. Maybe sorting, arranging, stacking, moving based on color or number, avoiding certain objects, prioritizing actions. For each, I need to ensure that the robot has to reason. For example, sorting by color but with some exceptions, or arranging objects in a specific order that requires planning.
+
+Let me start with the first task. Maybe something like moving the yellow cup to a specific location based on color. But need to ensure it's not just moving. Let me think of a scenario where the robot has to decide which cup to pick based on a condition. For example, moving the only pink cup to a certain spot. Wait, but there are multiple cups. Maybe the task is to move the pink cup to the center, but only if it's upright. That requires checking the state.
+
+Another idea: stacking cups in a certain order. For example, stacking the white paper cups on top of each other, but the robot has to determine which ones to pick first. But since they are numbered, maybe the task is to stack them in numerical order. That requires planning the sequence.
+
+Also, tasks that involve avoiding certain objects. For example, moving a cup without knocking over others. Or moving an object to a position that's not occupied by another. Maybe the robot needs to find a spot where the object can be placed without overlapping.
+
+I need to make sure each task has a clear initial setup and final state. Let me think of the first task:
+
+Task 1: Move the pink cup to the center of the table. But maybe the initial setup has the pink cup on the left, and the final state is in the center. However, that might be too simple. Maybe the robot needs to check if the cup is upright, or if there are other cups in the way. Wait, the initial setup should have specific positions. Let me think.
+
+Wait, the user wants each task to require reasoning. So maybe the robot has to decide which cup to move based on some condition. For example, moving the only cup that's not white. But there are multiple colors. Alternatively, moving the cup that's on the left side and is upright. That requires checking both position and orientation.
+
+Alternatively, the task could be to place the yellow cup next to the blue cup. But that's more about positioning. Maybe the robot needs to determine the correct relative positions. Hmm.
+
+Another angle: the robot has to avoid certain objects. For example, moving a cup without disturbing others. Or moving a cup to a specific spot that's not occupied. For example, moving the white plastic cup to the right side, but only if the paper cups are not there. That requires checking the initial positions.
+
+I need to ensure that each task has a clear reasoning component. Let me outline some possible tasks:
+
+1. Move the pink cup to the center, but only if it's upright. (Requires checking orientation)
+2. Stack the three paper cups in numerical order (1, 2, 3) from left to right. (Requires planning sequence)
+3. Move the white plastic cup to the right side, avoiding the paper cups. (Requires avoiding certain objects)
+4. Place the yellow cup next to the blue cup, but not on top of any other cup. (Requires spatial awareness)
+5. Sort all cups by color, placing each color in a specific quadrant. (Requires classification and arrangement)
+6. Move the only cup that's not white to the left side. (Requires identifying non-white cups)
+7. Stack the white plastic cups on top of each other in the center. (Requires stacking and checking stability)
+8. Move the cup that is upside down to the right side. (Requires checking orientation)
+9. Arrange the cups in a line from left to right by color, starting with light blue. (Requires ordering)
+10. Place the paper cup numbered 2 on top of the pink plastic cup. (Requires identifying and stacking)
+... and so on.
+
+Each of these would need detailed initial and final states. For example, in task 1, the initial setup would have the pink cup on the left, upright. The final state would have it in the center. But maybe the initial setup has other cups in the way, so the robot has to navigate around them.
+
+I need to make sure that each task is unique and covers different aspects of reasoning: color, position, orientation, object type, sequence, avoiding obstacles, etc.
+
+Also, the initial and final states must be described in detail, with relative positions, colors, orientations, etc.
+
+Let me try to write out the first few tasks properly, following the required format. Let's start with task_1:
+
+task_1: Move the pink plastic cup to the center of the table.
+required_objects: pink plastic cup
+initial_setup: The pink plastic cup is on the left side of the table, upright. All other cups are on the right side, scattered.
+final_state: The pink plastic cup is centered on the table, upright. The other cups remain on the right side.
+difficulty: easy
+
+Wait, but this might be too simple. The robot just moves the cup from left to center. But maybe the initial setup has other cups in the way. Let me adjust.
+
+task_1: Move the pink plastic cup to the center of the table without knocking over any other cups.
+required_objects: pink plastic cup, other cups
+initial_setup: The pink plastic cup is on the left side of the table, upright. Other cups (including white plastic, light blue, white paper cups 1-3) are scattered on the right side, some upright, some upside down.
+final_state: The pink plastic cup is centered on the table, upright. Other cups remain in their original positions on the right side, with no cups knocked over.
+difficulty: medium
+
+That's better. It requires the robot to move the cup without disturbing others, which involves spatial reasoning.
+
+Another example:
+
+task_2: Stack the white paper cups (numbered 1, 2, 3) in numerical order from left to right.
+required_objects: white paper cup 1, white paper cup 2, white paper cup 3
+initial_setup: The white paper cups are scattered on the table, with cup 1 on the far left, cup 2 in the center, and cup 3 on the far right. All are upright.
+final_state: The white paper cups are stacked in a line from left to right, with cup 1 on the left, cup 2 in the center, and cup 3 on the right. All are upright and aligned.
+difficulty: medium
+
+This requires the robot to arrange them in order, which involves planning the sequence.
+
+I need to ensure that each task is distinct and covers different reasoning aspects. Let me continue generating tasks, making sure each has a unique reasoning component and detailed setup and final states. I'll need to think of different constraints, such as color, position, orientation, type, and sequence. Also, some tasks might involve avoiding certain objects, prioritizing actions, or dealing with obstacles.
+
+Another task could involve moving an object based on a condition, like the only cup that is not white. Let's say:
+
+task_3: Move the only non-white cup to the right side of the table.
+required_objects: non-white cups (pink, light blue, lavender, mint, yellow)
+initial_setup: The non-white cups are scattered on the table, with the pink cup on the left, light blue in the center, and the rest on the right. All are upright.
+final_state: The non-white cups are on the right side of the table. The pink cup is on the left, light blue in the center, and the rest are in the same positions but moved to the right.
+difficulty: easy
+
+Wait, but the task says "the only non-white cup," but there are multiple. Maybe the task is to move all non-white cups, but the wording is confusing. Let me adjust:
+
+task_3: Move all non-white plastic cups to the right side of the table.
+required_objects: non-white plastic cups (pink, light blue, lavender, mint, yellow)
+initial_setup: The non-white plastic cups are scattered on the table, with the pink cup on the left, light blue in the center, and the rest on the right. All are upright.
+final_state: All non-white plastic cups are on the right side of the table. The white plastic cups remain on the left side.
+difficulty: medium
+
+This requires identifying and moving all non-white cups, which involves classification.
+
+I need to continue this process for 50 tasks. Each one must have unique reasoning elements. Let me think of other possibilities:
+
+- Moving a cup to a position where it's not overlapping with others.
+- Stacking cups in a certain order, considering their type or color.
+- Avoiding specific objects when moving.
+- Reordering cups based on color or number.
+- Handling cups that are upside down and needing to flip them.
+- Placing cups in a specific pattern, like a triangle.
+- Prioritizing moving certain cups over others based on a rule.
+- Ensuring that after moving, certain conditions are met (e.g., no cups are upside down).
+
+Each of these can be turned into a task. Now, I need to ensure that for each task, the initial and final states are described in detail with relative positions, colors, orientations, etc.
+
+I'll proceed to list them out, ensuring variety and that each task requires reasoning. Let me start writing all 50 tasks following the required format.
+</think>

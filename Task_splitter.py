@@ -232,9 +232,11 @@ async def create_robot_plan_and_save(
 
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
-
+    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+    with open(output_json_path, "w", encoding="utf-8") as f:
+        f.write(generated_text)
     print(generated_text)
-
+"""
     # 2. Parse into structured format
     parsed = planner.parse_generated_text(generated_text)
 
@@ -255,7 +257,7 @@ async def create_robot_plan_and_save(
         json.dump(output, f, indent=4, ensure_ascii=False)
 
     print(f"Saved robot plan to {output_json_path}")
-
+"""
 if __name__ == "__main__":
     # Device setup
     model_path = "/sda1/hub/Qwen2.5-VL-7B-Instruct"
@@ -275,7 +277,8 @@ if __name__ == "__main__":
     processor = AutoProcessor.from_pretrained(model_path)
 
     loop = asyncio.get_event_loop()
-    for i in range(3, 5):
+    for i in range(1, 31):
+    #for i in [2, 3, 5, 6, 7, 8]:
         task_id = f"task_{i}"
         task = all_tasks[task_id]["description"]
 
@@ -288,7 +291,7 @@ if __name__ == "__main__":
             f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/final/wrist_Color.png"
         ]
 
-        output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task/{task_id}.json"
+        output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_txt/{task_id}.txt"
 
         loop.run_until_complete(
             create_robot_plan_and_save(

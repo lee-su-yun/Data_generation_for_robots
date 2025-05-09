@@ -143,7 +143,7 @@ async def create_robot_plan_and_save(
         "## 3. After All Steps Are Annotated:\n"
         "End the output with:\n"
         "FINISHED\n\n"
-        "## 4. Use the following format clearly\n"
+        "## 4. **Really Important** Use the following format clearly. Do not ignore this format.\n"
         "<TASK>:~~\n"
         "<DESCRIPTION>:~~\n"
         "<PLAN>:~~\n"

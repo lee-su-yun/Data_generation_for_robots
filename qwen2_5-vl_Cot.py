@@ -75,7 +75,6 @@ class RobotTaskPlanner:
             elif line.startswith("<SOLUTION>"):
                 current["solution"] = line[len("<SOLUTION>"):].strip()
             elif line.strip().upper() == "FINISHED":
-                commit()
                 break
 
         commit()
@@ -163,7 +162,6 @@ async def create_robot_plan_and_save(
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
 
     print(generated_text)
-    exit()
 
     # 2. Parse into structured format
     structured_subtasks = planner.parse_generated_text(generated_text)

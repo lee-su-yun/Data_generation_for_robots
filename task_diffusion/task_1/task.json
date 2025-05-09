@@ -1,0 +1,9 @@
+{
+  "task_1": {
+    "description": "Place the red plastic cup next to the blue paper cup",
+    "required_objects": "red plastic cup, blue paper cup",
+    "initial_setup": "The red plastic cup is upright on the left side of the table, 20 cm from the edge. The blue paper cup is upright on the right side, 20 cm from the edge. A white tissue is folded and lying flat on the center of the table, 10 cm from the red cup.",
+    "final_state": "The red plastic cup is upright and placed directly adjacent to the blue paper cup, with the tissue moved to the far right corner of the table.",
+    "difficulty": "medium"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "task_10": {
+    "description": "Lift the tilted red cup and place it upright next to the blue tissue",
+    "required_objects": "red plastic cup, blue tissue",
+    "initial_setup": "The red cup is tilted and resting on its side near the center of the table. The blue tissue is folded and lying flat on the left side, 15 cm from the edge. A green paper cup is upright on the right side, 25 cm from the edge.",
+    "final_state": "The red cup is upright and placed 10 cm to the right of the blue tissue. The green cup remains untouched.",
+    "difficulty": "medium"
+  }
+}

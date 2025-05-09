@@ -1,0 +1,9 @@
+{
+  "task_6": {
+    "description": "Place the green tissue under the blue paper cup",
+    "required_objects": "green tissue, blue paper cup",
+    "initial_setup": "The green tissue is crumpled and lying flat on the left side of the table. The blue paper cup is upright on the right side, 25 cm from the edge. A red plastic cup is tilted and resting on its side near the center.",
+    "final_state": "The green tissue is flat and positioned directly under the blue cup, which is now tilted slightly to accommodate it. The red cup is upright on the far left corner.",
+    "difficulty": "medium"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "task_4": {
+    "description": "Avoid the red tissue while placing the blue cup next to the green cup",
+    "required_objects": "red tissue, blue plastic cup, green paper cup",
+    "initial_setup": "The red tissue is crumpled and lying flat on the center of the table. The blue plastic cup is upright on the left side, 20 cm from the edge. The green paper cup is upright on the right side, 20 cm from the edge. A yellow tissue is folded and placed near the red tissue.",
+    "final_state": "The blue cup is placed 10 cm to the left of the green cup. The red tissue remains untouched, and the yellow tissue is moved to the far right corner.",
+    "difficulty": "medium"
+  }
+}

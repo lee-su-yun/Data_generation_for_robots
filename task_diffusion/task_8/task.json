@@ -1,0 +1,9 @@
+{
+  "task_8": {
+    "description": "Sort the cups by color: red on the left, blue on the right",
+    "required_objects": "red plastic cup, blue plastic cup",
+    "initial_setup": "The red plastic cup is upright on the center of the table. The blue plastic cup is upright on the far right corner, 25 cm from the edge. A green tissue is crumpled and lying flat on the left side.",
+    "final_state": "The red cup is placed on the far left corner, and the blue cup is moved to the far right corner. The green tissue is moved to the center of the table.",
+    "difficulty": "medium"
+  }
+}

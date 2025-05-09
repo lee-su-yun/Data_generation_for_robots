@@ -8,5 +8,26 @@
         "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png"
     ],
-    "subtasks": []
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "plan": "The full remaining high-level plan is to move the pink plastic cup to the center of the table without knocking over any other cups.",
+            "subtask": "The high-level subtask that should be executed now is to pick up the pink plastic cup.",
+            "subtask_reason": "This subtask should be executed now because the pink cup needs to be moved to the center of the table, and picking it up is the first step towards achieving this goal.",
+            "move": "The primitive movement to execute this subtask is to move the gripper towards the pink cup and close it around the cup.",
+            "move_reason": "This movement is necessary at this moment because it allows the robot arm to securely hold the pink cup and prepare for the next step of moving it to the center of the table.",
+            "issue": "A potential issue that may arise while performing this step is that the gripper might not be able to securely hold the pink cup if it is too small or if the gripper is not properly calibrated.",
+            "solution": "To avoid or correct this issue, the gripper should be adjusted to ensure a proper fit around the pink cup before attempting to pick it up. Additionally, the gripper's force settings can be fine-tuned to prevent the cup from slipping out during the movement."
+        },
+        {
+            "step": "Step 1",
+            "plan": "The full remaining high-level plan is to move the pink plastic cup to the center of the table without knocking over any other cups.",
+            "subtask": "The high-level subtask that should be executed now is to pick up the pink plastic cup.",
+            "subtask_reason": "This subtask should be executed now because the pink cup needs to be moved to the center of the table, and picking it up is the first step towards achieving this goal.",
+            "move": "The primitive movement to execute this subtask is to move the gripper towards the pink cup and close it around the cup.",
+            "move_reason": "This movement is necessary at this moment because it allows the robot arm to securely hold the pink cup and prepare for the next step of moving it to the center of the table.",
+            "issue": "A potential issue that may arise while performing this step is that the gripper might not be able to securely hold the pink cup if it is too small or if the gripper is not properly calibrated.",
+            "solution": "To avoid or correct this issue, the gripper should be adjusted to ensure a proper fit around the pink cup before attempting to pick it up. Additionally, the gripper's force settings can be fine-tuned to prevent the cup from slipping out during the movement."
+        }
+    ]
 }

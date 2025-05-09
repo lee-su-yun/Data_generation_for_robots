@@ -90,17 +90,6 @@ async def create_robot_plan_and_save(
 ):
     planner = RobotTaskPlanner(model, processor, device)
 
-    """
-    system_prompt = (
-        "You are a robotics expert. Based on the provided images and task, "
-        "break down the task into small, executable subtasks for a one-armed robot. "
-        "For each subtask, identify potential unexpected issues and suggest practical solutions. "
-        "Use the following format clearly:\n\n"
-        "Subtask: <description>\n"
-        "Potential Issue: <issue>\n"
-        "Solution: <solution>\n"
-    )
-    """
     system_prompt = (
         "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
         "You must reason through the missing sequence of actions required to transition from the initial state to the final state. Your output should include high-level planning and per-step detailed annotations with justifications.\n\n"
@@ -171,6 +160,8 @@ async def create_robot_plan_and_save(
         "images_used": image_paths,
         "subtasks": structured_subtasks
     }
+    print(output)
+    exit()
 
     # 4. Save JSON
     os.makedirs(os.path.dirname(output_json_path), exist_ok=True)

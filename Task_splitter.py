@@ -44,63 +44,7 @@ class RobotTaskPlanner:
             generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
         )
         return output_text[0]
-    """
-    def parse_generated_text(self, text: str) -> dict:
-        result = {
-            "task": "",
-            "description": "",
-            "plan": "",
-            "planning_reason": "",
-            "subtasks": []
-        }
-        current = {}
-        lines = text.split('\n')
 
-        def commit():
-            if current and "step" in current:
-                result["subtasks"].append(current.copy())
-
-        current_field = None
-
-        for line in lines:
-            line = line.strip()
-            if line.startswith("### Task:"):
-                current_field = "task"
-                result["task"] = ""
-            elif line.startswith("### Description:"):
-                current_field = "description"
-                result["description"] = ""
-            elif line.startswith("### Plan:"):
-                current_field = "plan"
-                result["plan"] = ""
-            elif line.startswith("### Reasoning:"):
-                current_field = "planning_reason"
-                result["planning_reason"] = ""
-            elif line.startswith("[Step"):
-                commit()
-                current_field = None
-                current = {"step": line.strip("[]")}
-            elif line.strip().upper() == "FINISHED":
-                commit()
-                break
-            elif line.startswith("<SUBTASK>:"):
-                current["subtask"] = line[len("<SUBTASK>:"):].strip()
-            elif line.startswith("<SUBTASK_reason>:"):
-                current["subtask_reason"] = line[len("<SUBTASK_reason>:"):].strip()
-            elif line.startswith("<MOVE>:"):
-                current["move"] = line[len("<MOVE>:"):].strip()
-            elif line.startswith("<MOVE_reason>:"):
-                current["move_reason"] = line[len("<MOVE_reason>:"):].strip()
-            elif line.startswith("<ISSUE>:"):
-                current["issue"] = line[len("<ISSUE>:"):].strip()
-            elif line.startswith("<SOLUTION>:"):
-                current["solution"] = line[len("<SOLUTION>:"):].strip()
-            else:
-                if current_field and current_field in result:
-                    result[current_field] += (line + " ")
-
-        return result
-    """
 
     def parse_generated_text(self, text: str) -> dict:
         import re
@@ -239,10 +183,11 @@ async def create_robot_plan_and_save(
 
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
-#    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
-#    with open(output_json_path, "w", encoding="utf-8") as f:
-#        f.write(generated_text)
-    print(generated_text)
+    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+    with open(output_json_path, "w", encoding="utf-8") as f:
+        f.write(generated_text)
+    print(f"Saved robot plan to {output_json_path}")
+    #print(generated_text)
 """
     # 2. Parse into structured format
     parsed = planner.parse_generated_text(generated_text)
@@ -284,8 +229,8 @@ if __name__ == "__main__":
     processor = AutoProcessor.from_pretrained(model_path)
 
     loop = asyncio.get_event_loop()
-    #for i in range(1, 31):
-    for i in [1]:
+    for i in range(1, 31):
+    #for i in [1]:
         task_id = f"task_{i}"
         task = all_tasks[task_id]["description"]
 
@@ -298,7 +243,7 @@ if __name__ == "__main__":
           #  f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/final/wrist_Color.png"
         ]
 
-        output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_txt/{task_id}.txt"
+        output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_one/{task_id}.txt"
 
         loop.run_until_complete(
             create_robot_plan_and_save(

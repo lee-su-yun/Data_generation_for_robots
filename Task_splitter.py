@@ -1,7 +1,7 @@
 import os
 import json
 import asyncio
-with open('/home/sylee/codes/Data_generation_for_robots/task/tasks50.json', 'r', encoding='utf-8') as f:
+with open('/home/sylee/codes/Data_generation_for_robots/splitted_task/50tasks.json', 'r', encoding='utf-8') as f:
     all_tasks = json.load(f)
 from typing import List, Optional
 import torch

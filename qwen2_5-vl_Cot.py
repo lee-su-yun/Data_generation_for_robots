@@ -175,7 +175,7 @@ async def create_robot_plan_and_save(
     print(generated_text)
 
     # 2. Parse into structured format
-    structured_subtasks = planner.parse_generated_text(generated_text)
+    parsed = planner.parse_generated_text(generated_text)
 
     # 3. Assemble final output
     output = {

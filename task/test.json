@@ -1,5 +1,6 @@
 {
-    "task": "Move the pink plastic cup to the center of the table without knocking over any other cups.",
+    "task": "",
+    "description": "",
     "images_used": [
         "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
@@ -8,24 +9,26 @@
         "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png"
     ],
+    "plan": "1. **Pick up the pink plastic cup** from the left side of the table. 2. **Move the pink plastic cup to the center of the table** without knocking over any other cups. ",
+    "planning_reason": "",
     "subtasks": [
         {
             "step": "Step 1",
             "subtask": "Pick up the pink plastic cup.",
             "subtask_reason": "The pink plastic cup needs to be lifted to move it to the center of the table.",
-            "move": "Move the gripper towards the pink plastic cup and lift it off the table.",
-            "move_reason": "Lifting the pink plastic cup allows for repositioning it to the center of the table.",
-            "issue": "Potential issue: The gripper might accidentally hit the white paper cups if not carefully positioned.",
-            "solution": "Ensure the gripper is aligned correctly with the pink plastic cup before lifting it."
+            "move": "Move the gripper towards the pink plastic cup and lift it up.",
+            "move_reason": "Lifting the pink plastic cup allows for repositioning it on the table.",
+            "issue": "The gripper might accidentally hit the white paper cups if not carefully controlled.",
+            "solution": "Ensure the gripper is positioned correctly before lifting the pink cup to avoid contact with the white paper cups."
         },
         {
             "step": "Step 2",
             "subtask": "Move the pink plastic cup to the center of the table.",
-            "subtask_reason": "The pink plastic cup needs to be repositioned to the center of the table without disturbing the white paper cups.",
-            "move": "Move the gripper to the center of the table and place the pink plastic cup down.",
+            "subtask_reason": "The pink plastic cup needs to be placed in the center of the table to complete the task.",
+            "move": "Move the gripper towards the center of the table and place the pink plastic cup down.",
             "move_reason": "Placing the pink plastic cup in the center of the table completes the task.",
-            "issue": "Potential issue: The gripper might not align perfectly with the center of the table.",
-            "solution": "Adjust the gripper's position before placing the pink plastic cup to ensure it lands in the center."
+            "issue": "The gripper might accidentally drop the pink plastic cup if not controlled properly.",
+            "solution": "Ensure the gripper is stable and controlled when placing the pink plastic cup to avoid dropping it."
         }
     ]
 }

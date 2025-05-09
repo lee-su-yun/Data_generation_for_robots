@@ -54,24 +54,28 @@ class RobotTaskPlanner:
         current = {}
         lines = text.split('\n')
 
-        def commit():
-            if current and "step" in current:
-                result["subtasks"].append(current.copy())
-
+        current_field = None
         for line in lines:
             line = line.strip()
             if line.startswith("### Task:"):
-                result["task"] = line[len("### Task:"):].strip()
+                current_field = "task"
+                result["task"] = ""
             elif line.startswith("### Description:"):
-                result["description"] = line[len("### Description:"):].strip()
+                current_field = "description"
+                result["description"] = ""
             elif line.startswith("### Plan:"):
+                current_field = "plan"
                 result["plan"] = ""
-            elif line.startswith("1.") or line.startswith("2.") or line.startswith("3."):
-                result["plan"] += line.strip() + " "
             elif line.startswith("### Reasoning:"):
-                result["planning_reason"] = line[len("### Reasoning:"):].strip()
+                current_field = "planning_reason"
+                result["planning_reason"] = ""
+            elif line.startswith("### Step") or line.startswith("[Step") or line.strip().upper() == "FINISHED":
+                current_field = None
+            elif current_field:
+                result[current_field] += (line + " ")
             elif line.startswith("[Step"):
-                commit()
+                if current and "step" in current:
+                    result["subtasks"].append(current.copy())
                 current = {"step": line.strip("[]")}
             elif line.startswith("<SUBTASK>:"):
                 current["subtask"] = line[len("<SUBTASK>:"):].strip()
@@ -88,7 +92,8 @@ class RobotTaskPlanner:
             elif line.strip().upper() == "FINISHED":
                 break
 
-        commit()
+        if current and "step" in current:
+            result["subtasks"].append(current.copy())
         return result
 
 async def create_robot_plan_and_save(

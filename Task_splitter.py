@@ -237,7 +237,7 @@ if __name__ == "__main__":
             f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/final/wrist_Color.png"
         ]
 
-        output_json_path = f"/home/sylee/codes/Data_generation_for_robots/outputs/{task_id}.json"
+        output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task/{task_id}.json"
 
         loop.run_until_complete(
             create_robot_plan_and_save(

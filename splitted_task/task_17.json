@@ -1,0 +1,61 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_17/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_17/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_17/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_17/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_17/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_17/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the yellow plastic cup.",
+            "subtask_reason": "The yellow cup needs to be moved to the left side of the table.",
+            "move": "move down and close gripper.",
+            "move_reason": "To pick up the yellow cup.",
+            "issue": "~~",
+            "solution": "~~"
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the yellow plastic cup to the left side of the table.",
+            "subtask_reason": "The yellow cup needs to be moved to the left side of the table.",
+            "move": "move to the left side of the table and open gripper.",
+            "move_reason": "To place the yellow cup on the left side of the table.",
+            "issue": "~~",
+            "solution": "~~"
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Move the purple plastic cup to the right side of the table.",
+            "subtask_reason": "The purple cup needs to be moved to the right side of the table.",
+            "move": "move to the right side of the table and open gripper.",
+            "move_reason": "To place the purple cup on the right side of the table.",
+            "issue": "~~",
+            "solution": "~~"
+        },
+        {
+            "step": "Step 4",
+            "subtask": "Move the pink plastic cup to the top left corner of the table.",
+            "subtask_reason": "The pink cup needs to be moved to the top left corner of the table.",
+            "move": "move to the top left corner of the table and open gripper.",
+            "move_reason": "To place the pink cup on the top left corner of the table.",
+            "issue": "~~",
+            "solution": "~~"
+        },
+        {
+            "step": "Step 5",
+            "subtask": "Move the light blue plastic cup to the bottom center of the table.",
+            "subtask_reason": "The light blue cup needs to be moved to the bottom center of the table.",
+            "move": "move to the bottom center of the table and open gripper.",
+            "move_reason": "To place the light blue cup on the bottom center of the table.",
+            "issue": "~~",
+            "solution": "~~"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_15/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_15/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_15/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_15/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_15/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_15/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the white plastic cup.",
+            "subtask_reason": "The white plastic cup needs to be moved to the location of the paper cup numbered 1.",
+            "move": "move down and close gripper.",
+            "move_reason": "This movement is necessary to pick up the white plastic cup.",
+            "issue": "Potential issue: The gripper might not be able to securely hold the cup if it's too slippery.",
+            "solution": "Ensure the gripper is properly calibrated and adjusted for the cup's material before attempting to pick it up."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the white plastic cup to the position of the paper cup numbered 1.",
+            "subtask_reason": "The white plastic cup needs to be placed in the location of the paper cup numbered 1.",
+            "move": "move forward and place the cup down.",
+            "move_reason": "This movement is necessary to place the white plastic cup in the desired location.",
+            "issue": "Potential issue: The cup might slip or fall off the table during the placement process.",
+            "solution": "Ensure the table surface is stable and the gripper is securely holding the cup before placing it down."
+        }
+    ]
+}

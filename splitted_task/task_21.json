@@ -1,0 +1,34 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_21/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_21/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_21/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_21/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_21/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_21/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the white plastic cup from the left side of the table.",
+            "subtask_reason": "The white plastic cup needs to be moved to the right side of the table, so it's necessary to pick it up first.",
+            "move": "Move the gripper towards the white plastic cup and close the gripper around it.",
+            "move_reason": "This movement is necessary to lift the white plastic cup off the table.",
+            "issue": "Potential issue: The gripper might not be able to securely hold the white plastic cup if it's too small or slippery.",
+            "solution": "Solution: Ensure the gripper is properly calibrated and adjusted for the size and shape of the white plastic cup before attempting to pick it up."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the white plastic cup to the right side of the table.",
+            "subtask_reason": "Once the white plastic cup is picked up, it needs to be moved to the desired location on the table.",
+            "move": "Move the gripper horizontally to the right side of the table and release the white plastic cup.",
+            "move_reason": "This movement is necessary to place the white plastic cup on the right side of the table.",
+            "issue": "Potential issue: The white plastic cup might fall off the table if the gripper doesn't release it properly.",
+            "solution": "Solution: Ensure the gripper is set to release the white plastic cup gently and accurately onto the table surface."
+        }
+    ]
+}

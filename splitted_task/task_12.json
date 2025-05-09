@@ -1,0 +1,88 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_12/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_12/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_12/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_12/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_12/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_12/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the yellow cup.",
+            "subtask_reason": "The yellow cup is not white and needs to be moved to the left side of the table.",
+            "move": "Move the yellow cup to the left side of the table.",
+            "move_reason": "This move is necessary to clear space for the next step and ensure the yellow cup is out of the way.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Pick up the purple cup.",
+            "subtask_reason": "The purple cup is not white and needs to be moved to the left side of the table.",
+            "move": "Move the purple cup to the left side of the table.",
+            "move_reason": "This move is necessary to clear space for the next step and ensure the purple cup is out of the way.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Pick up the pink cup.",
+            "subtask_reason": "The pink cup is not white and needs to be moved to the left side of the table.",
+            "move": "Move the pink cup to the left side of the table.",
+            "move_reason": "This move is necessary to clear space for the next step and ensure the pink cup is out of the way.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        },
+        {
+            "step": "Step 4",
+            "subtask": "Pick up the blue cup.",
+            "subtask_reason": "The blue cup is not white and needs to be moved to the left side of the table.",
+            "move": "Move the blue cup to the left side of the table.",
+            "move_reason": "This move is necessary to clear space for the next step and ensure the blue cup is out of the way.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        },
+        {
+            "step": "Step 5",
+            "subtask": "Place the yellow cup on the left side of the table.",
+            "subtask_reason": "The yellow cup was picked up earlier and needs to be placed back on the left side of the table.",
+            "move": "Place the yellow cup on the left side of the table.",
+            "move_reason": "This move is necessary to complete the task and ensure all non-white cups are on the left side of the table.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        },
+        {
+            "step": "Step 6",
+            "subtask": "Place the purple cup on the left side of the table.",
+            "subtask_reason": "The purple cup was picked up earlier and needs to be placed back on the left side of the table.",
+            "move": "Place the purple cup on the left side of the table.",
+            "move_reason": "This move is necessary to complete the task and ensure all non-white cups are on the left side of the table.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        },
+        {
+            "step": "Step 7",
+            "subtask": "Place the pink cup on the left side of the table.",
+            "subtask_reason": "The pink cup was picked up earlier and needs to be placed back on the left side of the table.",
+            "move": "Place the pink cup on the left side of the table.",
+            "move_reason": "This move is necessary to complete the task and ensure all non-white cups are on the left side of the table.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        },
+        {
+            "step": "Step 8",
+            "subtask": "Place the blue cup on the left side of the table.",
+            "subtask_reason": "The blue cup was picked up earlier and needs to be placed back on the left side of the table.",
+            "move": "Place the blue cup on the left side of the table.",
+            "move_reason": "This move is necessary to complete the task and ensure all non-white cups are on the left side of the table.",
+            "issue": "Potential issue: The gripper might collide with other objects if it's not carefully controlled.",
+            "solution": "Ensure the gripper moves slowly and precisely to avoid collisions."
+        }
+    ]
+}

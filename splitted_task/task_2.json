@@ -1,0 +1,34 @@
+{
+    "task": "Align the white paper cups (numbered 1, 2, 3) in numerical order from left to right.  ",
+    "description": "The initial state shows three white paper cups labeled 1, 2, and 3 arranged in a scattered manner on a white table. In the final state, the cups are aligned in numerical order from left to right. The task requires the robot arm to pick up each cup and place it in the correct position.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/wrist_Color.png"
+    ],
+    "plan": "1. Pick up cup 1. 2. Place cup 1 in the leftmost position. 3. Pick up cup 2. 4. Place cup 2 in the middle position. 5. Pick up cup 3. 6. Place cup 3 in the rightmost position.  ### Planning Reasoning: The task involves aligning the cups in numerical order. The initial state shows the cups out of order, so the robot needs to pick them up one by one and place them in their respective positions. This ensures that the cups are correctly aligned from left to right according to their labels.  ### Step-by-Step Plan: ",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1"
+        },
+        {
+            "step": "Step 2"
+        },
+        {
+            "step": "Step 3"
+        },
+        {
+            "step": "Step 4"
+        },
+        {
+            "step": "Step 5"
+        },
+        {
+            "step": "Step 6"
+        }
+    ]
+}

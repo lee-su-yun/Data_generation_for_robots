@@ -1,0 +1,52 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_5/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_5/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_5/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_5/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_5/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Sort the light blue cups into the top left quadrant.",
+            "subtask_reason": "The light blue cups need to be separated from other colors to start organizing them by color.",
+            "move": "Move the light blue cups to the top left quadrant.",
+            "move_reason": "This ensures that the light blue cups are isolated for further sorting.",
+            "issue": "Potential issue: The robot might collide with other cups if they are not moved carefully.",
+            "solution": "Carefully move the light blue cups to avoid collisions with other cups."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Sort the white cups into the top right quadrant.",
+            "subtask_reason": "The white cups need to be separated from other colors to continue organizing them by color.",
+            "move": "Move the white cups to the top right quadrant.",
+            "move_reason": "This ensures that the white cups are isolated for further sorting.",
+            "issue": "Potential issue: The robot might collide with other cups if they are not moved carefully.",
+            "solution": "Carefully move the white cups to avoid collisions with other cups."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Sort the pink cups into the bottom left quadrant.",
+            "subtask_reason": "The pink cups need to be separated from other colors to continue organizing them by color.",
+            "move": "Move the pink cups to the bottom left quadrant.",
+            "move_reason": "This ensures that the pink cups are isolated for further sorting.",
+            "issue": "Potential issue: The robot might collide with other cups if they are not moved carefully.",
+            "solution": "Carefully move the pink cups to avoid collisions with other cups."
+        },
+        {
+            "step": "Step 4",
+            "subtask": "Sort the yellow cups into the bottom right quadrant.",
+            "subtask_reason": "The yellow cups need to be separated from other colors to complete the organization by color.",
+            "move": "Move the yellow cups to the bottom right quadrant.",
+            "move_reason": "This ensures that the yellow cups are isolated for further sorting.",
+            "issue": "Potential issue: The robot might collide with other cups if they are not moved carefully.",
+            "solution": "Carefully move the yellow cups to avoid collisions with other cups."
+        }
+    ]
+}

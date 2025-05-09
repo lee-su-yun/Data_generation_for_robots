@@ -1,0 +1,43 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_27/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_27/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_27/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_27/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_27/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_27/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the pink cup.",
+            "subtask_reason": "The pink cup needs to be moved to the left side of the table.",
+            "move": "move down and close gripper.",
+            "move_reason": "This movement is necessary to pick up the pink cup.",
+            "issue": "Potential issue: The gripper might not be able to securely hold the cup if it's too slippery.",
+            "solution": "Ensure the gripper is properly calibrated and adjusted for the cup's material before picking it up."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the pink cup to the left side of the table.",
+            "subtask_reason": "The pink cup needs to be positioned on the left side of the table.",
+            "move": "move to the left side of the table and place the cup down.",
+            "move_reason": "This movement is necessary to place the pink cup on the left side of the table.",
+            "issue": "Potential issue: The gripper might drop the cup if it's not securely held.",
+            "solution": "Ensure the gripper is properly calibrated and adjusted for the cup's material before placing it down."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Move the white cup to the right side of the table.",
+            "subtask_reason": "The white cup needs to be positioned on the right side of the table.",
+            "move": "move to the right side of the table and place the cup down.",
+            "move_reason": "This movement is necessary to place the white cup on the right side of the table.",
+            "issue": "Potential issue: The gripper might drop the cup if it's not securely held.",
+            "solution": "Ensure the gripper is properly calibrated and adjusted for the cup's material before placing it down."
+        }
+    ]
+}

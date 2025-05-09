@@ -1,0 +1,61 @@
+{
+    "task": "Stack the pink and yellow plastic cups on top of the white paper cup numbered 3.  ",
+    "description": "The initial state shows three cups on the table: a pink cup, a white paper cup labeled '3', and a yellow cup. In the final state, the pink and yellow cups are stacked on top of the white paper cup labeled '3'. The task requires the robot arm to pick up the pink and yellow cups and place them on top of the white paper cup.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_11/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_11/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_11/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_11/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_11/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_11/final/wrist_Color.png"
+    ],
+    "plan": "1. Pick up the pink cup. 2. Move the pink cup to the white paper cup. 3. Pick up the yellow cup. 4. Move the yellow cup to the white paper cup. 5. Stack the pink and yellow cups on top of the white paper cup.  ### Planning Reasoning: The task involves stacking the cups, so the robot arm needs to pick up the cups one by one and place them on the designated cup. The white paper cup labeled '3' is the target for stacking, and the pink and yellow cups need to be picked up and placed on it.  ### Step 1 ",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the pink cup.",
+            "subtask_reason": "The pink cup needs to be picked up before it can be stacked on the white paper cup.",
+            "move": "Move down and close the gripper around the pink cup.",
+            "move_reason": "This movement is necessary to grab the pink cup and lift it off the table.",
+            "issue": "The gripper might not be able to securely hold the pink cup if it's too small or slippery.",
+            "solution": "Ensure the gripper is properly calibrated and adjusted to fit the size and shape of the pink cup."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the pink cup to the white paper cup.",
+            "subtask_reason": "The pink cup needs to be moved to the white paper cup to start the stacking process.",
+            "move": "Move the pink cup towards the white paper cup.",
+            "move_reason": "This movement is necessary to position the pink cup over the white paper cup.",
+            "issue": "The pink cup might slip out of the gripper while moving.",
+            "solution": "Apply gentle pressure to the gripper to keep the pink cup secure during the move."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Pick up the yellow cup.",
+            "subtask_reason": "The yellow cup needs to be picked up before it can be stacked on the white paper cup.",
+            "move": "Move down and close the gripper around the yellow cup.",
+            "move_reason": "This movement is necessary to grab the yellow cup and lift it off the table.",
+            "issue": "The gripper might not be able to securely hold the yellow cup if it's too small or slippery.",
+            "solution": "Ensure the gripper is properly calibrated and adjusted to fit the size and shape of the yellow cup."
+        },
+        {
+            "step": "Step 4",
+            "subtask": "Move the yellow cup to the white paper cup.",
+            "subtask_reason": "The yellow cup needs to be moved to the white paper cup to complete the stacking process.",
+            "move": "Move the yellow cup towards the white paper cup.",
+            "move_reason": "This movement is necessary to position the yellow cup over the pink cup and white paper cup.",
+            "issue": "The yellow cup might slip out of the gripper while moving.",
+            "solution": "Apply gentle pressure to the gripper to keep the yellow cup secure during the move."
+        },
+        {
+            "step": "Step 5",
+            "subtask": "Stack the pink and yellow cups on top of the white paper cup.",
+            "subtask_reason": "The pink and yellow cups need to be stacked on the white paper cup to complete the task.",
+            "move": "Move the gripper upwards and release the pink and yellow cups onto the white paper cup.",
+            "move_reason": "This movement is necessary to place the pink and yellow cups on top of the white paper cup.",
+            "issue": "The gripper might not be able to release the cups properly, causing them to fall off.",
+            "solution": "Ensure the gripper is properly calibrated and adjusted to release the cups securely."
+        }
+    ]
+}

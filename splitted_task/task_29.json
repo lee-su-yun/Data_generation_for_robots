@@ -1,0 +1,34 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_29/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_29/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_29/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_29/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_29/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_29/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the white plastic cup from the left side of the table.",
+            "subtask_reason": "The white plastic cup needs to be moved to the right side of the table, so it's necessary to pick it up first.",
+            "move": "Move the robot arm downward and close the gripper around the white plastic cup.",
+            "move_reason": "This movement is necessary to grasp the white plastic cup before moving it.",
+            "issue": "Potential issue: The white plastic cup might get stuck between the other cups if not moved carefully.",
+            "solution": "Solution: Ensure the white plastic cup is lifted slightly above the other cups before moving it to the right side of the table."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the white plastic cup to the right side of the table.",
+            "subtask_reason": "Once the white plastic cup is picked up, it needs to be moved to the right side of the table to avoid the paper cups.",
+            "move": "Move the robot arm horizontally to the right side of the table and release the white plastic cup.",
+            "move_reason": "This movement is necessary to place the white plastic cup on the right side of the table.",
+            "issue": "Potential issue: The white plastic cup might fall off the table if not placed carefully.",
+            "solution": "Solution: Ensure the white plastic cup is placed gently on the right side of the table to avoid any damage."
+        }
+    ]
+}

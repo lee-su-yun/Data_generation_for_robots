@@ -1,0 +1,34 @@
+{
+    "task": "Stack the three paper cups in a vertical line on the right side of the table.  ",
+    "description": "The initial state shows three paper cups labeled 1, 2, and 3 arranged horizontally on the left side of the table. The final state shows the cups stacked vertically on the right side of the table. The task requires picking up each cup and placing it on top of the previous one until all three are stacked.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_16/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_16/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_16/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_16/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_16/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_16/final/wrist_Color.png"
+    ],
+    "plan": "1. Pick up cup 1. 2. Move cup 1 to the right side of the table. 3. Pick up cup 2. 4. Move cup 2 to the right side of the table. 5. Pick up cup 3. 6. Move cup 3 to the right side of the table. 7. Stack cup 3 on top of cup 2. 8. Stack cup 2 on top of cup 1.  ### Planning Reasoning: The plan starts with picking up cup 1 because it is the furthest left and needs to be moved first. Then, we move cup 1 to the right side of the table to make space for the next cup. Next, we pick up cup 2 and move it to the right side of the table. Finally, we pick up cup 3 and move it to the right side of the table. At this point, we can start stacking the cups by placing cup 3 on top of cup 2, then cup 2 on top of cup 1.  ### Step-by-Step Plan: ",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1"
+        },
+        {
+            "step": "Step 2"
+        },
+        {
+            "step": "Step 3"
+        },
+        {
+            "step": "Step 4"
+        },
+        {
+            "step": "Step 5"
+        },
+        {
+            "step": "Step 6"
+        }
+    ]
+}

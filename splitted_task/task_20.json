@@ -1,0 +1,43 @@
+{
+    "task": "Arrange the cups in a triangle formation with the light blue cup at the top.  ",
+    "description": "The initial state shows three cups (yellow, pink, and light blue) arranged in a line. The final state shows the cups arranged in a triangular formation with the light blue cup at the top.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_20/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_20/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_20/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_20/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_20/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_20/final/wrist_Color.png"
+    ],
+    "plan": "1. **Pick up the yellow cup** (Step 1): Move the yellow cup to the left side of the table. 2. **Pick up the pink cup** (Step 2): Move the pink cup to the right side of the table. 3. **Move the light blue cup to the top** (Step 3): Place the light blue cup at the top of the triangle.  ### Planning Reasoning: The task requires arranging the cups in a specific triangular formation. The initial arrangement is linear, so we need to move the cups around to form the triangle. The light blue cup needs to be placed at the top, which means it must be moved to the highest position relative to the other two cups.  ### Step-by-Step Annotations:  ",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the yellow cup.",
+            "subtask_reason": "To start forming the triangle, the yellow cup needs to be moved to the left side of the table.",
+            "move": "Move the yellow cup to the left side of the table.",
+            "move_reason": "This movement allows the yellow cup to be positioned for the next step in forming the triangle.",
+            "issue": "Potential issue: The yellow cup might get stuck if it's not easily movable.",
+            "solution": "Ensure the yellow cup is not stuck by gently tapping it or adjusting its position before picking it up."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Pick up the pink cup.",
+            "subtask_reason": "The pink cup needs to be moved to the right side of the table to form the triangle.",
+            "move": "Move the pink cup to the right side of the table.",
+            "move_reason": "This movement helps in positioning the pink cup for the final triangular arrangement.",
+            "issue": "Potential issue: The pink cup might be difficult to pick up due to its position.",
+            "solution": "Gently tap the pink cup to loosen it if necessary before picking it up."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Move the light blue cup to the top.",
+            "subtask_reason": "The light blue cup needs to be placed at the top of the triangle to complete the arrangement.",
+            "move": "Place the light blue cup at the top of the triangle.",
+            "move_reason": "This final placement forms the desired triangular arrangement.",
+            "issue": "Potential issue: The light blue cup might not fit perfectly into the triangle.",
+            "solution": "Ensure the light blue cup is centered and aligned properly within the triangle."
+        }
+    ]
+}

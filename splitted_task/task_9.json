@@ -1,0 +1,31 @@
+{
+    "task": "Arrange the cups in a line from left to right by color, starting with light blue.  ",
+    "description": "The initial state shows five cups scattered on a table. The final state shows the cups arranged in a line from left to right, starting with light blue. The cups are all upright and there are no occlusions or stackings.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_9/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_9/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_9/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_9/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_9/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_9/final/wrist_Color.png"
+    ],
+    "plan": "1. **Step 1:** Pick up the light blue cup from the top left corner. 2. **Step 2:** Place the light blue cup on the far left. 3. **Step 3:** Pick up the white cup from the top center. 4. **Step 4:** Place the white cup next to the light blue cup. 5. **Step 5:** Pick up the white cup from the bottom center. 6. **Step 6:** Place the white cup next to the previous two. 7. **Step 7:** Pick up the white cup from the bottom right. 8. **Step 8:** Place the white cup next to the previous three. 9. **Step 9:** Pick up the pink cup from the far right. 10. **Step 10:** Place the pink cup on the far right.  ### Planning Reasoning: The task requires arranging the cups in a specific order by color. The initial state shows the cups scattered, so we need to pick them up one by one and place them in the desired order. The final state shows the cups already arranged, which helps us understand the target configuration.  ### Step-by-Step Annotations:  ",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1"
+        },
+        {
+            "step": "Step 2"
+        },
+        {
+            "step": "Step 3"
+        },
+        {
+            "step": "Step 4"
+        },
+        {
+            "step": "Step 5"
+        }
+    ]
+}

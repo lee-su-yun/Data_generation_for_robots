@@ -224,7 +224,7 @@ if __name__ == "__main__":
     processor = AutoProcessor.from_pretrained(model_path)
 
     loop = asyncio.get_event_loop()
-    for i in range(16, 31):
+    for i in range(1, 31):
         task_id = f"task_{i}"
         task = all_tasks[task_id]["description"]
 

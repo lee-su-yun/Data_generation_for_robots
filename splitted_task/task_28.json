@@ -1,0 +1,15 @@
+{
+    "task": "Stack the yellow plastic cup on top of the white paper cup numbered 2.  ",
+    "description": "The initial state shows two cups on the table: a yellow plastic cup and a white paper cup numbered 2. The final state shows the yellow plastic cup placed on top of the white paper cup numbered 2, indicating successful stacking.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_28/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_28/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_28/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_28/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_28/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_28/final/wrist_Color.png"
+    ],
+    "plan": "1. **Step 1:** Pick up the yellow plastic cup. 2. **Step 2:** Move the yellow plastic cup to the position directly above the white paper cup numbered 2. 3. **Step 3:** Stack the yellow plastic cup on top of the white paper cup numbered 2.  ",
+    "planning_reason": "The task requires stacking the yellow plastic cup on top of the white paper cup numbered 2. The initial state shows both cups on the table, and the final state shows them stacked together. Therefore, the robot needs to pick up the yellow plastic cup and place it on top of the white paper cup numbered 2.  ### Step 1: Pick up the yellow plastic cup.  ### Step 2: Move the yellow plastic cup to the position directly above the white paper cup numbered 2.  ### Step 3: Stack the yellow plastic cup on top of the white paper cup numbered 2.  ",
+    "subtasks": []
+}

@@ -1,0 +1,28 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_14/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_14/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_14/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_14/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_14/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_14/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1"
+        },
+        {
+            "step": "Step 2"
+        },
+        {
+            "step": "Step 3"
+        },
+        {
+            "step": "Step 4"
+        }
+    ]
+}

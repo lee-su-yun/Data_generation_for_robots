@@ -1,0 +1,61 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_26/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_26/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_26/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_26/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_26/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_26/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the yellow plastic cup.",
+            "subtask_reason": "The yellow cup needs to be moved to the white paper cup before the pink cup can be added.",
+            "move": "move down and close gripper.",
+            "move_reason": "This movement is necessary to pick up the yellow cup.",
+            "issue": "The gripper might not be able to securely hold the yellow cup if it's too small.",
+            "solution": "Ensure the gripper size is appropriate for the yellow cup or adjust the grip force accordingly."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the yellow plastic cup to the white paper cup.",
+            "subtask_reason": "The yellow cup needs to be positioned on top of the white paper cup to form the base of the stack.",
+            "move": "move forward, place the yellow cup on the white paper cup, and open the gripper.",
+            "move_reason": "This movement is necessary to place the yellow cup on the white paper cup.",
+            "issue": "The gripper might slip off the yellow cup due to its smooth surface.",
+            "solution": "Apply a gentle downward pressure to the yellow cup to ensure it stays in place."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Pick up the pink plastic cup.",
+            "subtask_reason": "The pink cup needs to be moved to the stack of yellow and white cups to complete the task.",
+            "move": "move down and close gripper.",
+            "move_reason": "This movement is necessary to pick up the pink cup.",
+            "issue": "The gripper might not be able to securely hold the pink cup if it's too small.",
+            "solution": "Ensure the gripper size is appropriate for the pink cup or adjust the grip force accordingly."
+        },
+        {
+            "step": "Step 4",
+            "subtask": "Move the pink plastic cup to the stack of yellow and white cups.",
+            "subtask_reason": "The pink cup needs to be placed on top of the yellow cup to complete the stack.",
+            "move": "move forward, place the pink cup on the stack of yellow and white cups, and open the gripper.",
+            "move_reason": "This movement is necessary to place the pink cup on the stack of yellow and white cups.",
+            "issue": "The gripper might slip off the pink cup due to its smooth surface.",
+            "solution": "Apply a gentle downward pressure to the pink cup to ensure it stays in place."
+        },
+        {
+            "step": "Step 5",
+            "subtask": "Verify the stack is correctly formed.",
+            "subtask_reason": "Ensure the yellow and pink cups are stacked on top of the white paper cup.",
+            "move": "move back and open gripper.",
+            "move_reason": "This movement is necessary to check the stack formation.",
+            "issue": "The gripper might interfere with the stack during verification.",
+            "solution": "Move the gripper away from the stack and visually inspect the stack to confirm its formation."
+        }
+    ]
+}

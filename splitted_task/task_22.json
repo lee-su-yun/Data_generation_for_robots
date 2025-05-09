@@ -1,0 +1,70 @@
+{
+    "task": "Stack the white plastic cups and paper cups in alternating layers on the left side.  ",
+    "description": "The initial state shows three white paper cups labeled 1, 2, and 3 arranged in a row on a white table. The final state shows two stacked cups on the left side, with one paper cup on top of a plastic cup. The task requires stacking the cups in alternating layers.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_22/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_22/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_22/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_22/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_22/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_22/final/wrist_Color.png"
+    ],
+    "plan": "1. Pick up cup 1. 2. Move cup 1 to the left. 3. Pick up cup 2. 4. Move cup 2 to the left. 5. Pick up cup 3. 6. Move cup 3 to the left. 7. Stack cup 1 on top of cup 2. 8. Stack cup 2 on top of cup 3.  ### Planning Reasoning: The task involves stacking the cups in alternating layers. The initial state shows the cups arranged in a row, which makes it easy to identify the order for stacking. The final state shows the cups stacked in the desired pattern, so we can infer the steps needed to achieve this.  ### Step 1 ",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up cup 1.",
+            "subtask_reason": "Cup 1 needs to be picked up to start the stacking process.",
+            "move": "move down and close gripper.",
+            "move_reason": "The gripper needs to be positioned over cup 1 to pick it up.",
+            "issue": "Potential issue: The gripper might not be able to securely grasp cup 1 if it's not properly aligned.",
+            "solution": "Ensure the gripper is aligned correctly with cup 1 before attempting to pick it up."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move cup 1 to the left.",
+            "subtask_reason": "Cup 1 needs to be moved to the left to make space for the next cup.",
+            "move": "move to the left and open gripper.",
+            "move_reason": "The gripper needs to be moved to the left to place cup 1 on the table.",
+            "issue": "Potential issue: The gripper might collide with other objects on the table.",
+            "solution": "Ensure there is enough space on the left side of the table for cup 1."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Pick up cup 2.",
+            "subtask_reason": "Cup 2 needs to be picked up to continue the stacking process.",
+            "move": "move down and close gripper.",
+            "move_reason": "The gripper needs to be positioned over cup 2 to pick it up.",
+            "issue": "Potential issue: The gripper might not be able to securely grasp cup 2 if it's not properly aligned.",
+            "solution": "Ensure the gripper is aligned correctly with cup 2 before attempting to pick it up."
+        },
+        {
+            "step": "Step 4",
+            "subtask": "Move cup 2 to the left.",
+            "subtask_reason": "Cup 2 needs to be moved to the left to make space for the next cup.",
+            "move": "move to the left and open gripper.",
+            "move_reason": "The gripper needs to be moved to the left to place cup 2 on the table.",
+            "issue": "Potential issue: The gripper might collide with other objects on the table.",
+            "solution": "Ensure there is enough space on the left side of the table for cup 2."
+        },
+        {
+            "step": "Step 5",
+            "subtask": "Pick up cup 3.",
+            "subtask_reason": "Cup 3 needs to be picked up to complete the stacking process.",
+            "move": "move down and close gripper.",
+            "move_reason": "The gripper needs to be positioned over cup 3 to pick it up.",
+            "issue": "Potential issue: The gripper might not be able to securely grasp cup 3 if it's not properly aligned.",
+            "solution": "Ensure the gripper is aligned correctly with cup 3 before attempting to pick it up."
+        },
+        {
+            "step": "Step 6",
+            "subtask": "Move cup 3 to the left.",
+            "subtask_reason": "Cup 3 needs to be moved to the left to make space for the next cup.",
+            "move": "move to the left and open gripper.",
+            "move_reason": "The gripper needs to be moved to the left to place cup 3 on the table.",
+            "issue": "Potential issue: The gripper might collide with other objects on the table.",
+            "solution": "Ensure there is enough space on the left side of the table for cup 3."
+        }
+    ]
+}

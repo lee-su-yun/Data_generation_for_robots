@@ -1,0 +1,34 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_25/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_25/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_25/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_25/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_25/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_25/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the white paper cup numbered 3.",
+            "subtask_reason": "The white paper cup numbered 3 needs to be moved to the position where the light blue cup is currently located.",
+            "move": "move towards the white paper cup numbered 3 and pick it up.",
+            "move_reason": "This movement is necessary to lift the white paper cup numbered 3 so that it can be moved to the desired location.",
+            "issue": "Potential issue: The white paper cup numbered 3 might be heavy or difficult to grip.",
+            "solution": "Solution: Ensure the gripper is properly aligned and apply enough force to securely pick up the white paper cup numbered 3."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the white paper cup numbered 3 to the position where the light blue cup is currently located.",
+            "subtask_reason": "The white paper cup numbered 3 needs to be moved to the position where the light blue cup is currently located.",
+            "move": "move the white paper cup numbered 3 to the position where the light blue cup is currently located.",
+            "move_reason": "This movement is necessary to place the white paper cup numbered 3 in the desired location.",
+            "issue": "Potential issue: The white paper cup numbered 3 might not fit in the desired location.",
+            "solution": "Solution: Ensure the white paper cup numbered 3 fits in the desired location before placing it down."
+        }
+    ]
+}

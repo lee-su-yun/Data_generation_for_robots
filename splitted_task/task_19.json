@@ -1,0 +1,43 @@
+{
+    "task": "",
+    "description": "",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_19/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_19/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_19/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_19/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_19/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_19/final/wrist_Color.png"
+    ],
+    "plan": "",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the white cup from the left side of the table.",
+            "subtask_reason": "The white cup is currently upside down and needs to be moved to the center of the table for flipping.",
+            "move": "move to the left and pick the white cup.",
+            "move_reason": "This movement is necessary to reach the white cup before flipping it.",
+            "issue": "The white cup might be difficult to grasp due to its size and position.",
+            "solution": "Ensure a firm grip on the cup to prevent it from slipping during the pick-up process."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the white cup to the center of the table.",
+            "subtask_reason": "The white cup needs to be positioned centrally for flipping.",
+            "move": "move to the center and place the white cup upright.",
+            "move_reason": "This movement is necessary to place the cup in the desired location for flipping.",
+            "issue": "The white cup might not be stable when flipped.",
+            "solution": "Ensure the cup is securely placed on the table before flipping it to avoid any tipping over."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Flip the white cup upright.",
+            "subtask_reason": "The cup needs to be flipped to match the orientation of the other cups.",
+            "move": "flip the white cup.",
+            "move_reason": "This movement is necessary to change the orientation of the cup to match the others.",
+            "issue": "The cup might not be stable when flipped.",
+            "solution": "Ensure the cup is securely placed on the table before flipping it to avoid any tipping over."
+        }
+    ]
+}

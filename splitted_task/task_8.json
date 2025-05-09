@@ -1,0 +1,43 @@
+{
+    "task": "Stack the paper cup numbered 2 on top of the pink plastic cup.  ",
+    "description": "The initial state shows a pink plastic cup and a paper cup numbered 2 on the table. The final state shows the paper cup numbered 2 placed on top of the pink plastic cup, indicating successful stacking.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_8/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_8/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_8/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_8/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_8/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_8/final/wrist_Color.png"
+    ],
+    "plan": "1. **Pick up the pink plastic cup** - Move the pink plastic cup to a safe location. 2. **Pick up the paper cup numbered 2** - Move the paper cup numbered 2 to the location where it needs to be stacked. 3. **Stack the paper cup numbered 2 on the pink plastic cup** - Place the paper cup numbered 2 on top of the pink plastic cup.  ### Planning Reasoning: The task requires stacking the paper cup numbered 2 on top of the pink plastic cup. The initial state shows both objects on the table, so the robot arm must pick them up and place them in the correct order to achieve the final state.  ### Step 1: ",
+    "planning_reason": "",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the pink plastic cup.",
+            "subtask_reason": "The pink plastic cup needs to be moved to a safe location before picking up the paper cup numbered 2.",
+            "move": "Move the pink plastic cup to the left side of the table.",
+            "move_reason": "This movement allows the robot arm to reach the paper cup numbered 2 without obstructing it.",
+            "issue": "The robot arm might collide with the paper cup numbered 2 if it moves too quickly.",
+            "solution": "Slowly move the pink plastic cup to the left side of the table to avoid collision."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Pick up the paper cup numbered 2.",
+            "subtask_reason": "The paper cup numbered 2 needs to be picked up to be stacked on top of the pink plastic cup.",
+            "move": "Move the paper cup numbered 2 to the right side of the table.",
+            "move_reason": "This movement allows the robot arm to reach the pink plastic cup without obstructing it.",
+            "issue": "The robot arm might collide with the pink plastic cup if it moves too quickly.",
+            "solution": "Slowly move the paper cup numbered 2 to the right side of the table to avoid collision."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Stack the paper cup numbered 2 on the pink plastic cup.",
+            "subtask_reason": "The paper cup numbered 2 needs to be placed on top of the pink plastic cup to complete the task.",
+            "move": "Place the paper cup numbered 2 on top of the pink plastic cup.",
+            "move_reason": "This movement stacks the paper cup numbered 2 on top of the pink plastic cup, achieving the final state.",
+            "issue": "The robot arm might not be able to place the paper cup numbered 2 on top of the pink plastic cup due to misalignment.",
+            "solution": "Ensure the paper cup numbered 2 is aligned correctly with the pink plastic cup before placing it on top."
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "task": "Move the cup that is not pink to the right side of the table, leaving the pink cup in the center.  ",
+    "description": "The initial state shows five cups on the table: one pink, one yellow, two light blue, and one white. The final state shows the same cups, but the yellow cup has been moved to the right side of the table, and the pink cup remains in the center.  ",
+    "images_used": [
+        "/home/sylee/codes/Data_generation_for_robots/image/task_23/init/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_23/init/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_23/init/wrist_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_23/final/top_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_23/final/side_Color.png",
+        "/home/sylee/codes/Data_generation_for_robots/image/task_23/final/wrist_Color.png"
+    ],
+    "plan": "1. Identify the non-pink cup that needs to be moved (yellow cup). 2. Move the yellow cup to the right side of the table. 3. Ensure the pink cup stays in the center.  ",
+    "planning_reason": "The task requires moving the yellow cup to the right side of the table while keeping the pink cup in the center. This ensures that the pink cup remains the focal point, and the other cups are arranged symmetrically around it.  ### Step 1: ",
+    "subtasks": [
+        {
+            "step": "Step 1",
+            "subtask": "Pick up the yellow cup.",
+            "subtask_reason": "The yellow cup needs to be moved to the right side of the table.",
+            "move": "Move down and grab the yellow cup.",
+            "move_reason": "To pick up the yellow cup for relocation.",
+            "issue": "Potential issue: The gripper might collide with other cups if not carefully positioned.",
+            "solution": "Ensure the gripper is aligned correctly with the yellow cup before grabbing it."
+        },
+        {
+            "step": "Step 2",
+            "subtask": "Move the yellow cup to the right side of the table.",
+            "subtask_reason": "To fulfill the task requirement of having the yellow cup on the right side.",
+            "move": "Move the yellow cup to the right side of the table.",
+            "move_reason": "To place the yellow cup in the desired position.",
+            "issue": "Potential issue: The gripper might drop the cup if not securely held.",
+            "solution": "Hold the yellow cup firmly during the move to prevent it from falling."
+        },
+        {
+            "step": "Step 3",
+            "subtask": "Ensure the pink cup stays in the center.",
+            "subtask_reason": "To maintain the symmetry and focus on the pink cup.",
+            "move": "Move the pink cup slightly to the center if necessary.",
+            "move_reason": "To ensure the pink cup is perfectly centered.",
+            "issue": "Potential issue: The pink cup might shift due to the movement of other cups.",
+            "solution": "Carefully adjust the pink cup's position to keep it centered."
+        }
+    ]
+}

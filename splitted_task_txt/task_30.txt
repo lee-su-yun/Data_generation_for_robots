@@ -1,0 +1,73 @@
+### Task:
+Stack the white paper cups in a vertical line on the right side, with cup 3 at the bottom.
+
+### Description:
+The initial state shows three white paper cups labeled 1, 2, and 3 arranged horizontally on the left side of the table. The final state shows the cups stacked vertically on the right side of the table, with cup 3 at the bottom.
+
+### Plan:
+1. Pick up cup 1.
+2. Move cup 1 to the right side of the table.
+3. Pick up cup 2.
+4. Move cup 2 to the right side of the table.
+5. Pick up cup 3.
+6. Stack cup 3 on top of cup 2.
+7. Stack cup 2 on top of cup 1.
+
+### PLANNING_reason:
+The plan follows a sequential approach, starting with the topmost cup and moving downwards to ensure proper stacking. This ensures that the cups are stacked correctly in a vertical line with cup 3 at the bottom.
+
+### Step 1
+[Step 1]
+<SUBTASK> Pick up cup 1.
+<SUBTASK_reason> Cup 1 needs to be moved to the right side of the table for stacking.
+<MOVE> Move to the left side of the table, pick up cup 1, and move it to the right side.
+<MOVE_reason> Picking up cup 1 allows us to start the stacking process.
+<ISSUE> Potential issue: The gripper might not be able to securely hold cup 1 if it's not properly aligned.
+<SOLUTION> Ensure the gripper is properly aligned with cup 1 before picking it up.
+
+### Step 2
+[Step 2]
+<SUBTASK> Move cup 1 to the right side of the table.
+<SUBTASK_reason> Cup 1 needs to be positioned on the right side for stacking.
+<MOVE> Move to the right side of the table and place cup 1 on the table.
+<MOVE_reason> Placing cup 1 on the right side prepares it for the next step in the stacking process.
+<ISSUE> Potential issue: Cup 1 might fall off the table if not securely placed.
+<SOLUTION> Ensure cup 1 is securely placed on the table before moving to the next step.
+
+### Step 3
+[Step 3]
+<SUBTASK> Pick up cup 2.
+<SUBTASK_reason> Cup 2 needs to be picked up to continue the stacking process.
+<MOVE> Move to the left side of the table, pick up cup 2, and move it to the right side.
+<MOVE_reason> Picking up cup 2 allows us to stack it on top of cup 1.
+<ISSUE> Potential issue: The gripper might not be able to securely hold cup 2 if it's not properly aligned.
+<SOLUTION> Ensure the gripper is properly aligned with cup 2 before picking it up.
+
+### Step 4
+[Step 4]
+<SUBTASK> Move cup 2 to the right side of the table.
+<SUBTASK_reason> Cup 2 needs to be positioned on the right side for stacking.
+<MOVE> Move to the right side of the table and place cup 2 on top of cup 1.
+<MOVE_reason> Placing cup 2 on top of cup 1 continues the stacking process.
+<ISSUE> Potential issue: Cup 2 might fall off the table if not securely placed.
+<SOLUTION> Ensure cup 2 is securely placed on top of cup 1 before moving to the next step.
+
+### Step 5
+[Step 5]
+<SUBTASK> Pick up cup 3.
+<SUBTASK_reason> Cup 3 needs to be picked up to complete the stacking process.
+<MOVE> Move to the left side of the table, pick up cup 3, and move it to the right side.
+<MOVE_reason> Picking up cup 3 allows us to stack it on top of cup 2.
+<ISSUE> Potential issue: The gripper might not be able to securely hold cup 3 if it's not properly aligned.
+<SOLUTION> Ensure the gripper is properly aligned with cup 3 before picking it up.
+
+### Step 6
+[Step 6]
+<SUBTASK> Stack cup 3 on top of cup 2.
+<SUBTASK_reason> Cup 3 needs to be stacked on top of cup 2 to complete the vertical stack.
+<MOVE> Move to the right side of the table and place cup 3 on top of cup 2.
+<MOVE_reason> Placing cup 3 on top of cup 2 completes the vertical stack.
+<ISSUE> Potential issue: Cup 3 might fall off the table if not securely placed.
+<SOLUTION> Ensure cup 3 is securely placed on top of cup 2 before finishing the task.
+
+FINISHED

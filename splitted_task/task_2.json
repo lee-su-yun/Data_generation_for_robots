@@ -1,6 +1,6 @@
 {
     "task": "Align the white paper cups (numbered 1, 2, 3) in numerical order from left to right.  ",
-    "description": "The initial state shows three white paper cups labeled 1, 2, and 3 arranged in a scattered manner on a white table. In the final state, the cups are aligned in numerical order from left to right. The task requires the robot arm to pick up each cup and place it in the correct position.  ",
+    "description": "The initial state shows three white paper cups labeled 1, 2, and 3 arranged in a scattered manner on a table. In the final state, the cups are aligned in numerical order from left to right. The task requires the robot arm to pick up each cup and place it in the correct position.  ",
     "images_used": [
         "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/top_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/side_Color.png",
@@ -9,26 +9,67 @@
         "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/side_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/wrist_Color.png"
     ],
-    "plan": "1. Pick up cup 1. 2. Place cup 1 in the leftmost position. 3. Pick up cup 2. 4. Place cup 2 in the middle position. 5. Pick up cup 3. 6. Place cup 3 in the rightmost position.  ### Planning Reasoning: The task involves aligning the cups in numerical order. The initial state shows the cups out of order, so the robot needs to pick them up one by one and place them in their respective positions. This ensures that the cups are correctly aligned from left to right according to their labels.  ### Step-by-Step Plan: ",
-    "planning_reason": "",
+    "plan": [
+        "1. Pick up cup 1 and place it on the leftmost position.",
+        "2. Pick up cup 2 and place it next to cup 1.",
+        "3. Pick up cup 3 and place it next to cup 2."
+    ],
+
+    "planning_reason": "The plan is structured to ensure that the cups are placed in numerical order from left to right. The robot arm needs to pick up each cup individually and place it in the correct position to achieve the desired alignment.",
     "subtasks": [
         {
-            "step": "Step 1"
+            "step": "Step 1",
+            "subtask": "Pick up cup 1.",
+            "subtask_reason": "Cup 1 needs to be picked up first to start the alignment process.",
+            "move": "Move to the location of cup 1 and pick it up.",
+            "move_reason": "The gripper needs to reach the cup 1 to pick it up.",
+            "issue": "The gripper might collide with other objects if it moves too close to them.",
+            "solution": "Ensure the gripper moves slowly and carefully to avoid collisions."
         },
         {
-            "step": "Step 2"
+            "step": "Step 2",
+            "subtask": "Place cup 1 on the leftmost position.",
+            "subtask_reason": "Cup 1 needs to be placed in the starting position for the alignment.",
+            "move": "Move the gripper to the leftmost position on the table and place cup 1 there.",
+            "move_reason": "The gripper needs to move to the designated position to place cup 1.",
+            "issue": "The gripper might not be able to reach the leftmost position due to obstacles.",
+            "solution": "Adjust the gripper's path to avoid any obstacles."
         },
         {
-            "step": "Step 3"
+            "step": "Step 3",
+            "subtask": "Pick up cup 2.",
+            "subtask_reason": "Cup 2 needs to be picked up next to continue the alignment.",
+            "move": "Move to the location of cup 2 and pick it up.",
+            "move_reason": "The gripper needs to reach the cup 2 to pick it up.",
+            "issue": "The gripper might collide with other objects if it moves too close to them.",
+            "solution": "Ensure the gripper moves slowly and carefully to avoid collisions."
         },
         {
-            "step": "Step 4"
+            "step": "Step 4",
+            "subtask": "Place cup 2 next to cup 1.",
+            "subtask_reason": "Cup 2 needs to be placed next to cup 1 to maintain the numerical order.",
+            "move": "Move the gripper to the position next to cup 1 and place cup 2 there.",
+            "move_reason": "The gripper needs to move to the designated position to place cup 2.",
+            "issue": "The gripper might not be able to reach the position next to cup 1 due to obstacles.",
+            "solution": "Adjust the gripper's path to avoid any obstacles."
         },
         {
-            "step": "Step 5"
+            "step": "Step 5",
+            "subtask": "Pick up cup 3.",
+            "subtask_reason": "Cup 3 needs to be picked up to complete the alignment.",
+            "move": "Move to the location of cup 3 and pick it up.",
+            "move_reason": "The gripper needs to reach the cup 3 to pick it up.",
+            "issue": "The gripper might collide with other objects if it moves too close to them.",
+            "solution": "Ensure the gripper moves slowly and carefully to avoid collisions."
         },
         {
-            "step": "Step 6"
+            "step": "Step 6",
+            "subtask": "Place cup 3 next to cup 2.",
+            "subtask_reason": "Cup 3 needs to be placed next to cup 2 to complete the numerical order.",
+            "move": "Move the gripper to the position next to cup 2 and place cup 3 there.",
+            "move_reason": "The gripper needs to move to the designated position to place cup 3.",
+            "issue": "The gripper might not be able to reach the position next to cup 2 due to obstacles.",
+            "solution": "Adjust the gripper's path to avoid any obstacles."
         }
     ]
 }

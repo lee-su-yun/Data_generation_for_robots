@@ -1,0 +1,28 @@
+## Task:
+Stack the paper cup numbered 2 on top of the pink plastic cup.
+
+## Description:
+The initial state shows a pink plastic cup and a paper cup numbered 2 on a table. The final state shows the paper cup numbered 2 placed on top of the pink plastic cup, indicating successful stacking.
+
+## Plan:
+The high-level plan for this task involves picking up the paper cup numbered 2 and placing it on top of the pink plastic cup. The reasoning behind this plan is that the paper cup needs to be lifted and moved to the desired position on top of the pink plastic cup.
+
+## Step 1
+[Step 1]
+<SUBTASK> Pick up the paper cup numbered 2.
+<SUBTASK_reason> The paper cup numbered 2 needs to be lifted to place it on top of the pink plastic cup.
+<MOVE> Move the gripper towards the paper cup numbered 2 and pick it up.
+<MOVE_reason> The gripper needs to reach the paper cup numbered 2 to lift it.
+<ISSUE> The gripper might collide with other objects if it moves too close to them.
+<SOLUTION> Ensure the gripper moves slowly and carefully to avoid collisions.
+
+## Step 2
+[Step 2]
+<SUBTASK> Move the paper cup numbered 2 to the top of the pink plastic cup.
+<SUBTASK_reason> The paper cup numbered 2 needs to be placed on top of the pink plastic cup to complete the task.
+<MOVE> Move the gripper upwards and place the paper cup numbered 2 on top of the pink plastic cup.
+<MOVE_reason> The gripper needs to move upwards to place the paper cup numbered 2 on top of the pink plastic cup.
+<ISSUE> The gripper might not be able to place the paper cup numbered 2 accurately due to imprecise movements.
+<SOLUTION> Adjust the gripper's position and ensure precise placement of the paper cup numbered 2 on top of the pink plastic cup.
+
+FINISHED

@@ -1,0 +1,62 @@
+### Task:
+Stack the pink and yellow plastic cups on top of the white paper cup numbered 3.
+
+### Description:
+The initial state shows three plastic cups (pink, yellow, and white) placed on a table. The white paper cup numbered 3 is positioned in the middle. In the final state, the pink and yellow plastic cups are stacked on top of the white paper cup numbered 3.
+
+### Plan:
+1. Pick up the yellow plastic cup.
+2. Move the yellow plastic cup to the right of the white paper cup numbered 3.
+3. Pick up the pink plastic cup.
+4. Move the pink plastic cup to the right of the yellow plastic cup.
+5. Stack the pink and yellow plastic cups on top of the white paper cup numbered 3.
+
+### PLANNING_reason:
+The plan follows a sequential approach, starting with picking up the yellow plastic cup and moving it to the right of the white paper cup numbered 3. Then, the pink plastic cup is picked up and moved to the right of the yellow plastic cup. Finally, both cups are stacked on top of the white paper cup numbered 3 to achieve the desired final state.
+
+### Step 1
+[Step 1]
+<SUBTASK> Pick up the yellow plastic cup.
+<SUBTASK_reason> The yellow plastic cup needs to be moved to the right of the white paper cup numbered 3 before stacking the pink plastic cup on top of it.
+<MOVE> Move the gripper towards the yellow plastic cup and pick it up.
+<MOVE_reason> The gripper needs to be positioned over the yellow plastic cup to pick it up.
+<ISSUE> The gripper might collide with other objects if not carefully positioned.
+<SOLUTION> Ensure the gripper is aligned with the yellow plastic cup and avoid any unnecessary movements.
+
+### Step 2
+[Step 2]
+<SUBTASK> Move the yellow plastic cup to the right of the white paper cup numbered 3.
+<SUBTASK_reason> The yellow plastic cup needs to be positioned next to the white paper cup numbered 3 for the next step.
+<MOVE> Move the gripper to the right of the white paper cup numbered 3 and place the yellow plastic cup there.
+<MOVE_reason> The gripper needs to be positioned over the white paper cup numbered 3 to place the yellow plastic cup next to it.
+<ISSUE> The gripper might collide with the white paper cup numbered 3 if not carefully positioned.
+<SOLUTION> Ensure the gripper is aligned with the white paper cup numbered 3 and avoid any unnecessary movements.
+
+### Step 3
+[Step 3]
+<SUBTASK> Pick up the pink plastic cup.
+<SUBTASK_reason> The pink plastic cup needs to be picked up to be stacked on top of the yellow plastic cup.
+<MOVE> Move the gripper towards the pink plastic cup and pick it up.
+<MOVE_reason> The gripper needs to be positioned over the pink plastic cup to pick it up.
+<ISSUE> The gripper might collide with other objects if not carefully positioned.
+<SOLUTION> Ensure the gripper is aligned with the pink plastic cup and avoid any unnecessary movements.
+
+### Step 4
+[Step 4]
+<SUBTASK> Move the pink plastic cup to the right of the yellow plastic cup.
+<SUBTASK_reason> The pink plastic cup needs to be positioned next to the yellow plastic cup for the next step.
+<MOVE> Move the gripper to the right of the yellow plastic cup and place the pink plastic cup there.
+<MOVE_reason> The gripper needs to be positioned over the yellow plastic cup to place the pink plastic cup next to it.
+<ISSUE> The gripper might collide with the yellow plastic cup if not carefully positioned.
+<SOLUTION> Ensure the gripper is aligned with the yellow plastic cup and avoid any unnecessary movements.
+
+### Step 5
+[Step 5]
+<SUBTASK> Stack the pink and yellow plastic cups on top of the white paper cup numbered 3.
+<SUBTASK_reason> The final step involves stacking the pink and yellow plastic cups on top of the white paper cup numbered 3 to achieve the desired final state.
+<MOVE> Move the gripper to the top of the white paper cup numbered 3 and place the pink and yellow plastic cups on top of it.
+<MOVE_reason> The gripper needs to be positioned over the white paper cup numbered 3 to place the pink and yellow plastic cups on top of it.
+<ISSUE> The gripper might collide with the white paper cup numbered 3 if not carefully positioned.
+<SOLUTION> Ensure the gripper is aligned with the white paper cup numbered 3 and avoid any unnecessary movements.
+
+FINISHED

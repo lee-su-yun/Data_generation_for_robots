@@ -1,0 +1,49 @@
+[Step 1]
+SUBTASK: Move the only cup that is upside down to the right side of the table.
+SUBTASK_reason: The only cup that is upside down needs to be moved to the right side of the table so that it can be placed next to the other cups.
+MOVE: move the cup to the right side of the table.
+MOVE_reason: This movement is necessary to align the cup with the other cups on the table.
+ISSUE: The cup might get stuck or fall off the table during the movement.
+SOLUTION: Ensure that the cup is securely gripped and move it slowly to avoid any accidents.
+
+[Step 2]
+SUBTASK: Place the cup upright on the table.
+SUBTASK_reason: The cup needs to be placed upright on the table so that it can be aligned with the other cups.
+MOVE: place the cup upright on the table.
+MOVE_reason: This movement is necessary to ensure that the cup is properly aligned with the other cups.
+ISSUE: The cup might not be placed perfectly upright.
+SOLUTION: Adjust the cup's position slightly if necessary to ensure it is upright.
+
+[Step 3]
+SUBTASK: Move the remaining cup to the left side of the table.
+SUBTASK_reason: The remaining cup needs to be moved to the left side of the table so that it can be placed next to the other cups.
+MOVE: move the cup to the left side of the table.
+MOVE_reason: This movement is necessary to align the cup with the other cups on the table.
+ISSUE: The cup might get stuck or fall off the table during the movement.
+SOLUTION: Ensure that the cup is securely gripped and move it slowly to avoid any accidents.
+
+[Step 4]
+SUBTASK: Place the cup upright on the table.
+SUBTASK_reason: The cup needs to be placed upright on the table so that it can be aligned with the other cups.
+MOVE: place the cup upright on the table.
+MOVE_reason: This movement is necessary to ensure that the cup is properly aligned with the other cups.
+ISSUE: The cup might not be placed perfectly upright.
+SOLUTION: Adjust the cup's position slightly if necessary to ensure it is upright.
+
+[Step 5]
+SUBTASK: Move the remaining cup to the right side of the table.
+SUBTASK_reason: The remaining cup needs to be moved to the right side of the table so that it can be placed next to the other cups.
+MOVE: move the cup to the right side of the table.
+MOVE_reason: This movement is necessary to align the cup with the other cups on the table.
+ISSUE: The cup might get stuck or fall off the table during the movement.
+SOLUTION: Ensure that the cup is securely gripped and move it slowly to avoid any accidents.
+
+[Step 6]
+SUBTASK: Place the cup upright on the table.
+SUBTASK_reason: The cup needs to be placed upright on the table so that it can be aligned with the other cups.
+MOVE: place the cup upright on the table.
+MOVE_reason: This movement is necessary to ensure that the cup is properly aligned with the other cups.
+ISSUE: The cup might not be placed perfectly upright.
+SOLUTION: Adjust the cup's position slightly if necessary to ensure it is upright.
+
+FINISHED

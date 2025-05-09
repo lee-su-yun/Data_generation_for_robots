@@ -1,0 +1,49 @@
+## Task:
+Arrange the cups in a triangle formation with the light blue cup at the top.
+
+## Description:
+The initial state shows three cups (yellow, pink, and blue) arranged in a line. The final state shows the cups arranged in a triangular formation with the light blue cup at the top.
+
+## Plan:
+The high-level plan for arranging the cups in a triangle formation with the light blue cup at the top is as follows:
+1. Pick up the yellow cup.
+2. Place the yellow cup below the light blue cup.
+3. Pick up the pink cup.
+4. Place the pink cup to the left of the yellow cup.
+
+## PLANNING_reason:
+The plan starts with picking up the yellow cup because it needs to be placed below the light blue cup. Then, the pink cup is picked up and placed to the left of the yellow cup to form a triangle. This order ensures that the cups are arranged correctly in the desired formation.
+
+## Step 1
+<SUBTASK> Pick up the yellow cup.
+<SUBTASK_reason> The yellow cup needs to be moved to the bottom of the triangle.
+<MOVE> move towards the yellow cup and pick it up.
+<MOVE_reason> The gripper needs to reach the yellow cup to pick it up.
+<ISSUE> The gripper might collide with other objects if it moves too close.
+<SOLUTION> Move the gripper slowly and carefully to avoid collisions.
+
+## Step 2
+<SUBTASK> Place the yellow cup below the light blue cup.
+<SUBTASK_reason> The yellow cup needs to be positioned directly below the light blue cup to form the triangle.
+<MOVE> move the yellow cup towards the light blue cup and place it below it.
+<MOVE_reason> The gripper needs to move the yellow cup to the correct position.
+<ISSUE> The gripper might drop the yellow cup if it's not securely held.
+<SOLUTION> Ensure the gripper is securely holding the yellow cup before placing it.
+
+## Step 3
+<SUBTASK> Pick up the pink cup.
+<SUBTASK_reason> The pink cup needs to be moved to the left of the yellow cup to complete the triangle.
+<MOVE> move towards the pink cup and pick it up.
+<MOVE_reason> The gripper needs to reach the pink cup to pick it up.
+<ISSUE> The gripper might collide with other objects if it moves too close.
+<SOLUTION> Move the gripper slowly and carefully to avoid collisions.
+
+## Step 4
+<SUBTASK> Place the pink cup to the left of the yellow cup.
+<SUBTASK_reason> The pink cup needs to be positioned to the left of the yellow cup to complete the triangle.
+<MOVE> move the pink cup towards the left of the yellow cup and place it there.
+<MOVE_reason> The gripper needs to move the pink cup to the correct position.
+<ISSUE> The gripper might drop the pink cup if it's not securely held.
+<SOLUTION> Ensure the gripper is securely holding the pink cup before placing it.
+
+FINISHED

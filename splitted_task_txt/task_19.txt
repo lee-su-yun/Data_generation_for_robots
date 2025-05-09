@@ -1,0 +1,25 @@
+[Step 1]
+SUBTASK: Pick up the white cup from the left side of the table.
+SUBTASK_reason: The white cup is currently upside down and needs to be moved to the center of the table for flipping.
+MOVE: move to the left and pick the white cup.
+MOVE_reason: The white cup is located on the left side of the table, so moving towards it is necessary to pick it up.
+ISSUE: The white cup might be difficult to grasp due to its size and shape.
+SOLUTION: Ensure a firm grip on the white cup before lifting it.
+
+[Step 2]
+SUBTASK: Move the white cup to the center of the table.
+SUBTASK_reason: The white cup needs to be positioned in the center of the table for flipping.
+MOVE: move to the center of the table and place the white cup upright.
+MOVE_reason: Placing the white cup in the center allows for easier flipping and ensures it is in the correct position for the next step.
+ISSUE: The white cup might slip off the table during the movement.
+SOLUTION: Use a stable surface or a non-slip mat under the table to prevent the cup from slipping.
+
+[Step 3]
+SUBTASK: Flip the white cup upright.
+SUBTASK_reason: The white cup is currently upside down and needs to be flipped to the correct orientation.
+MOVE: flip the white cup.
+MOVE_reason: Flipping the white cup ensures it is in the correct orientation for the task.
+ISSUE: The white cup might not be flipped correctly, causing it to remain upside down.
+SOLUTION: Double-check the orientation of the white cup after flipping to ensure it is upright.
+
+FINISHED

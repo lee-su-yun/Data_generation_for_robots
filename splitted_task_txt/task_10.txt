@@ -1,0 +1,17 @@
+[Step 1]
+SUBTASK: Pick up the white paper cup numbered 1.
+SUBTASK_reason: The white paper cup numbered 1 needs to be moved to the position where the light blue cup is currently located.
+MOVE: move towards the white paper cup numbered 1 and pick it up.
+MOVE_reason: This movement is necessary to pick up the white paper cup numbered 1 so that it can be moved to the desired location.
+ISSUE: The gripper might collide with the light blue cup if it's too close.
+SOLUTION: Ensure the gripper moves slowly and accurately to avoid collision.
+
+[Step 2]
+SUBTASK: Place the white paper cup numbered 1 in the position of the light blue cup.
+SUBTASK_reason: The white paper cup numbered 1 needs to be placed in the position of the light blue cup to achieve the desired arrangement.
+MOVE: move the white paper cup numbered 1 to the position of the light blue cup and place it there.
+MOVE_reason: This movement is necessary to place the white paper cup numbered 1 in the desired location.
+ISSUE: The gripper might not be able to place the cup precisely due to imprecise positioning.
+SOLUTION: Adjust the gripper's position before placing the cup to ensure precise placement.
+
+FINISHED

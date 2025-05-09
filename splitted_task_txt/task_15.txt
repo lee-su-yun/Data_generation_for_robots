@@ -1,0 +1,8 @@
+[Step 1]
+<MOVE> The high-level subtask that should be executed now.
+<MOVE_reason> Why this subtask should be executed now, referencing spatial cues in the current setup.
+<MOVE> move the white plastic cup to the position where the paper cup numbered 1 is currently located.
+<MOVE_reason> The white plastic cup needs to be moved to the position of the paper cup numbered 1 to achieve the task goal.
+<ISSUE> A potential issue that may arise while performing this step.
+<SOLUTION> A brief reasoning or method to avoid or correct the issue.
+FINISHED

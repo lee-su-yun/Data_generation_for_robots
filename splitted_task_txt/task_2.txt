@@ -1,0 +1,63 @@
+## Task:
+Align the white paper cups (numbered 1, 2, 3) in numerical order from left to right.
+
+## Description:
+The initial state shows three white paper cups labeled 1, 2, and 3 arranged in a scattered manner on a table. In the final state, the cups are aligned in numerical order from left to right. The task requires the robot arm to pick up each cup and place it in the correct position.
+
+## Plan:
+1. Pick up cup 1 and place it on the leftmost position.
+2. Pick up cup 2 and place it next to cup 1.
+3. Pick up cup 3 and place it next to cup 2.
+
+## PLANNING_reason:
+The plan is structured to ensure that the cups are placed in numerical order from left to right. The robot arm needs to pick up each cup individually and place it in the correct position to achieve the desired alignment.
+
+## Step 1
+<SUBTASK> Pick up cup 1.
+<SUBTASK_reason> Cup 1 needs to be picked up first to start the alignment process.
+<MOVE> Move to the location of cup 1 and pick it up.
+<MOVE_reason> The gripper needs to reach the cup 1 to pick it up.
+<ISSUE> The gripper might collide with other objects if it moves too close to them.
+<SOLUTION> Ensure the gripper moves slowly and carefully to avoid collisions.
+
+## Step 2
+<SUBTASK> Place cup 1 on the leftmost position.
+<SUBTASK_reason> Cup 1 needs to be placed in the starting position for the alignment.
+<MOVE> Move the gripper to the leftmost position on the table and place cup 1 there.
+<MOVE_reason> The gripper needs to move to the designated position to place cup 1.
+<ISSUE> The gripper might not be able to reach the leftmost position due to obstacles.
+<SOLUTION> Adjust the gripper's path to avoid any obstacles.
+
+## Step 3
+<SUBTASK> Pick up cup 2.
+<SUBTASK_reason> Cup 2 needs to be picked up next to continue the alignment.
+<MOVE> Move to the location of cup 2 and pick it up.
+<MOVE_reason> The gripper needs to reach the cup 2 to pick it up.
+<ISSUE> The gripper might collide with other objects if it moves too close to them.
+<SOLUTION> Ensure the gripper moves slowly and carefully to avoid collisions.
+
+## Step 4
+<SUBTASK> Place cup 2 next to cup 1.
+<SUBTASK_reason> Cup 2 needs to be placed next to cup 1 to maintain the numerical order.
+<MOVE> Move the gripper to the position next to cup 1 and place cup 2 there.
+<MOVE_reason> The gripper needs to move to the designated position to place cup 2.
+<ISSUE> The gripper might not be able to reach the position next to cup 1 due to obstacles.
+<SOLUTION> Adjust the gripper's path to avoid any obstacles.
+
+## Step 5
+<SUBTASK> Pick up cup 3.
+<SUBTASK_reason> Cup 3 needs to be picked up to complete the alignment.
+<MOVE> Move to the location of cup 3 and pick it up.
+<MOVE_reason> The gripper needs to reach the cup 3 to pick it up.
+<ISSUE> The gripper might collide with other objects if it moves too close to them.
+<SOLUTION> Ensure the gripper moves slowly and carefully to avoid collisions.
+
+## Step 6
+<SUBTASK> Place cup 3 next to cup 2.
+<SUBTASK_reason> Cup 3 needs to be placed next to cup 2 to complete the numerical order.
+<MOVE> Move the gripper to the position next to cup 2 and place cup 3 there.
+<MOVE_reason> The gripper needs to move to the designated position to place cup 3.
+<ISSUE> The gripper might not be able to reach the position next to cup 2 due to obstacles.
+<SOLUTION> Adjust the gripper's path to avoid any obstacles.
+
+FINISHED

@@ -1,0 +1,9 @@
+[Step 1]
+<MOVE> The high-level subtask that should be executed now.
+<MOVE_reason> Why this subtask should be executed now, referencing spatial cues in the current setup.
+<MOVE> move down and close gripper
+<MOVE_reason> Why this movement is necessary at this moment.
+<ISSUE> A potential issue that may arise while performing this step.
+<SOLUTION> A brief reasoning or method to avoid or correct the issue.
+
+FINISHED

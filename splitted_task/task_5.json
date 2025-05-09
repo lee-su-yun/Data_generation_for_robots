@@ -1,6 +1,6 @@
 {
-    "task": "",
-    "description": "",
+    "task": "The task is to sort all cups by color, placing each color in a specific quadrant of the table. ",
+    "description": "In the initial image, there are multiple colored plastic cups scattered across the table. In the final image, the cups are sorted into four quadrants based on their color. The cups are light blue, white, pink, and yellow. ",
     "images_used": [
         "/home/sylee/codes/Data_generation_for_robots/image/task_5/init/top_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_5/init/side_Color.png",

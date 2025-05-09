@@ -1,0 +1,39 @@
+## Task:
+Stack the yellow plastic cup on top of the white paper cup numbered 2.
+
+## Description:
+The initial state shows two cups on the table: a yellow plastic cup and a white paper cup numbered 2. The final state shows the yellow plastic cup placed on top of the white paper cup numbered 2, indicating successful stacking.
+
+## Plan:
+1. Pick up the yellow plastic cup.
+2. Move the yellow plastic cup towards the white paper cup numbered 2.
+3. Place the yellow plastic cup on top of the white paper cup numbered 2.
+
+## PLANNING_reason:
+The task requires stacking the yellow plastic cup on top of the white paper cup numbered 2. The initial state shows both cups on the table, so the first step is to pick up the yellow plastic cup. The second step involves moving the yellow plastic cup towards the white paper cup numbered 2. Finally, placing the yellow plastic cup on top of the white paper cup numbered 2 completes the task.
+
+## Step 1
+<SUBTASK> Pick up the yellow plastic cup.
+<SUBTASK_reason> The yellow plastic cup needs to be lifted before it can be moved to the desired position.
+<MOVE> Move the gripper towards the yellow plastic cup and close the gripper around it.
+<MOVE_reason> Closing the gripper around the yellow plastic cup allows for a secure pick-up.
+<ISSUE> The gripper might not be able to securely grasp the yellow plastic cup if it's too small or slippery.
+<SOLUTION> Ensure the gripper is properly calibrated and adjusted to fit the size and shape of the yellow plastic cup.
+
+## Step 2
+<SUBTASK> Move the yellow plastic cup towards the white paper cup numbered 2.
+<SUBTASK_reason> The yellow plastic cup needs to be positioned above the white paper cup numbered 2 to achieve the stacking goal.
+<MOVE> Move the gripper upwards and slightly forward to bring the yellow plastic cup closer to the white paper cup numbered 2.
+<MOVE_reason> Moving the gripper upwards and forward helps align the yellow plastic cup with the white paper cup numbered 2.
+<ISSUE> The gripper might collide with the white paper cup numbered 2 during the movement.
+<SOLUTION> Adjust the gripper's path to avoid collision with the white paper cup numbered 2.
+
+## Step 3
+<SUBTASK> Place the yellow plastic cup on top of the white paper cup numbered 2.
+<SUBTASK_reason> The yellow plastic cup needs to be securely placed on top of the white paper cup numbered 2 to complete the task.
+<MOVE> Close the gripper around the yellow plastic cup and lower it onto the white paper cup numbered 2.
+<MOVE_reason> Lowering the gripper onto the white paper cup numbered 2 ensures a stable and secure placement of the yellow plastic cup.
+<ISSUE> The gripper might not be able to release the yellow plastic cup once it's placed on top of the white paper cup numbered 2.
+<SOLUTION> Ensure the gripper is properly calibrated and adjusted to release the yellow plastic cup when it's in place.
+
+FINISHED

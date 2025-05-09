@@ -1,0 +1,25 @@
+[Step 1]
+SUBTASK: Move the pink plastic cup to the center of the table.
+SUBTASK_reason: The pink plastic cup needs to be moved to the center of the table to align it with the final state where all cups are stacked.
+MOVE: move the pink plastic cup to the center of the table.
+MOVE_reason: This movement is necessary to ensure the pink plastic cup is positioned correctly for the next step.
+ISSUE: The movement might cause the other cups to shift slightly.
+SOLUTION: Ensure the movement is smooth and controlled to minimize any unintended displacement of the other cups.
+
+[Step 2]
+SUBTASK: Stack the white paper cups on top of each other.
+SUBTASK_reason: The white paper cups need to be stacked to match the final state where they are stacked together.
+MOVE: stack the white paper cups on top of each other.
+MOVE_reason: This movement is necessary to achieve the desired final state where the white paper cups are stacked.
+ISSUE: The stacking process might cause the pink plastic cup to shift.
+SOLUTION: Ensure the stacking process is done carefully to avoid any unintended movement of the pink plastic cup.
+
+[Step 3]
+SUBTASK: Place the white plastic bowl on top of the stacked white paper cups.
+SUBTASK_reason: The white plastic bowl needs to be placed on top of the stacked white paper cups to match the final state where all cups are stacked.
+MOVE: place the white plastic bowl on top of the stacked white paper cups.
+MOVE_reason: This movement is necessary to achieve the desired final state where the white plastic bowl is on top of the stacked white paper cups.
+ISSUE: The placement might cause the stacked white paper cups to shift.
+SOLUTION: Ensure the placement is done carefully to avoid any unintended movement of the stacked white paper cups.
+
+FINISHED

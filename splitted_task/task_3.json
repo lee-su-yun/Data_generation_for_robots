@@ -1,6 +1,6 @@
 {
-    "task": "",
-    "description": "",
+    "task": "The task is to move all non-white plastic cups to the right side of the table.",
+    "description": "The initial state shows six plastic cups on the table: one white, two light blue, one purple, one pink, and one yellow. The white cup is positioned on the left side of the table. The other five cups are scattered around the table. In the final state, all non-white cups are moved to the right side of the table, leaving the white cup on the left side. ",
     "images_used": [
         "/home/sylee/codes/Data_generation_for_robots/image/task_3/init/top_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_3/init/side_Color.png",
@@ -9,80 +9,62 @@
         "/home/sylee/codes/Data_generation_for_robots/image/task_3/final/side_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_3/final/wrist_Color.png"
     ],
-    "plan": "~~",
-    "planning_reason": "~~",
+    "plan": "The high-level plan for this task involves picking up each non-white cup and placing it on the right side of the table. The plan is structured to ensure that each cup is picked up and placed in the correct position without any overlap or collision. ",
+    "planning_reason": "The plan is structured to ensure that each non-white cup is picked up and placed in the correct position without any overlap or collision. This is achieved by picking up each cup individually and placing it on the right side of the table, ensuring that the white cup remains on the left side. ",
     "subtasks": [
         {
             "step": "Step 1",
-            "subtask": "Pick up the pink cup",
-            "subtask_reason": "The pink cup is on the left side of the table and needs to be moved to the right side.",
-            "move": "move to the pink cup and pick it up",
-            "move_reason": "This is necessary to start moving the cups to the right side of the table.",
-            "issue": "Potential issue: The gripper might collide with other cups if they are too close together.",
-            "solution": "Ensure there is enough space between the cups before picking one up."
+            "subtask": "Pick up the pink cup.",
+            "subtask_reason": "The pink cup is the first non-white cup on the left side of the table. Picking it up is the first step in moving all non-white cups to the right side.",
+            "move": "Move the gripper towards the pink cup and pick it up.",
+            "move_reason": "The gripper needs to be positioned over the pink cup to pick it up.",
+            "issue": "The gripper might collide with other objects if not carefully positioned.",
+            "solution": "Ensure the gripper is positioned correctly over the pink cup before picking it up."
         },
         {
             "step": "Step 2",
-            "subtask": "Place the pink cup on the right side of the table",
-            "subtask_reason": "The pink cup needs to be placed on the right side of the table to free up space for the next cup.",
-            "move": "move to the right side of the table and place the pink cup down",
-            "move_reason": "This is necessary to create space for the next cup to be moved.",
-            "issue": "Potential issue: The gripper might collide with the yellow cup if it's too close.",
-            "solution": "Ensure there is enough space between the cups before placing one down."
+            "subtask": "Place the pink cup on the right side of the table.",
+            "subtask_reason": "The pink cup has been picked up and needs to be placed on the right side of the table to continue the task.",
+            "move": "Move the gripper towards the right side of the table and place the pink cup down.",
+            "move_reason": "The gripper needs to be positioned over the right side of the table to place the pink cup.",
+            "issue": "The gripper might collide with other objects if not carefully positioned.",
+            "solution": "Ensure the gripper is positioned correctly over the right side of the table before placing the pink cup."
         },
         {
             "step": "Step 3",
-            "subtask": "Pick up the yellow cup",
-            "subtask_reason": "The yellow cup is on the left side of the table and needs to be moved to the right side.",
-            "move": "move to the yellow cup and pick it up",
-            "move_reason": "This is necessary to continue moving the cups to the right side of the table.",
-            "issue": "Potential issue: The gripper might collide with the pink cup if it's too close.",
-            "solution": "Ensure there is enough space between the cups before picking one up."
+            "subtask": "Pick up the yellow cup.",
+            "subtask_reason": "The yellow cup is the second non-white cup on the left side of the table. Picking it up is the next step in moving all non-white cups to the right side.",
+            "move": "Move the gripper towards the yellow cup and pick it up.",
+            "move_reason": "The gripper needs to be positioned over the yellow cup to pick it up.",
+            "issue": "The gripper might collide with other objects if not carefully positioned.",
+            "solution": "Ensure the gripper is positioned correctly over the yellow cup before picking it up."
         },
         {
             "step": "Step 4",
-            "subtask": "Place the yellow cup on the right side of the table",
-            "subtask_reason": "The yellow cup needs to be placed on the right side of the table to free up space for the next cup.",
-            "move": "move to the right side of the table and place the yellow cup down",
-            "move_reason": "This is necessary to create space for the next cup to be moved.",
-            "issue": "Potential issue: The gripper might collide with the purple cup if it's too close.",
-            "solution": "Ensure there is enough space between the cups before placing one down."
+            "subtask": "Place the yellow cup on the right side of the table.",
+            "subtask_reason": "The yellow cup has been picked up and needs to be placed on the right side of the table to continue the task.",
+            "move": "Move the gripper towards the right side of the table and place the yellow cup down.",
+            "move_reason": "The gripper needs to be positioned over the right side of the table to place the yellow cup.",
+            "issue": "The gripper might collide with other objects if not carefully positioned.",
+            "solution": "Ensure the gripper is positioned correctly over the right side of the table before placing the yellow cup."
         },
         {
             "step": "Step 5",
-            "subtask": "Pick up the purple cup",
-            "subtask_reason": "The purple cup is on the left side of the table and needs to be moved to the right side.",
-            "move": "move to the purple cup and pick it up",
-            "move_reason": "This is necessary to continue moving the cups to the right side of the table.",
-            "issue": "Potential issue: The gripper might collide with the yellow cup if it's too close.",
-            "solution": "Ensure there is enough space between the cups before picking one up."
+            "subtask": "Pick up the purple cup.",
+            "subtask_reason": "The purple cup is the third non-white cup on the left side of the table. Picking it up is the next step in moving all non-white cups to the right side.",
+            "move": "Move the gripper towards the purple cup and pick it up.",
+            "move_reason": "The gripper needs to be positioned over the purple cup to pick it up.",
+            "issue": "The gripper might collide with other objects if not carefully positioned.",
+            "solution": "Ensure the gripper is positioned correctly over the purple cup before picking it up."
         },
         {
             "step": "Step 6",
-            "subtask": "Place the purple cup on the right side of the table",
-            "subtask_reason": "The purple cup needs to be placed on the right side of the table to free up space for the next cup.",
-            "move": "move to the right side of the table and place the purple cup down",
-            "move_reason": "This is necessary to create space for the next cup to be moved.",
-            "issue": "Potential issue: The gripper might collide with the blue cup if it's too close.",
-            "solution": "Ensure there is enough space between the cups before placing one down."
-        },
-        {
-            "step": "Step 7",
-            "subtask": "Pick up the blue cup",
-            "subtask_reason": "The blue cup is on the left side of the table and needs to be moved to the right side.",
-            "move": "move to the blue cup and pick it up",
-            "move_reason": "This is necessary to continue moving the cups to the right side of the table.",
-            "issue": "Potential issue: The gripper might collide with the purple cup if it's too close.",
-            "solution": "Ensure there is enough space between the cups before picking one up."
-        },
-        {
-            "step": "Step 8",
-            "subtask": "Place the blue cup on the right side of the table",
-            "subtask_reason": "The blue cup needs to be placed on the right side of the table to free up space for the next cup.",
-            "move": "move to the right side of the table and place the blue cup down",
-            "move_reason": "This is necessary to create space for the next cup to be moved.",
-            "issue": "Potential issue: The gripper might collide with the cyan cup if it's too close.",
-            "solution": "Ensure there is enough space between the cups before placing one down."
+            "subtask": "Place the purple cup on the right side of the table.",
+            "subtask_reason": "The purple cup has been picked up and needs to be placed on the right side of the table to continue the task.",
+            "move": "Move the gripper towards the right side of the table and place the purple cup down.",
+            "move_reason": "The gripper needs to be positioned over the right side of the table to place the purple cup.",
+            "issue": "The gripper might collide with other objects if not carefully positioned.",
+            "solution": "Ensure the gripper is positioned correctly over the right side of the table before placing the purple cup."
         }
     ]
 }

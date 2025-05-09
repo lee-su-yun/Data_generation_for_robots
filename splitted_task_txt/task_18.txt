@@ -1,0 +1,33 @@
+**Task**: Place the pink plastic cup on top of the white paper cup numbered 2, ensuring it is upright.
+
+**Description**: In the initial image, there are two cups on the table: a pink plastic cup and a white paper cup numbered 2. The pink cup is upside down, and the white cup is upright. In the final image, the pink cup is placed on top of the white cup, and both are upright.
+
+**Plan**: The high-level plan involves picking up the pink cup, moving it to the white cup, and placing it on top while ensuring it is upright.
+
+**PLANNING_reason**: The task requires stacking the pink cup on top of the white cup. The initial state shows the pink cup upside down, so the first step is to pick it up. Then, the robot needs to move the pink cup to the white cup and place it on top, ensuring it is upright.
+
+**Step 1**
+<SUBTASK> Pick up the pink plastic cup.
+<SUBTASK_reason> The pink cup is currently upside down, and we need to pick it up before placing it on top of the white cup.
+<MOVE> Move the gripper towards the pink cup and close it to pick it up.
+<MOVE_reason> This movement is necessary to lift the pink cup off the table.
+<ISSUE> The gripper might not be able to securely hold the pink cup if it's not properly aligned.
+<SOLUTION> Ensure the gripper is properly aligned with the pink cup before closing it to pick it up.
+
+**Step 2**
+<SUBTASK> Move the pink cup to the white paper cup numbered 2.
+<SUBTASK_reason> We need to position the pink cup over the white cup to place it on top.
+<MOVE> Move the gripper towards the white cup and align it with the pink cup.
+<MOVE_reason> This movement is necessary to position the pink cup correctly for placement.
+<ISSUE> The gripper might collide with the white cup during the movement.
+<SOLUTION> Adjust the gripper's path to avoid collision with the white cup.
+
+**Step 3**
+<SUBTASK> Place the pink cup on top of the white paper cup numbered 2, ensuring it is upright.
+<SUBTASK_reason> The pink cup needs to be placed on top of the white cup, and it must be upright to complete the task.
+<MOVE> Close the gripper around the pink cup and gently lower it onto the white cup.
+<MOVE_reason> This movement is necessary to place the pink cup on top of the white cup.
+<ISSUE> The gripper might not be able to maintain the pink cup's orientation.
+<SOLUTION> Ensure the gripper is properly aligned with the white cup before placing the pink cup on top, and use a gentle motion to avoid flipping the pink cup.
+
+FINISHED

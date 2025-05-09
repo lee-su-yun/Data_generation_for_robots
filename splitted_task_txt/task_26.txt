@@ -1,0 +1,35 @@
+## Task:
+Stack the yellow and pink plastic cups on top of the white paper cup numbered 1.
+
+## Description:
+The initial state shows three cups on the table: a yellow plastic cup, a white paper cup with the label "L," and a pink plastic cup. The final state shows the yellow and pink plastic cups stacked on top of the white paper cup numbered 1.
+
+## Plan:
+The high-level plan involves picking up the yellow and pink plastic cups and stacking them on top of the white paper cup numbered 1. The reasoning behind this plan is that the task requires the cups to be stacked in a specific order, which can be achieved by first picking up the cups and then placing them on the designated cup.
+
+## Step 1
+[Step 1]
+<SUBTASK> Pick up the yellow plastic cup.
+<SUBTASK_reason> The yellow plastic cup needs to be picked up before it can be stacked on top of the other cups.
+<MOVE> Move the gripper towards the yellow plastic cup and pick it up.
+<MOVE_reason> Picking up the yellow plastic cup is necessary to move it to the desired location for stacking.
+<ISSUE> The gripper might collide with the other cups if it moves too close.
+<SOLUTION> Ensure the gripper moves slowly and carefully to avoid collisions with the other cups.
+
+[Step 2]
+<SUBTASK> Pick up the pink plastic cup.
+<SUBTASK_reason> The pink plastic cup needs to be picked up before it can be stacked on top of the yellow plastic cup.
+<MOVE> Move the gripper towards the pink plastic cup and pick it up.
+<MOVE_reason> Picking up the pink plastic cup is necessary to move it to the desired location for stacking.
+<ISSUE> The gripper might collide with the yellow plastic cup if it moves too close.
+<SOLUTION> Ensure the gripper moves slowly and carefully to avoid collisions with the yellow plastic cup.
+
+[Step 3]
+<SUBTASK> Stack the yellow and pink plastic cups on top of the white paper cup numbered 1.
+<SUBTASK_reason> The yellow and pink plastic cups need to be stacked on top of the white paper cup numbered 1 to complete the task.
+<MOVE> Move the gripper towards the white paper cup numbered 1 and place the yellow and pink plastic cups on top of it.
+<MOVE_reason> Placing the yellow and pink plastic cups on top of the white paper cup numbered 1 is necessary to complete the task.
+<ISSUE> The gripper might not be able to reach the white paper cup numbered 1 due to its position.
+<SOLUTION> Adjust the gripper's position to ensure it can reach the white paper cup numbered 1.
+
+FINISHED

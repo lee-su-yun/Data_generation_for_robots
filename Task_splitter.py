@@ -182,7 +182,7 @@ async def create_robot_plan_and_save(
     # 1. Generate response
     generated_text = await planner.generate_plan(task, image_paths, system_prompt)
 
-    #print(generated_text)
+    print(generated_text)
 
     # 2. Parse into structured format
     parsed = planner.parse_generated_text(generated_text)
@@ -224,7 +224,7 @@ if __name__ == "__main__":
     processor = AutoProcessor.from_pretrained(model_path)
 
     loop = asyncio.get_event_loop()
-    for i in range(1, 31):
+    for i in range(3, 5):
         task_id = f"task_{i}"
         task = all_tasks[task_id]["description"]
 

@@ -43,27 +43,33 @@ class RobotTaskPlanner:
         )
         return output_text[0]
 
-    def parse_generated_text(self, text: str) -> List[dict]:
-        subtasks = []
+    def parse_generated_text(self, text: str) -> dict:
+        result = {
+            "task": "",
+            "description": "",
+            "plan": "",
+            "planning_reason": "",
+            "subtasks": []
+        }
         current = {}
         lines = text.split('\n')
 
         def commit():
             if current and "step" in current:
-                subtasks.append(current.copy())
+                result["subtasks"].append(current.copy())
 
         for line in lines:
             line = line.strip()
             if line.startswith("### Task:"):
-                current["task"] = line[len("### Task:"):].strip()
+                result["task"] = line[len("### Task:"):].strip()
             elif line.startswith("### Description:"):
-                current["description"] = line[len("### Description:"):].strip()
+                result["description"] = line[len("### Description:"):].strip()
             elif line.startswith("### Plan:"):
-                current["plan"] = ""
+                result["plan"] = ""
             elif line.startswith("1.") or line.startswith("2.") or line.startswith("3."):
-                current["plan"] += line.strip() + " "
+                result["plan"] += line.strip() + " "
             elif line.startswith("### Reasoning:"):
-                current["planning_reason"] = line[len("### Reasoning:"):].strip()
+                result["planning_reason"] = line[len("### Reasoning:"):].strip()
             elif line.startswith("[Step"):
                 commit()
                 current = {"step": line.strip("[]")}
@@ -83,7 +89,7 @@ class RobotTaskPlanner:
                 break
 
         commit()
-        return subtasks
+        return result
 
 async def create_robot_plan_and_save(
     model, processor, device,
@@ -173,9 +179,12 @@ async def create_robot_plan_and_save(
 
     # 3. Assemble final output
     output = {
-        "task": task,
+        "task": parsed["task"],
+        "description": parsed["description"],
         "images_used": image_paths,
-        "subtasks": structured_subtasks
+        "plan": parsed["plan"],
+        "planning_reason": parsed["planning_reason"],
+        "subtasks": parsed["subtasks"]
     }
 
 

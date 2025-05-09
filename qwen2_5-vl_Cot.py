@@ -44,7 +44,6 @@ class RobotTaskPlanner:
         return output_text[0]
 
     def parse_generated_text(self, text: str) -> List[dict]:
-        """Parse the generated multi-step plan text into structured subtasks."""
         subtasks = []
         current = {}
         lines = text.split('\n')
@@ -55,25 +54,31 @@ class RobotTaskPlanner:
 
         for line in lines:
             line = line.strip()
-            if line.startswith("[Step"):
+            if line.startswith("### Task:"):
+                current["task"] = line[len("### Task:"):].strip()
+            elif line.startswith("### Description:"):
+                current["description"] = line[len("### Description:"):].strip()
+            elif line.startswith("### Plan:"):
+                current["plan"] = ""
+            elif line.startswith("1.") or line.startswith("2.") or line.startswith("3."):
+                current["plan"] += line.strip() + " "
+            elif line.startswith("### Reasoning:"):
+                current["planning_reason"] = line[len("### Reasoning:"):].strip()
+            elif line.startswith("[Step"):
                 commit()
                 current = {"step": line.strip("[]")}
-            elif line.startswith("<TASK>"):
-                current["task"] = line[len("<TASK>"):].strip()
-            elif line.startswith("<PLAN>"):
-                current["plan"] = line[len("<PLAN>"):].strip()
-            elif line.startswith("<SUBTASK>"):
-                current["subtask"] = line[len("<SUBTASK>"):].strip()
-            elif line.startswith("<SUBTASK_reason>"):
-                current["subtask_reason"] = line[len("<SUBTASK_reason>"):].strip()
-            elif line.startswith("<MOVE>"):
-                current["move"] = line[len("<MOVE>"):].strip()
-            elif line.startswith("<MOVE_reason>"):
-                current["move_reason"] = line[len("<MOVE_reason>"):].strip()
-            elif line.startswith("<ISSUE>"):
-                current["issue"] = line[len("<ISSUE>"):].strip()
-            elif line.startswith("<SOLUTION>"):
-                current["solution"] = line[len("<SOLUTION>"):].strip()
+            elif line.startswith("<SUBTASK>:"):
+                current["subtask"] = line[len("<SUBTASK>:"):].strip()
+            elif line.startswith("<SUBTASK_reason>:"):
+                current["subtask_reason"] = line[len("<SUBTASK_reason>:"):].strip()
+            elif line.startswith("<MOVE>:"):
+                current["move"] = line[len("<MOVE>:"):].strip()
+            elif line.startswith("<MOVE_reason>:"):
+                current["move_reason"] = line[len("<MOVE_reason>:"):].strip()
+            elif line.startswith("<ISSUE>:"):
+                current["issue"] = line[len("<ISSUE>:"):].strip()
+            elif line.startswith("<SOLUTION>:"):
+                current["solution"] = line[len("<SOLUTION>:"):].strip()
             elif line.strip().upper() == "FINISHED":
                 break
 

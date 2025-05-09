@@ -1,6 +1,6 @@
 {
-    "task": "The task is to place the yellow plastic cup next to the blue plastic cup, ensuring it is not on top of any other cup.  ",
-    "description": "In the initial image, there are four cups on the table: a yellow cup, a blue cup, a white cup, and a purple cup. The yellow cup is positioned to the left of the blue cup, and both are upright. In the final image, the yellow cup is placed next to the blue cup, maintaining their relative positions and orientations.  ",
+    "task": "Place the yellow plastic cup next to the blue plastic cup, but not on top of any other cup.",
+    "description": "The initial state shows four cups on a table: a yellow cup, a blue cup, a white cup, and a purple cup. In the final state, the yellow cup is placed next to the blue cup, and no cup is on top of another.",
     "images_used": [
         "/home/sylee/codes/Data_generation_for_robots/image/task_4/init/top_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_4/init/side_Color.png",
@@ -9,35 +9,35 @@
         "/home/sylee/codes/Data_generation_for_robots/image/task_4/final/side_Color.png",
         "/home/sylee/codes/Data_generation_for_robots/image/task_4/final/wrist_Color.png"
     ],
-    "plan": "1. **Step 1:** Identify the yellow cup and the blue cup. 2. **Step 2:** Move the yellow cup to the right, placing it next to the blue cup. 3. **Step 3:** Ensure the yellow cup is not on top of any other cup.  ",
-    "planning_reason": "The task requires the yellow cup to be placed next to the blue cup, which means moving the yellow cup to the right. This ensures that the yellow cup is not on top of any other cup, as it is already upright and not stacked with any other cup.  ### Steps: ",
+    "plan": "The robot arm will pick up the yellow cup, move it to the right, and place it next to the blue cup.",
+    "planning_reason": "The yellow cup needs to be moved to the right to align it next to the blue cup, which is already in the desired position. This ensures that the yellow cup is not on top of any other cup and is placed correctly according to the task description.",
     "subtasks": [
         {
             "step": "Step 1",
-            "subtask": "Identify the yellow cup and the blue cup.",
-            "subtask_reason": "To ensure the correct cups are selected for the task.",
-            "move": "Move the yellow cup to the right.",
-            "move_reason": "To place the yellow cup next to the blue cup.",
-            "issue": "The yellow cup might accidentally be placed on top of another cup.",
-            "solution": "Ensure the yellow cup is not on top of any other cup by checking its position before placing it."
+            "subtask": "Pick up the yellow plastic cup.",
+            "subtask_reason": "The yellow cup needs to be picked up before it can be moved to the right.",
+            "move": "move down and close gripper",
+            "move_reason": "The gripper needs to be closed around the yellow cup to pick it up.",
+            "issue": "The gripper might not be able to reach the yellow cup if it is too far away.",
+            "solution": "Ensure the gripper is positioned close enough to the yellow cup to pick it up."
         },
         {
             "step": "Step 2",
-            "subtask": "Place the yellow cup next to the blue cup.",
-            "subtask_reason": "To fulfill the task requirement of placing the yellow cup next to the blue cup.",
-            "move": "Move the yellow cup to the right.",
-            "move_reason": "To place the yellow cup next to the blue cup.",
-            "issue": "The yellow cup might accidentally be placed on top of another cup.",
-            "solution": "Ensure the yellow cup is not on top of any other cup by checking its position before placing it."
+            "subtask": "Move the yellow plastic cup to the right.",
+            "subtask_reason": "The yellow cup needs to be moved to the right to align it next to the blue cup.",
+            "move": "move right",
+            "move_reason": "Moving the yellow cup to the right will bring it closer to the blue cup.",
+            "issue": "The gripper might collide with the blue cup if it moves too close.",
+            "solution": "Ensure the gripper moves slowly and carefully to avoid colliding with the blue cup."
         },
         {
             "step": "Step 3",
-            "subtask": "Ensure the yellow cup is not on top of any other cup.",
-            "subtask_reason": "To fulfill the task requirement of not stacking the yellow cup on top of any other cup.",
-            "move": "Check the position of the yellow cup.",
-            "move_reason": "To ensure the yellow cup is not on top of any other cup.",
-            "issue": "The yellow cup might accidentally be placed on top of another cup.",
-            "solution": "If the yellow cup is on top of another cup, move it back to the correct position."
+            "subtask": "Place the yellow plastic cup next to the blue plastic cup.",
+            "subtask_reason": "The yellow cup needs to be placed next to the blue cup to complete the task.",
+            "move": "open gripper",
+            "move_reason": "Opening the gripper allows the yellow cup to be released onto the table.",
+            "issue": "The gripper might not release the yellow cup properly.",
+            "solution": "Ensure the gripper is fully open when releasing the yellow cup."
         }
     ]
 }

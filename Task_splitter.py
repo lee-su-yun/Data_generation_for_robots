@@ -159,7 +159,7 @@ async def create_robot_plan_and_save(
     planner = RobotTaskPlanner(model, processor, device)
 
     system_prompt = (
-        "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
+         "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
         "You must reason through the missing sequence of actions required to transition from the initial state to the final state. Your output should include high-level planning and per-step detailed annotations with justifications.\n\n"
         "# Experimental Setup:\n"
         "- You are an expert in robotics and reinforcement learning.\n"
@@ -192,17 +192,17 @@ async def create_robot_plan_and_save(
         "End the output with:\n"
         "FINISHED\n\n"
         "## 4. Use the following format clearly.\n"
-        "<TASK>:~~\n"
-        "<DESCRIPTION>:~~\n"
-        "<PLAN>:~~\n"
-        "<PLANNING_reason>:~~\n"
+        "<TASK>:\n"
+        "<DESCRIPTION>:\n"
+        "<PLAN>:\n"
+        "<PLANNING_reason>:\n"
         "[Step X]\n"
-        "<SUBTASK>:~~\n"
-        "<SUBTASK_reason>:~~\n"
-        "<MOVE>:~~\n"
-        "<MOVE_reason>:~~\n"
-        "<ISSUE>:~~\n"
-        "<SOLUTION>:~~\n\n"
+        "<SUBTASK>:\n"
+        "<SUBTASK_reason>:\n"
+        "<MOVE>:\n"
+        "<MOVE_reason>:\n"
+        "<ISSUE>:\n"
+        "<SOLUTION>:\n\n"
         "IMPORTANT: You MUST use the exact format shown above, with angle brackets and colons.\n"
         "Do NOT use Markdown headers like '### Task' or '### Plan'. That is strictly forbidden.\n"
         "If you do not follow the format, the output will be discarded and considered invalid.\n\n"
@@ -227,7 +227,7 @@ async def create_robot_plan_and_save(
         "    - Ego-top view, Ego-side view, Exo-wrist view (from the gripper)\n"
         "  - The last 3 images represent the final state after the task is completed:\n"
         "    - Ego-top view, Ego-side view, Exo-wrist view\n"
-        "Use these images, along with the task description, to infer the full action plan and annotate the steps."
+       "Use these images, along with the task description, to infer the full action plan and annotate the steps."
     )
 
     # 1. Generate response

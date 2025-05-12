@@ -121,8 +121,8 @@ model = AutoModel.from_pretrained(
 
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
 
-pixel_values1 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
-pixel_values2 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
+pixel_values1 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_5/init/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
+pixel_values2 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
 pixel_values = torch.cat((pixel_values1, pixel_values2), dim=0)
 
 

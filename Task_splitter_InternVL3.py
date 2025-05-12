@@ -129,7 +129,6 @@ pixel_values = torch.cat((pixel_values1, pixel_values2), dim=0)
 # 3. 이미지 텍스트 명령 구성
 question = '<image>\nDescribe the two images in detail.'
 
-
 # 5. 생성 config
 generation_config = dict(max_new_tokens=1024, do_sample=True)
 

@@ -90,19 +90,19 @@ if __name__ == "__main__":
 
     # device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 
-    quantization_config = BitsAndBytesConfig(load_in_4bit=True)
+    # quantization_config = BitsAndBytesConfig(load_in_4bit=True)
 
     device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
     model_path = '/sda1/InternVL3-14B'
     model = AutoModel.from_pretrained(
         model_path,
         torch_dtype="auto",
-            # load_in_8bit=True,
+        load_in_8bit=True,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
         use_flash_attn=True,
         device_map="auto",
-        quantization_config=quantization_config,
+        # quantization_config=quantization_config,
     ).eval()
 
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)

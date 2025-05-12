@@ -107,6 +107,7 @@ def split_model(model_name):
 
     return device_map
 # 1. 모델 경로와 로드
+device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 model_path = '/sda1/InternVL3-14B'
 model = AutoModel.from_pretrained(
     model_path,
@@ -115,13 +116,13 @@ model = AutoModel.from_pretrained(
     low_cpu_mem_usage=True,
     trust_remote_code=True,
     use_flash_attn=True,
-    device_map='cuda:1'  # 자동 분산
+    device_map=device  # 자동 분산
 ).eval()
 
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
 
-pixel_values1 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png', max_num=12).to(torch.bfloat16).cuda()
-pixel_values2 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png', max_num=12).to(torch.bfloat16).cuda()
+pixel_values1 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
+pixel_values2 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
 pixel_values = torch.cat((pixel_values1, pixel_values2), dim=0)
 
 

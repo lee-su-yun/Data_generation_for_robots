@@ -1,5 +1,5 @@
 import torch
-from transformers import AutoProcessor, AutoModelForVision2Text, BitsAndBytesConfig
+from transformers import AutoProcessor, AutoModel, BitsAndBytesConfig
 from PIL import Image
 
 model_path = "/sda1/InternVL3-14B"
@@ -7,12 +7,12 @@ model_path = "/sda1/InternVL3-14B"
 # 1. 모델 로드 (8bit + bfloat16)
 bnb_config = BitsAndBytesConfig(load_in_8bit=True)
 
-model = AutoModelForVision2Text.from_pretrained(
+model = AutoModel.from_pretrained(
     model_path,
+    trust_remote_code=True,
     device_map="cuda:1",
     torch_dtype=torch.bfloat16,
-    quantization_config=bnb_config,
-    trust_remote_code=True
+    quantization_config=BitsAndBytesConfig(load_in_8bit=True)
 ).eval()
 
 # 2. 프로세서 로드

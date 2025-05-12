@@ -125,13 +125,18 @@ pixel_values1 = load_image('/home/sylee/codes/Data_generation_for_robots/image/t
 pixel_values2 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
 pixel_values = torch.cat((pixel_values1, pixel_values2), dim=0)
 
+# Separate images
+num_patches_list = [pixel_values1.size(0), pixel_values2.size(0)]
 
 # 3. 이미지 텍스트 명령 구성
-question = '<image>\nDescribe the two images in detail.'
+question = 'Image-1: <image>\nImage-2: <image>\nDescribe the two images in detail.'
+
 
 # 5. 생성 config
 generation_config = dict(max_new_tokens=1024, do_sample=True)
 
 response, history = model.chat(tokenizer, pixel_values, question, generation_config,
+                               num_patches_list=num_patches_list,
                                history=None, return_history=True)
+
 print(f'User: {question}\nAssistant: {response}')

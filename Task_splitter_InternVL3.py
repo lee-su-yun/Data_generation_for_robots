@@ -1,11 +1,16 @@
+import os
 import math
-import numpy as np
 import torch
+import torch.distributed as dist
+from torch.multiprocessing import spawn
 import torchvision.transforms as T
 from decord import VideoReader, cpu
 from PIL import Image
 from torchvision.transforms.functional import InterpolationMode
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoModel, AutoTokenizer, AutoConfig
+from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
+from torch.distributed.fsdp.wrap import transformer_auto_wrap_policy
+
 
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)
@@ -81,31 +86,58 @@ def load_image(image_file, input_size=448, max_num=12):
     pixel_values = torch.stack(pixel_values)
     return pixel_values
 
-def split_model(model_name):
-    device_map = {}
-    world_size = torch.cuda.device_count()
-    config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
-    num_layers = config.llm_config.num_hidden_layers
-    # Since the first GPU will be used for ViT, treat it as half a GPU.
-    num_layers_per_gpu = math.ceil(num_layers / (world_size - 0.5))
-    num_layers_per_gpu = [num_layers_per_gpu] * world_size
-    num_layers_per_gpu[0] = math.ceil(num_layers_per_gpu[0] * 0.5)
-    layer_cnt = 0
-    for i, num_layer in enumerate(num_layers_per_gpu):
-        for j in range(num_layer):
-            device_map[f'language_model.model.layers.{layer_cnt}'] = i
-            layer_cnt += 1
-    device_map['vision_model'] = 0
-    device_map['mlp1'] = 0
-    device_map['language_model.model.tok_embeddings'] = 0
-    device_map['language_model.model.embed_tokens'] = 0
-    device_map['language_model.output'] = 0
-    device_map['language_model.model.norm'] = 0
-    device_map['language_model.model.rotary_emb'] = 0
-    device_map['language_model.lm_head'] = 0
-    device_map[f'language_model.model.layers.{num_layers - 1}'] = 0
+def setup(rank, world_size):
+    os.environ['MASTER_ADDR'] = 'localhost'
+    os.environ['MASTER_PORT'] = '12355'
+    dist.init_process_group("nccl", rank=rank, world_size=world_size)
+    torch.cuda.set_device(rank)
 
-    return device_map
+def run_inference(rank, world_size):
+    setup(rank, world_size)
+
+    model_path = '/sda1/InternVL3-14B'
+    image_paths = [
+        '/home/sylee/codes/Data_generation_for_robots/image/task_5/init/top_Color.png',
+        '/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png'
+    ]
+
+    # from internvl.modeling_internvl import InternVLBlock  # InternVL3용 레이어
+    # auto_wrap_policy = transformer_auto_wrap_policy({InternVLBlock})
+
+    model = AutoModel.from_pretrained(
+        model_path,
+        torch_dtype=torch.bfloat16,
+        trust_remote_code=True
+    )
+    model = FSDP(
+        model,
+        # auto_wrap_policy=auto_wrap_policy,
+        device_id=torch.device(f"cuda:{rank}")
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
+
+    model.eval()
+
+    pixel_values_list = []
+    for path in image_paths:
+        pixel_values = load_image(path, max_num=12).to(torch.bfloat16).to(rank)
+        pixel_values_list.append(pixel_values)
+
+    pixel_values = torch.cat(pixel_values_list, dim=0)
+    num_patches_list = [x.size(0) for x in pixel_values_list]
+    question = 'Image-1: <image>\nImage-2: <image>\nDescribe the two images in detail.'
+    generation_config = dict(max_new_tokens=1024, do_sample=True)
+
+    with torch.no_grad():
+        response, history = model.chat(tokenizer, pixel_values, question, generation_config,
+                                       num_patches_list=num_patches_list,
+                                       history=None, return_history=True)
+        if rank == 0:
+            print(f'User: {question}\nAssistant: {response}')
+
+    dist.destroy_process_group()
+
+"""
 # 1. 모델 경로와 로드
 device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 model_path = '/sda1/InternVL3-14B'
@@ -140,3 +172,8 @@ response, history = model.chat(tokenizer, pixel_values, question, generation_con
                                history=None, return_history=True)
 
 print(f'User: {question}\nAssistant: {response}')
+"""
+
+if __name__ == "__main__":
+    world_size = torch.cuda.device_count()
+    spawn(run_inference, args=(world_size,), nprocs=world_size, join=True)

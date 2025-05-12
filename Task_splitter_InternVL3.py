@@ -3,7 +3,7 @@ from lmdeploy.vl import load_image
 from lmdeploy.vl.constants import IMAGE_TOKEN
 
 model = '/sda1/InternVL3-14B'
-pipe = pipeline(model, backend_config=TurbomindEngineConfig(session_len=16384, tp=1), chat_template_config=ChatTemplateConfig(model_name='internvl2_5'))
+pipe = pipeline(model, backend_config=TurbomindEngineConfig(session_len=8192, tp=1), chat_template_config=ChatTemplateConfig(model_name='internvl2_5'))
 
 image_urls=[
     '/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png',

@@ -7,7 +7,7 @@ import torchvision.transforms as T
 from decord import VideoReader, cpu
 from PIL import Image
 from torchvision.transforms.functional import InterpolationMode
-from transformers import AutoModel, AutoTokenizer, AutoConfig
+from transformers import AutoModel, AutoTokenizer, AutoConfig, BitsAndBytesConfig
 from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
 from torch.distributed.fsdp.wrap import transformer_auto_wrap_policy
 
@@ -101,23 +101,26 @@ def run_inference(rank, world_size):
         '/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png'
     ]
 
-    device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+    # device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+
+    quantization_config = BitsAndBytesConfig(load_in_4bit=True)
 
     model = AutoModel.from_pretrained(
         model_path,
-        torch_dtype=torch.bfloat16,
-        load_in_8bit=True,
+        torch_dtype="auto",
+        # load_in_8bit=True,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
         use_flash_attn=True,
-        device_map=device  # 자동 분산
+        device_map="auto",
+        quantization_config=quantization_config,
     ).eval()
 
-  #  model = FSDP(
-  #      model,
-        # auto_wrap_policy=auto_wrap_policy,
-  #      device_id=torch.device(f"cuda:{rank}")
-  #  )
+   # model = FSDP(
+   #     model,
+   #      # auto_wrap_policy=auto_wrap_policy,
+   #     device_id=torch.device(f"cuda:{rank}")
+   # )
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
 
     model.eval()

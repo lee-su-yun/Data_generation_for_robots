@@ -86,29 +86,18 @@ def load_image(image_file, input_size=448, max_num=12):
     pixel_values = torch.stack(pixel_values)
     return pixel_values
 
-def setup(rank, world_size):
-    os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '12355'
-    dist.init_process_group("nccl", rank=rank, world_size=world_size)
-    torch.cuda.set_device(rank)
-
-def run_inference(rank, world_size):
-    setup(rank, world_size)
-
-    model_path = '/sda1/InternVL3-14B'
-    image_paths = [
-        '/home/sylee/codes/Data_generation_for_robots/image/task_5/init/top_Color.png',
-        '/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png'
-    ]
+if __name__ == "__main__":
 
     # device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 
     quantization_config = BitsAndBytesConfig(load_in_4bit=True)
 
+    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    model_path = '/sda1/InternVL3-14B'
     model = AutoModel.from_pretrained(
         model_path,
         torch_dtype="auto",
-        # load_in_8bit=True,
+            # load_in_8bit=True,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
         use_flash_attn=True,
@@ -116,71 +105,26 @@ def run_inference(rank, world_size):
         quantization_config=quantization_config,
     ).eval()
 
-   # model = FSDP(
-   #     model,
-   #      # auto_wrap_policy=auto_wrap_policy,
-   #     device_id=torch.device(f"cuda:{rank}")
-   # )
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
 
-    model.eval()
+    pixel_values1 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_5/init/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
+    pixel_values2 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
+    pixel_values = torch.cat((pixel_values1, pixel_values2), dim=0)
 
-    pixel_values_list = []
-    for path in image_paths:
-        pixel_values = load_image(path, max_num=12).to(torch.bfloat16).to(rank)
-        pixel_values_list.append(pixel_values)
+    # Separate images
+    num_patches_list = [pixel_values1.size(0), pixel_values2.size(0)]
 
-    pixel_values = torch.cat(pixel_values_list, dim=0)
-    num_patches_list = [x.size(0) for x in pixel_values_list]
+    # 3. 이미지 텍스트 명령 구성
     question = 'Image-1: <image>\nImage-2: <image>\nDescribe the two images in detail.'
+
+
+    # 5. 생성 config
     generation_config = dict(max_new_tokens=1024, do_sample=True)
 
-    with torch.no_grad():
-        response, history = model.chat(tokenizer, pixel_values, question, generation_config,
-                                       num_patches_list=num_patches_list,
-                                       history=None, return_history=True)
-        if rank == 0:
-            print(f'User: {question}\nAssistant: {response}')
+    response, history = model.chat(tokenizer, pixel_values, question, generation_config,
+                                   num_patches_list=num_patches_list,
+                                   history=None, return_history=True)
 
-    dist.destroy_process_group()
-
-"""
-# 1. 모델 경로와 로드
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
-model_path = '/sda1/InternVL3-14B'
-model = AutoModel.from_pretrained(
-    model_path,
-    torch_dtype=torch.bfloat16,
-    load_in_8bit=True,
-    low_cpu_mem_usage=True,
-    trust_remote_code=True,
-    use_flash_attn=True,
-    device_map=device  # 자동 분산
-).eval()
-
-tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
-
-pixel_values1 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_5/init/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
-pixel_values2 = load_image('/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png', max_num=12).to(torch.bfloat16).to(device)
-pixel_values = torch.cat((pixel_values1, pixel_values2), dim=0)
-
-# Separate images
-num_patches_list = [pixel_values1.size(0), pixel_values2.size(0)]
-
-# 3. 이미지 텍스트 명령 구성
-question = 'Image-1: <image>\nImage-2: <image>\nDescribe the two images in detail.'
+    print(f'User: {question}\nAssistant: {response}')
 
 
-# 5. 생성 config
-generation_config = dict(max_new_tokens=1024, do_sample=True)
-
-response, history = model.chat(tokenizer, pixel_values, question, generation_config,
-                               num_patches_list=num_patches_list,
-                               history=None, return_history=True)
-
-print(f'User: {question}\nAssistant: {response}')
-"""
-
-if __name__ == "__main__":
-    world_size = torch.cuda.device_count()
-    spawn(run_inference, args=(world_size,), nprocs=world_size, join=True)

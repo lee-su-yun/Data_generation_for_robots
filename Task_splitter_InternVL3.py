@@ -101,19 +101,23 @@ def run_inference(rank, world_size):
         '/home/sylee/codes/Data_generation_for_robots/image/task_5/final/top_Color.png'
     ]
 
-    # from internvl.modeling_internvl import InternVLBlock  # InternVL3용 레이어
-    # auto_wrap_policy = transformer_auto_wrap_policy({InternVLBlock})
+    device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 
     model = AutoModel.from_pretrained(
         model_path,
         torch_dtype=torch.bfloat16,
-        trust_remote_code=True
-    )
-    model = FSDP(
-        model,
+        load_in_8bit=True,
+        low_cpu_mem_usage=True,
+        trust_remote_code=True,
+        use_flash_attn=True,
+        device_map=device  # 자동 분산
+    ).eval()
+
+  #  model = FSDP(
+  #      model,
         # auto_wrap_policy=auto_wrap_policy,
-        device_id=torch.device(f"cuda:{rank}")
-    )
+  #      device_id=torch.device(f"cuda:{rank}")
+  #  )
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
 
     model.eval()

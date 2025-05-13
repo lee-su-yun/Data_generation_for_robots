@@ -18,6 +18,7 @@ model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     model_path,
     quantization_config=bnb_config,
     device_map="auto",
+    attn_implementation="flash_attention_2",
     # llm_int8_enable_fp32_cpu_offload=True,
 )
 

@@ -129,7 +129,7 @@ messages = [
             "Please suggest 30 practical tabletop manipulation tasks based on these colored cups, suitable for fine-tuning a foundation model for 1-armed robots. "
             "Each task should involve physical interaction and test useful robotic skills such as planning, perception, categorization, or spatial reasoning. "
             "Tasks should encourage the robot to perform operations like sorting, stacking, grouping, or pattern-based placement. "
-            "Respond in JSON format with fields: description, required_objects, and initial_setup. [/INST]"
+            "Respond in JSON format with fields: description, required_objects, initial_setup and final_state. [/INST]"
             "{\n"
             "  \"task_1\": {\n"
             "    \"description\": \"...\",\n"

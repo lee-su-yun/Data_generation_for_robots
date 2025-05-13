@@ -173,13 +173,16 @@ thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True
 content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip()
 
 # thinking_content
-with open("/home/sylee/codes/Data_generation_for_robots/task/reason50.txt", "w") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/task/reason30.txt", "w") as f:
     f.write(thinking_content)
 
+with open("/home/sylee/codes/Data_generation_for_robots/task/tasks30.txt", "w") as f:
+    f.write(content)
+
 # content
-parsed = parse_task_blocks(content)
-
-with open("/home/sylee/codes/Data_generation_for_robots/task/tasks50.json", "w", encoding="utf-8") as f:
-    json.dump(parsed, f, indent=2, ensure_ascii=False)
-
-print("Saved to suggested_tasks.json")
+# parsed = parse_task_blocks(content)
+#
+# with open("/home/sylee/codes/Data_generation_for_robots/task/tasks50.json", "w", encoding="utf-8") as f:
+#     json.dump(parsed, f, indent=2, ensure_ascii=False)
+#
+# print("Saved to suggested_tasks.json")

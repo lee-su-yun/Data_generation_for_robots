@@ -29,7 +29,7 @@ messages = [
                 "text": (
                     "I have a robot arm with a gripper, operating on a white table. "
                     "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
-                    "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
+                    "Please suggest 30 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
                     "Each task should involve physical interaction and test useful robotic skills such as planning, perception, or tool use. "
                     "Respond in the following JSON format:\n\n"
                     "{\n"
@@ -37,7 +37,6 @@ messages = [
                     "    \"description\": \"~~\",\n"
                     "    \"required_objects\": \"~~\",\n"
                     "    \"initial_setup\": \"~~\",\n"
-                    "    \"difficulty\": \"easy / medium / hard\"\n"
                     "  },\n"
                     "  \"task_2\": { ... },\n"
                     "  ...\n"
@@ -54,9 +53,11 @@ prompt = (
     "<|begin_of_text|>"
     "Ignore the image."
     "[INST] I have a robot arm with a gripper, operating on a white table. "
-    "Assume the robot can interact with any general household objects, such as colored cups, tissue, paper cups, or a permanent marker. "
-    "Please suggest 5 practical tabletop manipulation tasks suitable for fine-tuning a foundation model for robotics. "
-    "Each task should involve physical interaction and test useful robotic skills such as planning, perception, or tool use. "
+    "Assume the robot can interact with plastic cups in the following colors: blue, white, pink, purple, light green, and yellow. "
+    "There are 3 sets of these colored plastic cups randomly placed on the table (i.e., 18 cups total). "
+    "Please suggest 30 practical tabletop manipulation tasks based on these colored cups. "
+    "Each task should involve physical interaction and test useful robotic skills such as planning, perception, categorization, or spatial reasoning. "
+    "Tasks should encourage the robot to perform operations like sorting, stacking, grouping, or pattern-based placement. "
     "Respond in JSON format with fields: description, required_objects, initial_setup, and difficulty. [/INST]"
     "{\n"
     "  \"task_1\": {\n"
@@ -100,7 +101,7 @@ except json.JSONDecodeError:
     print(response_text)
     raise
 
-with open("/home/sylee/codes/Data_generation_for_robots/suggested_tasks.json", "w") as f:
+with open("/home/sylee/codes/Data_generation_for_robots/30tasks.json", "w") as f:
     json.dump(response_json, f, indent=2)
 
 print("Saved to suggested_tasks.json")

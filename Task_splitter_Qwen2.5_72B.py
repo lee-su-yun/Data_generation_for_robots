@@ -41,79 +41,98 @@ processor = AutoProcessor.from_pretrained(model_path)
 
 image_paths = [
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
+   # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
+   # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
+   # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
+   # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
-task = "Move the pink plastic cup to the center behind of the table without knocking over any other cups."
+# task = "Move the pink plastic cup to the center behind of the table without knocking over any other cups."
+#
+# system_prompt = (
+#     "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
+#     "You must reason through the missing sequence of *fine-grained* actions required to transition from the initial state to the final state. "
+#     "Your output must include high-level planning and per-step *primitive-level* annotations with justifications.\n\n"
+#
+#     "# Experimental Setup:\n"
+#     "- You are an expert in robotics and reinforcement learning.\n"
+#     "- A robot arm must complete a tabletop manipulation task using:\n"
+#     "  - one initial image, one final image:\n"
+#     "    - Ego-top view.\n"
+#     "  - A natural language task instruction\n"
+#     "- You must infer and annotate the *minimal, sequential motor-level subtasks* to complete the task.\n\n"
+#
+#     "# Instructions:\n\n"
+#     "## 1. Describe the Task:\n"
+#     "- Briefly explain the overall goal using the instruction and the visual difference between initial and final states.\n"
+#     "- Mention:\n"
+#     "  - Object identities and colors\n"
+#     "  - Initial and final positions\n"
+#
+#     "## 2. Provide Detailed Planning:\n"
+#     "<PLAN>:\n"
+#     "- Decompose the entire task into a sequence of *subtasks*, where each subtask represents a meaningful action unit (e.g., moving one cup).\n"
+#     "- For each <SUBTASK>, provide the corresponding <MOVE> list that contains fine-grained, robot arm-level primitive actions.\n"
+#     "- Format:\n"
+#     "    <SUBTASK>: [brief natural language description of the objective, e.g., 'Move blue cup to bottom-right corner']\n"
+#     "    <MOVE>: ['Raise arm', 'Move arm left', 'Move arm forward', 'Open gripper', 'Lower arm', 'Close gripper (grab blue cup)', 'Raise arm', 'Move arm right', 'Move arm down', 'Lower arm', 'Open gripper (release cup)']\n"
+#
+#     "- Number the subtasks (e.g., Subtask 1, Subtask 2, ...) and make sure each <MOVE> is specific, step-by-step, and physical.\n"
+#
+#     "<PLANNING_reason>:\n"
+#     "- Explain the reasoning behind the **ordering of subtasks** (not individual moves).\n"
+#     "- Mention factors such as: minimizing collision, avoiding occlusion, simplifying alignment, or optimizing travel distance.\n"
+#     "- Example: 'Starting with the blue cup minimizes the risk of disturbing other nearby cups and clears space for the red cup placement.'\n"
+#
+#     "## 4. Finish with:\n"
+#     "FINISHED\n\n"
+#
+#     "# Notes:\n"
+#     "- DO NOT skip primitive steps. Decompose compound actions (e.g., 'sort all cups') into multiple atomic actions.\n"
+#     "- Do not assume any hidden motion. You only know the initial and final images.\n"
+#     "- All reasoning must be *visually grounded* and task-specific.\n"
+#     "- Write like an expert roboticist explaining every decision.\n\n"
+#
+#     "# Scene Description:\n"
+#     "Objects include:\n"
+#     "- Plastic cups in various colors (blue, red, pink, lavender, mint, yellow)\n"
+#     "- White paper cups labeled 1, 2, 3\n"
+#     "- Cups may be upright, flipped, or stacked on each other\n"
+#     "All items are on a white table.\n"
+#     "The robot arm is black with a silver wrist camera.\n\n"
+#
+# )
 
 system_prompt = (
-    "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "
-    "You must reason through the missing sequence of *fine-grained* actions required to transition from the initial state to the final state. "
-    "Your output must include high-level planning and per-step *primitive-level* annotations with justifications.\n\n"
+    "You are an expert robotics planner. Given an initial and final image of a tabletop and a task instruction, "
+    "you must infer the robot arm’s motion plan: decompose it into subtasks, then provide low-level primitive actions with reasoning.\n"
+)
 
-    "# Experimental Setup:\n"
-    "- You are an expert in robotics and reinforcement learning.\n"
-    "- A robot arm must complete a tabletop manipulation task using:\n"
-    "  - 3 initial images:\n"
-    "    - Ego-top view, Ego-side view, Exo-wrist view\n"
-    "  - 3 final images: same format\n"
-    "  - A natural language task instruction\n"
-    "- You must infer and annotate the *minimal, sequential motor-level subtasks* to complete the task.\n\n"
+user_input = (
+    "# Task Instruction:\n"
+    "Move the pink plastic cup to the center back of the table without knocking over any other cups.\n\n"
 
-    "# Instructions:\n\n"
-    "## 1. Describe the Task:\n"
-    "- Briefly explain the overall goal using the instruction and the visual difference between initial and final states.\n"
-    "- Mention:\n"
-    "  - Object identities and colors\n"
-    "  - Initial and final positions\n"
+    "# Initial Image: [image1.jpg]\n"
+    "# Final Image: [image2.jpg]\n\n"
 
-    "## 2. Provide Detailed Planning:\n"
-    "<PLAN>:\n"
-    "- Decompose the entire task into a sequence of *subtasks*, where each subtask represents a meaningful action unit (e.g., moving one cup).\n"
-    "- For each <SUBTASK>, provide the corresponding <MOVE> list that contains fine-grained, robot arm-level primitive actions.\n"
-    "- Format:\n"
-    "    <SUBTASK>: [brief natural language description of the objective, e.g., 'Move blue cup to bottom-right corner']\n"
-    "    <MOVE>: ['Raise arm', 'Move arm left', 'Move arm forward', 'Open gripper', 'Lower arm', 'Close gripper (grab blue cup)', 'Raise arm', 'Move arm right', 'Move arm down', 'Lower arm', 'Open gripper (release cup)']\n"
+    "# Please output in the following format:\n"
+    "## 1. Describe the Task\n"
+    "- Object identities and colors\n"
+    "- Initial and final positions\n\n"
 
-    "- Number the subtasks (e.g., Subtask 1, Subtask 2, ...) and make sure each <MOVE> is specific, step-by-step, and physical.\n"
+    "## 2. <PLAN>\n"
+    "- Subtask 1: ...\n"
+    "- <MOVE>: [...]\n\n"
 
-    "<PLANNING_reason>:\n"
-    "- Explain the reasoning behind the **ordering of subtasks** (not individual moves).\n"
-    "- Mention factors such as: minimizing collision, avoiding occlusion, simplifying alignment, or optimizing travel distance.\n"
-    "- Example: 'Starting with the blue cup minimizes the risk of disturbing other nearby cups and clears space for the red cup placement.'\n"
-
-    "## 4. Finish with:\n"
-    "FINISHED\n\n"
-
-    "# Notes:\n"
-    "- DO NOT skip primitive steps. Decompose compound actions (e.g., 'sort all cups') into multiple atomic actions.\n"
-    "- Do not assume any hidden motion. You only know the initial and final images.\n"
-    "- All reasoning must be *visually grounded* and task-specific.\n"
-    "- Write like an expert roboticist explaining every decision.\n\n"
-
-    "# Scene Description:\n"
-    "Objects include:\n"
-    "- Plastic cups in various colors (blue, red, pink, lavender, mint, yellow)\n"
-    "- White paper cups labeled 1, 2, 3\n"
-    "- Cups may be upright, flipped, or stacked on each other\n"
-    "All items are on a white table.\n"
-    "The robot arm is black with a silver wrist camera.\n\n"
-
-    "# Image Format:\n"
-    "- 6 total images:\n"
-    "  - First 3: Initial state (top, side, wrist view)\n"
-    "  - Last 3: Final state (top, side, wrist view)\n"
-    "Use these + the task instruction to generate a detailed and *step-wise executable* plan.\n"
+    "<PLANNING_reason>: ...\n\n"
+    "FINISHED"
 )
 
 content = []
 for image in image_paths:
     content.append({"type": "image", "image": image})
-content.append({"type": "text", "text": task})
+content.append({"type": "text", "text": user_input})
 
 messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": content}]
 
@@ -132,7 +151,7 @@ inputs = processor(
 inputs = inputs.to("cuda")
 
 # Inference: Generation of the output
-generated_ids = model.generate(**inputs, max_new_tokens=128)
+generated_ids = model.generate(**inputs, max_new_tokens=1024)
 generated_ids_trimmed = [
     out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
 ]

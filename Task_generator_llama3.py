@@ -25,30 +25,34 @@ prompt = (
     "Please suggest 30 practical tabletop manipulation tasks based on these colored cups. "
     "Each task should involve physical interaction and test useful robotic skills such as planning, perception, categorization, or spatial reasoning. "
     "Tasks should encourage the robot to perform operations like sorting, stacking, grouping, or pattern-based placement. "
-    "Respond in JSON format with fields: description, required_objects, and initial_setup. [/INST]"
-    "{\n"
-    "  \"task_1\": {\n"
-    "    \"description\": \"...\",\n"
-    "    \"required_objects\": \"...\",\n"
-    "    \"initial_setup\": \"...\"\n"
-    "  },\n"
-    "  \"task_2\": {\n"
-    "    \"description\": \"...\",\n"
-    "    \"required_objects\": \"...\",\n"
-    "    \"initial_setup\": \"...\"\n"
-    "  },\n"
-    "  ...\n"
-    "}\n\n"
+    "Respond only in JSON format with 30 tasks. Each should include fields: description, required_objects, and initial_setup. "
+    "Do not repeat the prompt. Do not include any explanation or commentary. Just return the final JSON object with 30 tasks. [/INST]"
+    # "Respond in JSON format with fields: description, required_objects, and initial_setup. [/INST]"
+    # "{\n"
+    # "  \"task_1\": {\n"
+    # "    \"description\": \"...\",\n"
+    # "    \"required_objects\": \"...\",\n"
+    # "    \"initial_setup\": \"...\"\n"
+    # "  },\n"
+    # "  \"task_2\": {\n"
+    # "    \"description\": \"...\",\n"
+    # "    \"required_objects\": \"...\",\n"
+    # "    \"initial_setup\": \"...\"\n"
+    # "  },\n"
+    # "  ...\n"
+    # "}\n\n"
 )
 
 inputs = processor(image, prompt, return_tensors="pt").to(model.device)
 
 outputs = model.generate(
     **inputs,
-    max_new_tokens=2048,
+    max_new_tokens=1024,
 )
 
 response_text = processor.batch_decode(outputs[:, inputs["input_ids"].shape[-1]:])[0]
+print("=== RAW OUTPUT ===")
+print(response_text[:1000])
 
 try:
     response_json = json.loads(response_text)

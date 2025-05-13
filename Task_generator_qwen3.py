@@ -80,7 +80,7 @@ messages = [
         )
     }
 ]
-"""
+
 messages = [
     {
         "role": "user",
@@ -112,6 +112,37 @@ messages = [
             "initial_setup: <clear, detailed initial condition of the tabletop>\n"
             "final_state: <clear, detailed expected tabletop state after the task is complete>\n"
             "difficulty: <easy / medium / hard>\n"
+        )
+    }
+]
+"""
+
+messages = [
+    {
+        "role": "user",
+        "content": (
+            "I have a robot arm with a simple gripper, operating on a flat white table. "
+            "The robot has standard capabilities for visual perception, object localization, and basic grasping. "
+            "It can manipulate 3 sets of 6 colored plastic cups (e.g., blue, white, pink, purple, green, yellow). "  # , and three white paper cups which have numbers (1, 2, 3). "
+            "The robot can lift and place objects by using its gripper.\n\n"
+
+            "Please suggest 30 practical tabletop manipulation tasks based on these colored cups, suitable for fine-tuning a foundation model for 1-armed robots. "
+            "Each task should involve physical interaction and test useful robotic skills such as planning, perception, categorization, or spatial reasoning. "
+            "Tasks should encourage the robot to perform operations like sorting, stacking, grouping, or pattern-based placement. "
+            "Respond in JSON format with fields: description, required_objects, and initial_setup. [/INST]"
+            "{\n"
+            "  \"task_1\": {\n"
+            "    \"description\": \"...\",\n"
+            "    \"required_objects\": \"...\",\n"
+            "    \"initial_setup\": \"...\"\n"
+            "  },\n"
+            "  \"task_2\": {\n"
+            "    \"description\": \"...\",\n"
+            "    \"required_objects\": \"...\",\n"
+            "    \"initial_setup\": \"...\"\n"
+            "  },\n"
+            "  ...\n"
+            "}\n\n"
         )
     }
 ]

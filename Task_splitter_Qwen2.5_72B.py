@@ -46,7 +46,7 @@ image_paths = [
     f"/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png"
 ]
 
-task = ""
+task = "Move the pink plastic cup to the center behind of the table without knocking over any other cups."
 
 system_prompt = (
     "You are tasked with inferring and annotating a robot arm trajectory given only the initial images, final images, and a task description. "

@@ -2,9 +2,6 @@ from transformers import Qwen2_5_VLForConditionalGeneration, AutoTokenizer, Auto
 from qwen_vl_utils import process_vision_info
 import torch
 from transformers import BitsAndBytesConfig
-import os
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,3"
 
 # model_path = "/sda1/Qwen2.5-VL-72B-Instruct"
 model_path = "/sda1/hub/Qwen2.5-VL-7B-Instruct"
@@ -18,7 +15,7 @@ bnb_config = BitsAndBytesConfig(
 
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     model_path,
-   # quantization_config=bnb_config,
+    quantization_config=bnb_config,
     device_map="auto",
     attn_implementation="flash_attention_2",
     # llm_int8_enable_fp32_cpu_offload=True,

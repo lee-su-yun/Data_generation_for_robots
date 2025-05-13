@@ -1,56 +1,27 @@
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoTokenizer, AutoProcessor
 from qwen_vl_utils import process_vision_info
 import torch
-
-from accelerate import infer_auto_device_map, init_empty_weights
-from transformers.utils import get_balanced_memory
-
-from transformers import AutoConfig
 from transformers import BitsAndBytesConfig
 
 
-# model_path = "/sda1/Qwen2.5-VL-72B-Instruct"
-#
-# bnb_config = BitsAndBytesConfig(
-#     load_in_4bit=True,              # 또는 load_in_8bit=True
-#     bnb_4bit_compute_dtype=torch.bfloat16,  # 또는 float16
-#     bnb_4bit_use_double_quant=True,
-#     bnb_4bit_quant_type="nf4",      # fp4보다 일반적임
-# )
-# # default: Load the model on the available device(s)
-#
-# model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-#     model_path,
-#     quantization_config=bnb_config,
-#     device_map="auto",
-#     attn_implementation="flash_attention_2",
-#     # llm_int8_enable_fp32_cpu_offload=True,
-# )
+model_path = "/sda1/Qwen2.5-VL-72B-Instruct"
 
-config = AutoConfig.from_pretrained(model_path)
-
-# 각 모듈을 어떤 디바이스에 올릴지 계산
-max_memory = get_balanced_memory(
-    model_path,
-    dtype=torch.bfloat16,
-    low_zero=False,
-    no_split_module_classes=["QWen2Layer"]  # 모델 구조에 맞게 바꿔야 함
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,              # 또는 load_in_8bit=True
+    bnb_4bit_compute_dtype=torch.bfloat16,  # 또는 float16
+    bnb_4bit_use_double_quant=True,
+    bnb_4bit_quant_type="nf4",      # fp4보다 일반적임
 )
+# default: Load the model on the available device(s)
 
-device_map = infer_auto_device_map(
-    model_path,
-    max_memory=max_memory,
-    dtype=torch.bfloat16,
-    no_split_module_classes=["QWen2Layer"]
-)
-
-# 모델 로딩
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     model_path,
     quantization_config=bnb_config,
-    device_map=device_map,
-    llm_int8_enable_fp32_cpu_offload=True,
+    device_map="auto",
+    attn_implementation="flash_attention_2",
+    # llm_int8_enable_fp32_cpu_offload=True,
 )
+
 
 # We recommend enabling flash_attention_2 for better acceleration and memory saving, especially in multi-image and video scenarios.
 # model = Qwen2_5_VLForConditionalGeneration.from_pretrained(

@@ -2,8 +2,7 @@ from transformers import Qwen2_5_VLForConditionalGeneration, AutoTokenizer, Auto
 from qwen_vl_utils import process_vision_info
 import torch
 
-from transformers import accelerate
-from transformers import infer_auto_device_map
+from accelerate import infer_auto_device_map, init_empty_weights
 from transformers.utils import get_balanced_memory
 
 from transformers import AutoConfig

@@ -4,7 +4,7 @@ import torch
 from transformers import BitsAndBytesConfig
 
 
-model_path = "/sda1/hub/Qwen2.5-VL-72B-Instruct"
+model_path = "/sda1/Qwen2.5-VL-72B-Instruct"
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,              # 또는 load_in_8bit=True

@@ -4,7 +4,7 @@ from transformers import AutoProcessor, MllamaForConditionalGeneration
 from PIL import Image
 
 model_path = "/sda1/llama3.2-11b-vision"
-image_path = "/home/sylee/codes/Data_generation_for_robots/image/side_Color.jpg"
+image_path = "/home/sylee/codes/Data_generation_for_robots/image/side_Color.png"
 output_path = "/home/sylee/codes/Data_generation_for_robots/30tasks.json"
 
 image = Image.open(image_path).convert("RGB")

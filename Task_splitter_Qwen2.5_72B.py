@@ -3,8 +3,8 @@ from qwen_vl_utils import process_vision_info
 import torch
 from transformers import BitsAndBytesConfig
 
-# model_path = "/sda1/Qwen2.5-VL-72B-Instruct"
-model_path = "/sda1/hub/Qwen2.5-VL-7B-Instruct"
+model_path = "/sda1/Qwen2.5-VL-72B-Instruct"
+#model_path = "/sda1/hub/Qwen2.5-VL-7B-Instruct"
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,              # 또는 load_in_8bit=True
     bnb_4bit_compute_dtype=torch.bfloat16,  # 또는 float16
@@ -40,12 +40,12 @@ processor = AutoProcessor.from_pretrained(model_path)
 # processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-72B-Instruct", min_pixels=min_pixels, max_pixels=max_pixels)
 
 image_paths = [
-    f"/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png",
-    f"/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
-    f"/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    f"/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png"
-    f"/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
-    f"/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png"
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png"
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png"
 ]
 
 task = "Move the pink plastic cup to the center behind of the table without knocking over any other cups."

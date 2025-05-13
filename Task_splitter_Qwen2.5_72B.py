@@ -18,6 +18,7 @@ model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     model_path,
     quantization_config=bnb_config,
     device_map="auto",
+    llm_int8_enable_fp32_cpu_offload=True,
 )
 
 # We recommend enabling flash_attention_2 for better acceleration and memory saving, especially in multi-image and video scenarios.

@@ -43,9 +43,9 @@ image_paths = [
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png",
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png"
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png",
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png"
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
 task = "Move the pink plastic cup to the center behind of the table without knocking over any other cups."

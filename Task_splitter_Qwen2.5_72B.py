@@ -165,13 +165,11 @@ inputs = inputs.to("cuda")
 #     max_new_tokens=1024,
 # )
 
-# Beam Search
+#Beam Search
 generated_ids = model.generate(
     **inputs,
     do_sample=False,
-    num_beams=6,
-    num_beam_groups=3,
-    diversity_penalty=1.0,
+    num_beams=5,
     max_new_tokens=1024,
 )
 

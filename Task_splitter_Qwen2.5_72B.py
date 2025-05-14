@@ -41,10 +41,10 @@ processor = AutoProcessor.from_pretrained(model_path)
 
 image_paths = [
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/top_Color.png",
-   # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
     "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/top_Color.png",
-   # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -111,10 +111,10 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Move the pink plastic cup to the center back of the table without knocking over any other cups.\n\n"
+    "Move the pink plastic cup to the center behind of the table without knocking over any other cups (stacked or not).\n\n"
 
-    "# Initial Image: [image1.jpg]\n"
-    "# Final Image: [image2.jpg]\n\n"
+    "# Initial Image: [image1.png], [image2.png]\n"
+    "# Final Image: [image3.png], [image4.png]\n\n"
 
     "# Please output in the following format:\n"
     "## 1. Describe the Task\n"
@@ -152,6 +152,14 @@ inputs = inputs.to("cuda")
 
 # Inference: Generation of the output
 generated_ids = model.generate(**inputs, max_new_tokens=1024)
+# generated_ids = model.generate(
+#     **inputs,
+#     do_sample=True,
+#     temperature=0.7,
+#     top_p=0.9,
+#     max_new_tokens=1024,
+# )
+
 generated_ids_trimmed = [
     out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
 ]

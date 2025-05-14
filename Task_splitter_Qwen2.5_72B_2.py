@@ -40,11 +40,11 @@ processor = AutoProcessor.from_pretrained(model_path)
 # processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-72B-Instruct", min_pixels=min_pixels, max_pixels=max_pixels)
 
 image_paths = [
-    "/home/sylee/codes/Data_generation_for_robots/image/task_15/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_15/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_17/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_17/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_15/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_15/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_17/final/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_17/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -57,7 +57,7 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Move the white plastic cup to the position where the paper cup numbered 1 is currently located.\n\n"
+    "Move the yellow plastic cup to the left side of the table, but only if it is upright.\n\n"
 
     "# Initial Image: [image1.png], [image2.png]\n"
     "# Final Image: [image3.png], [image4.png]\n\n"
@@ -138,7 +138,7 @@ output_text = processor.batch_decode(
 )
 print(output_text)
 print('\n')
-print('task15')
+print('task17')
 
 # with open("/home/sylee/codes/Data_generation_for_robots/task/reason30.txt", "w") as f:
 #     f.write(thinking_content)

@@ -73,11 +73,11 @@ task = [
 #     output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_one/{task_id}.txt"
 
 image_paths = [
-    "/home/sylee/codes/Data_generation_for_robots/image/task_14/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_14/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_16/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_16/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_14/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_14/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_16/final/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_16/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -90,7 +90,7 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Sort the cups by type, placing plastic cups on the left and paper cups on the right.\n\n"
+    "Stack the three paper cups in a vertical line on the right side of the table.\n\n"
 
     "# Initial Image: [image1.png], [image2.png]\n"
     "# Final Image: [image3.png], [image4.png]\n\n"
@@ -169,4 +169,4 @@ output_text = processor.batch_decode(
 )
 print(output_text)
 print('\n')
-print('task14')
+print('task16')

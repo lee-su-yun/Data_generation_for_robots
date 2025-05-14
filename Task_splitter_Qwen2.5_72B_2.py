@@ -40,11 +40,11 @@ processor = AutoProcessor.from_pretrained(model_path)
 # processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-72B-Instruct", min_pixels=min_pixels, max_pixels=max_pixels)
 
 image_paths = [
-    "/home/sylee/codes/Data_generation_for_robots/image/task_25/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_25/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_27/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_27/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_25/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_25/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_27/final/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_27/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -57,7 +57,7 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Move the white paper cup numbered 3 to the position where the light blue cup is currently located.\n\n"
+    "Move the cup that is not white to the left side of the table, prioritizing the pink cup.\n\n"
 
     "# Initial Image: [image1.png], [image2.png]\n"
     "# Final Image: [image3.png], [image4.png]\n\n"
@@ -138,7 +138,7 @@ output_text = processor.batch_decode(
 )
 print(output_text)
 print('\n')
-print('task25')
+print('task27')
 
 # with open("/home/sylee/codes/Data_generation_for_robots/task/reason30.txt", "w") as f:
 #     f.write(thinking_content)

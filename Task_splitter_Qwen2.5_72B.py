@@ -56,11 +56,11 @@ processor = AutoProcessor.from_pretrained(model_path)
 #     output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_one/{task_id}.txt"
 
 image_paths = [
-    "/home/sylee/codes/Data_generation_for_robots/image/task_20/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_20/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_22/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_22/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_20/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_20/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_22/final/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_22/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -73,7 +73,7 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Arrange the cups in a triangle formation with the light blue cup at the top.\n\n"
+    "Stack the white plastic cups and paper cups in alternating layers on the left side.\n\n"
 
     "# Initial Image: [image1.png], [image2.png]\n"
     "# Final Image: [image3.png], [image4.png]\n\n"
@@ -152,4 +152,4 @@ output_text = processor.batch_decode(
 )
 print(output_text)
 print('\n')
-print('task20')
+print('task22')

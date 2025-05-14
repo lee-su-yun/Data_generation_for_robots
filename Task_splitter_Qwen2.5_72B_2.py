@@ -152,11 +152,17 @@ inputs = inputs.to("cuda")
 
 # Inference: Generation of the output
 #generated_ids = model.generate(**inputs, max_new_tokens=1024)
+# generated_ids = model.generate(
+#     **inputs,
+#     do_sample=True,
+#     temperature=0.7,
+#     top_p=0.9,
+#     max_new_tokens=1024,
+# )
 generated_ids = model.generate(
     **inputs,
-    do_sample=True,
-    temperature=0.7,
-    top_p=0.9,
+    do_sample=False,
+    num_beams=5,
     max_new_tokens=1024,
 )
 

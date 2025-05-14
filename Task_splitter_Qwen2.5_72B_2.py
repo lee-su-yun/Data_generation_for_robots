@@ -40,11 +40,11 @@ processor = AutoProcessor.from_pretrained(model_path)
 # processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-72B-Instruct", min_pixels=min_pixels, max_pixels=max_pixels)
 
 image_paths = [
-    "/home/sylee/codes/Data_generation_for_robots/image/task_11/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_11/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_13/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_13/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_11/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_11/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_13/final/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_13/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -57,7 +57,7 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Stack the pink and yellow plastic cups on top of the white paper cup numbered 3.\n\n"
+    "Place the lavender plastic cup next to the white paper cup numbered 2, but not on top of it.\n\n"
 
     "# Initial Image: [image1.png], [image2.png]\n"
     "# Final Image: [image3.png], [image4.png]\n\n"
@@ -138,7 +138,7 @@ output_text = processor.batch_decode(
 )
 print(output_text)
 print('\n')
-print('task11')
+print('task13')
 
 # with open("/home/sylee/codes/Data_generation_for_robots/task/reason30.txt", "w") as f:
 #     f.write(thinking_content)

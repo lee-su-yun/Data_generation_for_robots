@@ -73,11 +73,11 @@ task = [
 #     output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_one/{task_id}.txt"
 
 image_paths = [
-    "/home/sylee/codes/Data_generation_for_robots/image/task_10/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_10/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_12/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_12/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_10/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_10/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_12/final/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_12/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -90,7 +90,7 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Move the white paper cup numbered 1 to the position where the light blue cup is currently located.\n\n"
+    "Move the cup that is not white to the left side of the table, avoiding the paper cups.\n\n"
 
     "# Initial Image: [image1.png], [image2.png]\n"
     "# Final Image: [image3.png], [image4.png]\n\n"
@@ -169,4 +169,4 @@ output_text = processor.batch_decode(
 )
 print(output_text)
 print('\n')
-print('task10')
+print('task12')

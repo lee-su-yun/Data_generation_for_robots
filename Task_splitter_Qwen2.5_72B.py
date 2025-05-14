@@ -73,11 +73,11 @@ task = [
 #     output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_one/{task_id}.txt"
 
 image_paths = [
-    "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_4/init/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_4/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_4/final/top_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_4/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
@@ -90,7 +90,7 @@ system_prompt = (
 
 user_input = (
     "# Task Instruction:\n"
-    "Align the white paper cups (numbered 1, 2, 3) in numerical order from left to right.\n\n"
+    "Place the yellow plastic cup next to the blue plastic cup, but not on top of any other cup.\n\n"
 
     "# Initial Image: [image1.png], [image2.png]\n"
     "# Final Image: [image3.png], [image4.png]\n\n"
@@ -168,3 +168,5 @@ output_text = processor.batch_decode(
     generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
 )
 print(output_text)
+print('\n')
+print('task4')

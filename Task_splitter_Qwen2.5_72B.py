@@ -166,16 +166,6 @@ inputs = inputs.to("cuda")
 # )
 
 # Beam Search
-generated_ids = model.generate(
-    **inputs,
-    do_sample=False,
-    num_beams=6,
-    num_beam_groups=3,
-    diversity_penalty=1.0,
-    max_new_tokens=1024,
-)
-
-# Diverse Beam Search
 # generated_ids = model.generate(
 #     **inputs,
 #     do_sample=False,
@@ -184,6 +174,16 @@ generated_ids = model.generate(
 #     diversity_penalty=1.0,
 #     max_new_tokens=1024,
 # )
+
+# Diverse Beam Search
+generated_ids = model.generate(
+    **inputs,
+    do_sample=False,
+    num_beams=6,
+    num_beam_groups=3,
+    diversity_penalty=1.0,
+    max_new_tokens=1024,
+)
 
 generated_ids_trimmed = [
     out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)

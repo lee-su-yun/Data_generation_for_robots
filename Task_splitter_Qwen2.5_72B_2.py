@@ -107,6 +107,7 @@ image_paths = [
 system_prompt = (
     "You are an expert robotics planner. Given an initial and final image of a tabletop and a task instruction, "
     "you must infer the robot arm’s motion plan: decompose it into subtasks, then provide low-level primitive actions with reasoning.\n"
+    "In the <MOVE> section, do not just state the destination. Instead, describe the **detailed movement path**, "
 )
 
 user_input = (
@@ -151,20 +152,38 @@ inputs = processor(
 inputs = inputs.to("cuda")
 
 # Inference: Generation of the output
-#generated_ids = model.generate(**inputs, max_new_tokens=1024)
-# generated_ids = model.generate(
-#     **inputs,
-#     do_sample=True,
-#     temperature=0.7,
-#     top_p=0.9,
-#     max_new_tokens=1024,
-# )
+
+# Greedy
+# generated_ids = model.generate(**inputs, max_new_tokens=1024)
+
+# Sampling
 generated_ids = model.generate(
     **inputs,
-    do_sample=False,
-    num_beams=5,
+    do_sample=True,
+    temperature=0.7,
+    top_p=0.9,
     max_new_tokens=1024,
 )
+
+# Beam Search
+# generated_ids = model.generate(
+#     **inputs,
+#     do_sample=False,
+#     num_beams=6,
+#     num_beam_groups=3,
+#     diversity_penalty=1.0,
+#     max_new_tokens=1024,
+# )
+
+# Diverse Beam Search
+# generated_ids = model.generate(
+#     **inputs,
+#     do_sample=False,
+#     num_beams=6,
+#     num_beam_groups=3,
+#     diversity_penalty=1.0,
+#     max_new_tokens=1024,
+# )
 
 generated_ids_trimmed = [
     out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)

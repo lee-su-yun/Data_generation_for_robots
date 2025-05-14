@@ -154,7 +154,7 @@ inputs = inputs.to("cuda")
 # Inference: Generation of the output
 
 # Greedy
-generated_ids = model.generate(**inputs, max_new_tokens=1024)
+# generated_ids = model.generate(**inputs, max_new_tokens=1024)
 
 # Sampling
 # generated_ids = model.generate(
@@ -166,14 +166,14 @@ generated_ids = model.generate(**inputs, max_new_tokens=1024)
 # )
 
 # Beam Search
-# generated_ids = model.generate(
-#     **inputs,
-#     do_sample=False,
-#     num_beams=6,
-#     num_beam_groups=3,
-#     diversity_penalty=1.0,
-#     max_new_tokens=1024,
-# )
+generated_ids = model.generate(
+    **inputs,
+    do_sample=False,
+    num_beams=6,
+    num_beam_groups=3,
+    diversity_penalty=1.0,
+    max_new_tokens=1024,
+)
 
 # Diverse Beam Search
 # generated_ids = model.generate(

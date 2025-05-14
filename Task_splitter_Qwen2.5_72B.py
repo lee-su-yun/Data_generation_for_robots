@@ -39,12 +39,45 @@ processor = AutoProcessor.from_pretrained(model_path)
 # max_pixels = 1280*28*28
 # processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-72B-Instruct", min_pixels=min_pixels, max_pixels=max_pixels)
 
+task = [
+    "Move the pink plastic cup to the center behind of the table without knocking over any other cups (stacked or not).",
+"Align the white paper cups (numbered 1, 2, 3) in numerical order from left to right.",
+"Move all non-white plastic cups to the right side of the table.",
+"Place the yellow plastic cup next to the blue plastic cup, but not on top of any other cup.",
+"Sort all cups by color, placing each color in a specific quadrant of the table.",
+"Move the only cup that is upside down to the right side of the table.",
+"Stack the white plastic cups on top of each other in the center of the table.",
+"Place the paper cup numbered 2 on top of the pink plastic cup.",
+"Arrange the cups in a line from left to right by color, starting with light blue.",
+"Move the white paper cup numbered 1 to the position where the light blue cup is currently located.",
+"Stack the pink and yellow plastic cups on top of the white paper cup numbered 3.",
+"Move the cup that is not white to the left side of the table, avoiding the paper cups.",
+"Place the lavender plastic cup next to the white paper cup numbered 2, but not on top of it.",
+"Sort the cups by type, placing plastic cups on the left and paper cups on the right.",
+"Move the white plastic cup to the position where the paper cup numbered 1 is currently located.",
+]
+
+# for i in [31]:
+#     task_id = f"task_{i}"
+#     task = all_tasks[task_id]["description"]
+#
+#     image_paths = [
+#         f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/init/top_Color.png",
+#         #  f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/init/side_Color.png",
+#         #  f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/init/wrist_Color.png",
+#         f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/final/top_Color.png"
+#         #  f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/final/side_Color.png",
+#         #  f"/home/sylee/codes/Data_generation_for_robots/image/{task_id}/final/wrist_Color.png"
+#     ]
+#
+#     output_json_path = f"/home/sylee/codes/Data_generation_for_robots/splitted_task_one/{task_id}.txt"
+
 image_paths = [
     "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/top_Color.png",
     "/home/sylee/codes/Data_generation_for_robots/image/task_2/init/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/init/wrist_Color.png",
     "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/top_Color.png",
-    "/home/sylee/codes/Data_generation_for_robots/image/task_\2/final/side_Color.png",
+    "/home/sylee/codes/Data_generation_for_robots/image/task_2/final/side_Color.png",
    # "/home/sylee/codes/Data_generation_for_robots/image/task_1/final/wrist_Color.png",
 ]
 
